@@ -1,5 +1,6 @@
 {
     "test": "test",
     "header": "home app",
-    "nav_about": "About"
+    "nav_about": "About",
+    "nav_list_one": "list-one"
 }

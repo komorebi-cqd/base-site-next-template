@@ -1,5 +1,6 @@
 {
     "test": "测试",
     "header": "首页app",
-    "nav_about": "关于我"
+    "nav_about": "关于我",
+    "nav_list_one": "列表1"
 }

@@ -6,8 +6,14 @@ import Link from 'next/link'
 import Logo from './logo'
 import Dropdown from '@/app/components/utils/dropdown'
 import MobileMenu from './mobile-menu'
+import { useIntl } from 'react-intl';
+import { SafeUser } from '@/types'
+import { signOut } from 'next-auth/react'
 
-export default function Header() {
+
+export default function Header({ currentUser }: { currentUser?: SafeUser }) {
+    console.log(currentUser, "Header----")
+    const { formatMessage } = useIntl();
 
     const [top, setTop] = useState<boolean>(true)
 
@@ -36,7 +42,7 @@ export default function Header() {
                     <nav className="hidden md:flex md:grow h-full">
                         {/* Desktop sign in links */}
                         <ul className="flex grow justify-end flex-wrap items-center">
-                            <Dropdown title='列表一'>
+                            <Dropdown title={formatMessage({ id: 'nav_list_one' })}>
                                 <div>
                                     <h3>title</h3>
                                     <ul>
@@ -65,9 +71,12 @@ export default function Header() {
                             <li className='h-full flex justify-center items-center hover:bg-slate-500 transition duration-150 ease-in-out'>
                                 <Link href="/user/login" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">登录</Link>
                             </li>
-                            <li className='h-full flex justify-center items-center hover:bg-slate-500 transition duration-150 ease-in-out'>
-                                退出登录
-                            </li>
+                            {
+                                currentUser?.id &&
+                                <li onClick={() => signOut()} className='h-full flex justify-center items-center hover:bg-slate-500 transition duration-150 ease-in-out'>
+                                    退出登录
+                                </li>
+                            }
                         </ul>
 
                     </nav>

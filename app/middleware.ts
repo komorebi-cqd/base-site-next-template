@@ -1,11 +1,6 @@
-// import createMiddleware from 'next-intl/middleware';
+export { default } from "next-auth/middleware";
 
-// export default createMiddleware({
-//   locales: ['en', 'cn'],
-//   defaultLocale: 'cn'
-// });
-
-// export const config = {
-//   // Skip all paths that should not be internationalized
-//   matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
-// };
+export const config = {
+  //需要登录的页面路径
+  matcher: ["/about"],
+};

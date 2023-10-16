@@ -7,5 +7,5 @@ import { useIntl } from "react-intl";
 export default function ExampleClientComponent() {
   const { formatMessage } = useIntl();
 
-  return <div>{formatMessage({ id: "test" })}</div>;
+  return <div className=" text-red-900">{formatMessage({ id: "test" })}</div>;
 }

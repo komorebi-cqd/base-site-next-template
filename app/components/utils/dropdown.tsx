@@ -5,19 +5,21 @@ import { Transition } from '@headlessui/react'
 
 type DropdownProps = {
     children: React.ReactNode
-    title: string
+    title: string,
+    isHasRelative?: boolean;
 }
 
 export default function Dropdown({
     children,
-    title
+    title,
+    isHasRelative = false
 }: DropdownProps) {
 
     const [dropdownOpen, setDropdownOpen] = useState<boolean>(false)
 
     return (
         <li
-            className='h-full flex justify-center items-center hover:bg-slate-500 transition duration-150 ease-in-out'
+            className={`h-full flex justify-center items-center hover:bg-slate-500 transition duration-150 ease-in-out ${isHasRelative ? 'relative' : ''}`}
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
             onFocus={() => setDropdownOpen(true)}

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-
+import LocaleSwitcher from '../LocaleSwitcher'
 import Link from 'next/link'
 import Logo from './logo'
 import Dropdown from '@/app/components/utils/dropdown'
@@ -13,7 +13,7 @@ export default function Header() {
 
     // detect whether user has scrolled the page down by 10px
     const scrollHandler = () => {
-        window.pageYOffset > 10 ? setTop(false) : setTop(true)
+        window.scrollY > 10 ? setTop(false) : setTop(true)
     }
 
     useEffect(() => {
@@ -56,13 +56,17 @@ export default function Header() {
                                     </ul>
                                 </div>
                             </Dropdown>
+                            <Dropdown title='中文' isHasRelative={true}>
+                                <ul>
+                                    <li>中文</li>
+                                    <li>英文</li>
+                                </ul>
+                            </Dropdown>
                             <li className='h-full flex justify-center items-center hover:bg-slate-500 transition duration-150 ease-in-out'>
                                 <Link href="/user/login" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">登录</Link>
                             </li>
                             <li className='h-full flex justify-center items-center hover:bg-slate-500 transition duration-150 ease-in-out'>
-                                <Link href="/signup">
-                                    <span>退出登录</span>
-                                </Link>
+                                退出登录
                             </li>
                         </ul>
 

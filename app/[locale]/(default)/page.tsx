@@ -1,4 +1,4 @@
-import getIntl from './intl';
+import getIntl from '../intl';
 import ExampleClientComponent from '@/app/components/ExampleClientComponent';
 import LocaleSwitcher from '@/app/components/LocaleSwitcher';
 import Link from 'next/link';

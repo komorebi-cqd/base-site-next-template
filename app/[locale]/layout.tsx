@@ -1,7 +1,7 @@
 import i18nConfig from '@/i18nConfig';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
-import Header from '../components/ui/header';
+import Header from '@/app/components/ui/header';
 import getIntl from './intl';
 import ServerIntlProvider from '@/app/providers/ServerIntlProvider';
 import ToasterProvider from '@/app/providers/ToasterProvider';
@@ -18,7 +18,7 @@ export function generateStaticParams() {
     return i18nConfig.locales.map(locale => ({ locale }));
 }
 
-export default async function RootLayout({
+export default async function DefaultRootLayout({
     children,
     params: { locale }
 }: {
@@ -40,3 +40,4 @@ export default async function RootLayout({
         </html>
     );
 }
+

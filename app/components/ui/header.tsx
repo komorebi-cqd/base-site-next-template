@@ -12,7 +12,7 @@ import { signOut } from 'next-auth/react'
 
 
 export default function Header({ currentUser }: { currentUser?: SafeUser }) {
-    console.log(currentUser, "Header----")
+    // console.log(currentUser, "Header----")
     const { formatMessage } = useIntl();
 
     const [top, setTop] = useState<boolean>(true)

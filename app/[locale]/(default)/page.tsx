@@ -6,7 +6,7 @@ import getCurrentUser from "@/app/actions/getCurrentUser";
 
 async function Home({ params: { locale } }: { params: { locale: string } }) {
     const currentUser = await getCurrentUser();
-    console.log("home---", currentUser, "---home");
+    // console.log("home---", currentUser, "---home");
     const intl = await getIntl(locale);
 
     return (

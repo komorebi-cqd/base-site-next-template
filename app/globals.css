@@ -20,6 +20,7 @@ body {
   color: rgb(var(--foreground-rgb));
   min-height: 2000px;
   background-color: bisque;
+  overflow-x: hidden;
   /* background: linear-gradient(
       to bottom,
       transparent,

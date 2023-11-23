@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { ReactNode } from 'react';
 import Header from '@/app/components/ui/header';
 import getCurrentUser from "@/app/actions/getCurrentUser";
+import Footer from '@/app/components/ui/footer';
 
 
 export const metadata: Metadata = {
@@ -20,8 +21,9 @@ export default async function DefaultRootLayout({
     const currentUser = await getCurrentUser();
     return (
         <>
-            <Header currentUser={currentUser?.user} />
+            <Header />
             {children}
+            <Footer />
         </>
     );
 }

@@ -28,3 +28,8 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 }
+
+
+.home-bg{
+    background:no-repeat center/cover url("/image/home/home-bg.png") ;
+}

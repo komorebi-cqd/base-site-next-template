@@ -97,7 +97,7 @@ const TestPage = () => {
             <motion.div variants={variantsDiv} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.8}} className='w-full h-[448px] overflow-hidden relative'>
                 {/* <Image src={"/image/homebg.png"} fill={true} alt='bg' /> */}
                 <div className='w-full h-[448px] absolute top-0 bottom-0 left-0 right-0'>
-                    <Image src={"/image/homebg.png"} priority={true} fill={true} alt="bg" />
+                    <Image src={"/image/home/advantagebg.png"} priority={true} fill={true} alt="bg" />
                 </div>
                 <div className='max-w-[1176px] mx-auto relative h-full'>
                     <motion.div variants={variantsCDiv} className=' absolute top-[25px] bottom-[56px] text-3xl text-white w-full text-center'>
@@ -109,22 +109,22 @@ const TestPage = () => {
                         </motion.div>
                     ))} */}
                     <motion.div variants={variantsCDiv} className=' absolute bottom-[82px] left-0'>
-                        <Image src="/image/bg1.png" priority={false} alt="" width={238} height={98} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
+                        <Image src="/image/home/advantage1.png" priority={true} alt="" width={238} height={98} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
                     </motion.div>
-                    <motion.div variants={variantsCDiv} className={`absolute bottom-[${"228px"}] left-[${'16.2%'}]`}>
-                        <Image src="/image/bg2.png" priority={false} alt="" width={255} height={94} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
+                    <motion.div variants={variantsCDiv} className={`absolute bottom-[228px] left-[16.2%]`}>
+                        <Image src="/image/home/advantage2.png" priority={true} alt="" width={255} height={94} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
                     </motion.div>
                     <motion.div variants={variantsCDiv} className=' absolute bottom-[22px] left-[35.7%] '>
-                        <Image src="/image/bg3.png" priority={false} alt="" width={152} height={91} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
+                        <Image src="/image/home/advantage3.png" priority={true} alt="" width={152} height={91} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
                     </motion.div>
                     <motion.div variants={variantsCDiv} className=' absolute bottom-[114px] right-[43%] '>
-                        <Image src="/image/bg4.png" priority={false} alt="" width={107} height={86} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
+                        <Image src="/image/home/advantage4.png" priority={true} alt="" width={107} height={86} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
                     </motion.div>
                     <motion.div variants={variantsCDiv} className=' absolute bottom-[215px] right-[13.8%] '>
-                        <Image src="/image/bg5.png" priority={false} alt="" width={221} height={98} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
+                        <Image src="/image/home/advantage5.png" priority={true} alt="" width={221} height={98} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
                     </motion.div>
                     <motion.div variants={variantsCDiv} className=' absolute bottom-[57px] right-0'>
-                        <Image src="/image/bg6.png" priority={false} alt="" width={241} height={96} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
+                        <Image src="/image/home/advantage6.png" priority={true} alt="" width={241} height={96} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
                     </motion.div>
                 </div>
             </motion.div>

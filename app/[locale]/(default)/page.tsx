@@ -1,10 +1,8 @@
-import getIntl from '../intl';
-import LocaleSwitcher from '@/app/components/LocaleSwitcher';
-import Link from 'next/link';
-import getCurrentUser from "@/app/actions/getCurrentUser";
+import HomeRiskSwiper from "@/app/components/ui/home-risk-swiper";
+import HalfCirclePosition from "@/app/components/HalfCirclePosition";
+import ClientOnly from "@/app/components/ClientOnly";
 
-async function Home({ params: { locale } }: { params: { locale: string } }) {
-
+async function Home() {
     return (
         <main className=''>
             {/* 顶部大图 */}
@@ -17,11 +15,30 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                 </div>
             </div>
             {/*  */}
-            <div className='h-[896px] bg-slate-200'>
-                
+            <div className='w-full h-[896px] relative'>
+                <div className="absolute -top-32 inset-0 mx-auto w-[1273px] h-[530px] risk-ai-bg rounded-2xl text-[#333]">
+                    {/* title */}
+                    <div className="flex items-center justify-center gap-x-5 pt-12 mb-4">
+                        <span className=" block w-[22px] h-[22px] rounded-full bg-gradient-to-bl from-white to-[#316FE7] "></span>
+                        <span className="  text-[28px] font-semibold">AI支付风控，为跨境出海保驾护航</span>
+                        <span className=" block w-[22px] h-[22px] rounded-full bg-gradient-to-bl from-white to-[#316FE7]"></span>
+                    </div>
+                    <div className="text-center">欺诈提醒--欺诈预防--争议解决--全链路--站式为商户提供专业，快速。易用成熟的支付风控产品</div>
+                    <div className="text-center text-[28px] mt-4 mb-6 font-bold">全球欺诈仍在继续</div>
+                    {/* 幻灯片 */}
+                    <ClientOnly>
+                        <HomeRiskSwiper />
+                    </ClientOnly>
+                </div>
+                <div className="pt-[420px]">
+                    <div className="max-w-[1337px] h-[476px] relative mx-auto overflow-hidden">
+                        <ClientOnly>
+                            <HalfCirclePosition />
+                        </ClientOnly>
+                    </div>
+                </div>
             </div>
         </main>
     );
 }
-
 export default Home;

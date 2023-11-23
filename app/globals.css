@@ -33,3 +33,14 @@ body {
 .home-bg{
     background:no-repeat center/cover url("/image/home/home-bg.png") ;
 }
+
+.risk-ai-bg{
+    background:no-repeat bottom/contain url("/image/home/risk-ai-bg.png"), repeating-linear-gradient(to top,#fff,#EAF4FF);
+}
+
+
+@layer components {
+    .ab-c {
+      @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2;
+    }
+  }

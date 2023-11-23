@@ -16,10 +16,7 @@ const navList = [
 
 export default function Header() {
     const pathname = usePathname();
-    console.log(pathname, "pathname---");
-
     const [top, setTop] = useState<boolean>(true)
-
     // detect whether user has scrolled the page down by 10px
     const scrollHandler = () => {
         window.scrollY > 10 ? setTop(false) : setTop(true)

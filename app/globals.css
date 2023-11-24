@@ -39,8 +39,12 @@ body {
 }
 
 
+.earth-bg{
+    background:no-repeat right calc(100% + 10px)/contain url("/image/home/flash-earth.png"), #F6F8FF;
+}
+
 @layer components {
     .ab-c {
-      @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2;
+        @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2;
     }
-  }
+}

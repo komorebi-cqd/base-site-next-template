@@ -20,13 +20,13 @@ const RiskIdentification = () => {
                     <div className=' text-[#316FE7] text-2xl text-center font-bold pt-5 pb-4'>我们的优势</div>
                     <div className='flex justify-between items-center mt-24'>
                         <AdvantageItem title='模型准确率高，稳定可靠' desc={(<>动静态特征相结合，AI智能模型，<br />提高准确性，确保稳定性</>)} absImg={<div className=' absolute left-1/2 -top-[5.75rem] -translate-x-1/2 w-[13.5rem] h-[13.5rem]'>
-                            <Image src="/image/anti-fraud/anti-fraud-value1.png" alt='anti-fraud-value' fill={true} />
+                            <Image src="/image/advantage-icons/advantage1.png" alt='advantage1' fill={true} />
                         </div>} />
                         <AdvantageItem title='全平台、适配性好' desc={(<>动静态特征相结合，AI智能模型，高兼容，<br />有效对抗设备信息篡改</>)} absImg={<div className=' absolute left-1/2 -top-[4.5rem] -translate-x-1/2 w-[14.7rem] h-[10.2rem]'>
-                            <Image src="/image/risk-identification/item2.png" alt='risk-identification' fill={true} />
+                            <Image src="/image/advantage-icons/advantage8.png" alt='advantage8' fill={true} />
                         </div>} />
                         <AdvantageItem title='多维度、反咋骗能力强' desc={(<>多维度设备信息、大数据分析、AI智能算法<br />和智能风控系统，有效对抗伪造，机控和撸羊毛</>)} absImg={<div className=' absolute left-1/2 -top-[5.75rem] -translate-x-1/2 w-44 h-44'>
-                            <Image src="/image/risk-identification/item3.png" alt='anti-fraud-value' fill={true} />
+                            <Image src="/image/advantage-icons/advantage9.png" alt='advantage9' fill={true} />
                         </div>} />
                     </div>
                 </div>
@@ -50,7 +50,7 @@ const RiskIdentification = () => {
                         </div>
                         <div>
                             <div className='text-[#316FE7] text-[2rem] font-extrabold mb-2'>大数据</div>
-                            <div className='text-[#333333] text-base'>WeTech拥有上亿的移动设备生态，具有上百人的专业团队，<br/>可支撑设备风险识别业务的后续持续优化和更新迭代，<br/>具备海外设备变化的洞察先机，帮助业务提前感知潜在风险。</div>
+                            <div className='text-[#333333] text-base'>WeTech拥有上亿的移动设备生态，具有上百人的专业团队，<br />可支撑设备风险识别业务的后续持续优化和更新迭代，<br />具备海外设备变化的洞察先机，帮助业务提前感知潜在风险。</div>
                         </div>
                     </div>
                 </div>

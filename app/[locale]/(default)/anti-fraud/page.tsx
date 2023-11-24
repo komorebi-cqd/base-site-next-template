@@ -52,13 +52,13 @@ const AntiFraud = () => {
                         <div className='text-center text-4xl text-[#316FE7] pt-12 mb-28'>信用卡反欺诈核心价值</div>
                         <div className='flex justify-between items-center px-12'>
                             <AdvantageItem title='降低欺诈率' desc={(<>精准、实时地做出欺诈风险决策，<br />识别风险用户，拒绝欺诈订单，降低欺诈率</>)} absImg={<div className=' absolute left-1/2 -top-[5.75rem] -translate-x-1/2 w-[13.5rem] h-[13.5rem]'>
-                                <Image src="/image/anti-fraud/anti-fraud-value1.png" alt='anti-fraud-value' fill={true} />
+                                <Image src="/image/advantage-icons/advantage1.png" alt='advantage1' fill={true} />
                             </div>} />
                             <AdvantageItem title='提高订单通过率及营收' desc={(<>精准、实时地做出欺诈风险决策，<br />提高优质用户的订单通过率，增加加营收</>)} absImg={<div className=' absolute left-1/2 -top-[5.75rem] -translate-x-1/2 w-[13.5rem] h-[13.5rem]'>
-                                <Image src="/image/anti-fraud/anti-fraud-value2.png" alt='anti-fraud-value2' fill={true} />
+                                <Image src="/image/advantage-icons/advantage2.png" alt='advantage2' fill={true} />
                             </div>} />
                             <AdvantageItem title='消除拒付成本' desc={(<>主动阻止成本，<br />防止拒付和其他成本而影响到你的利润</>)} absImg={<div className=' absolute left-1/2 -top-[8rem] -translate-x-1/2 w-72 h-72'>
-                                <Image src="/image/anti-fraud/anti-fraud-value3.png" alt='anti-fraud-value' fill={true} />
+                                <Image src="/image/advantage-icons/advantage3.png" alt='advantage3' fill={true} />
                             </div>} />
 
                         </div>

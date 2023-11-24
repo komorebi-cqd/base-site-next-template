@@ -20,13 +20,13 @@ const RiskPortait = () => {
                     <div className=' text-[#316FE7] text-2xl text-center font-bold pt-5 pb-4'>我们的优势</div>
                     <div className='flex justify-between items-center mt-24'>
                         <AdvantageItem title='多维度风险画像' desc={(<>基本AI智能算法，从多个维度进行风险画像，<br />具备全面性和性高准确性</>)} absImg={<div className=' absolute left-1/2 -top-[5.75rem] -translate-x-1/2 w-[13.5rem] h-[13.5rem]'>
-                            <Image src="/image/anti-fraud/anti-fraud-value1.png" alt='anti-fraud-value' fill={true} />
+                        <Image src="/image/advantage-icons/advantage1.png" alt='advantage1' fill={true} />
                         </div>} />
                         <AdvantageItem title='全球采样数据库' desc={(<>丰富全球生态样能力，<br />高效的大数据分析和智能AI算法</>)} absImg={<div className=' absolute left-1/2 -top-[4.5rem] -translate-x-1/2 w-[14.7rem] h-[10.2rem]'>
-                            <Image src="/image/risk-identification/item2.png" alt='risk-identification' fill={true} />
+                        <Image src="/image/advantage-icons/advantage8.png" alt='advantage8' fill={true} />
                         </div>} />
                         <AdvantageItem title='定制化客户方案' desc={(<>专业定制服务团队，<br />便捷的接入流程和高效的响应机制</>)} absImg={<div className=' absolute left-1/2 -top-[5.75rem] -translate-x-1/2 w-44 h-44'>
-                            <Image src="/image/risk-identification/item3.png" alt='anti-fraud-value' fill={true} />
+                        <Image src="/image/advantage-icons/advantage9.png" alt='advantage9' fill={true} />
                         </div>} />
                     </div>
                 </div>

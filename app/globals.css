@@ -45,6 +45,10 @@ body {
     background:no-repeat right bottom/26.25rem 19.5rem url("/image/anti-fraud/earth.png"), #F5F8FF;
 }
 
+.risk-advantage-img{
+    background:no-repeat right bottom/26.25rem 19.5rem url("/image/anti-fraud/earth.png"), rgba(199,218,255,0.19);
+}
+
 @layer components {
     .ab-c {
         @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2;

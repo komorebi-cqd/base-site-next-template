@@ -2,20 +2,15 @@ import ClientOnly from "@/app/components/ClientOnly";
 import HomeRiskSwiper from "@/app/components/home/home-risk-swiper";
 import HalfCirclePosition from "@/app/components/HalfCirclePosition";
 import SixAdvantage from "@/app/components/home/six-advantage";
+import HomeTop from "@/app/components/home/home-top";
 import Image from "next/image";
 
 async function Home() {
+
     return (
         <main className=''>
             {/* 顶部大图 */}
-            <div className='home-bg w-full h-[818px] relative pt-60  pl-44'>
-                <div className='flex flex-col text-white'>
-                    <div className=' w-6 h-[2px] bg-white' />
-                    <div className=' text-6xl font-extrabold mt-11 mb-4'>多场景、大数据</div>
-                    <div className=' text-3xl font-medium'>全智能金融科技服务商</div>
-                    <div className=' cursor-pointer mt-12 border border-white w-[206px] h-[44px] rounded leading-[40px] text-center text-base'>立即体验</div>
-                </div>
-            </div>
+            <HomeTop />
             {/* AI支付风控，为跨境出海保驾护航 */}
             <div className='w-full h-[896px] relative'>
                 <div className="absolute -top-32 inset-0 mx-auto w-[1273px] h-[530px] risk-ai-bg rounded-2xl text-[#333]">

@@ -49,6 +49,27 @@ body {
     background:no-repeat right bottom/26.25rem 19.5rem url("/image/anti-fraud/earth.png"), rgba(199,218,255,0.19);
 }
 
+.half-item::before{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: -0.75rem;
+    left: -0.875rem;
+    z-index: -10;
+}
+
+.half-item1::before{
+    background: linear-gradient(90deg, #636BEC 0%, rgba(196,200,244,0.25) 100%);
+}
+.half-item2::before{
+    background: linear-gradient(90deg, #65BEB1 0%, rgba(180,226,219,0.31) 100%);
+}
+.half-item3::before{
+    background: linear-gradient(90deg, #3D73F0 0%, rgba(153,180,244,0.39) 100%);
+}
+
 @layer components {
     .ab-c {
         @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2;

@@ -6,8 +6,8 @@ import Footer from '@/app/components/ui/footer';
 
 
 export const metadata: Metadata = {
-    title: '创建网站',
-    description: '网址'
+    title: 'WeTech',
+    description: 'WeTech官网'
 };
 
 

@@ -1,6 +1,7 @@
 import React from 'react'
-import PageTop from '@/app/components/ui/page-top'
 import Image from 'next/image';
+import PageTop from '@/app/components/ui/page-top'
+import EarlyWarningSwiper from '@/app/components/ui/early-warning-swiper';
 
 const desc = (
     <>
@@ -15,8 +16,8 @@ const EarlyWarning = () => {
             {/* 顶部 */}
             <PageTop bgImg='/image/early-warning/top-bg.png' title='争议预警于解决' desc={desc} />
             {/* 两个幻灯片 */}
-            <div className='w-full h-[43.375rem] bg-[url("/image/early-warning/swiper-bg.png")] bg-center bg-no-repeat bg-cover'>
-
+            <div className='w-full h-[43.375rem] pt-20 bg-[url("/image/early-warning/swiper-bg.png")] bg-center bg-no-repeat bg-cover'>
+                <EarlyWarningSwiper />
             </div>
             {/* RDR和CDRN拒付解决服务能够做 */}
             <div className='w-full min-h-[28.5rem] bg-[#F4F7FF]'>
@@ -55,7 +56,7 @@ const EarlyWarning = () => {
                 </div>
             </div>
             {/* 我们的优点 */}
-            <div className='w-full min-h-[42.25rem]'>
+            <div className='w-full min-h-[42.25rem] bg-[url("/image/early-warning/advantage-bg.png")] bg-center bg-no-repeat bg-cover'>
                 <div className='max-w-[67.56rem] mx-auto'>
                     <div className='text-[#316FE7] text-2xl text-center font-bold pt-12 mb-10'>我们的优点</div>
                     <div className=' text-sm text-[#333] w-full flex flex-wrap justify-center items-center gap-x-40'>
@@ -91,7 +92,78 @@ const EarlyWarning = () => {
                         </div>
                     </div>
                 </div>
-
+            </div>
+            {/* Ethoca拒付预警服务 */}
+            <div className='min-h-[22.5rem] h-[22.5rem] w-full bg-[#00206E]'>
+                <div className=' max-w-[80.875rem] h-full mx-auto flex justify-between items-center'>
+                    <div className='relative w-[35.5rem] h-[10.875rem] flex-shrink-0'>
+                        <Image src="/image/early-warning/fw.png" fill={true} alt="Ethoca拒付预警服务" />
+                    </div>
+                    <div className=' text-white'>
+                        <div className=' font-extrabold text-[1.75rem] mb-4 '>Ethoca拒付预警服务</div>
+                        <ul className=' text-base flex flex-col gap-y-2'>
+                            <li>通过分层防御来实现：</li>
+                            <li>
+                                <div>1.消除： </div>
+                                <div className='indent-8'>通过实时向持卡人和发卡机构提供详细的商户订单和购买历史信息，阻止善意欺诈</div>
+                            </li>
+                            <li>
+                                <div>2.预警：</div>
+                                <div className='indent-8'>通过向商家提供欺诈和纠纷的预警，打击欺诈和退款</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {/* WeTech Ethoca拒付预警可以为您实现 */}
+            <div className='w-full min-h-[45.25.rem] '>
+                <div className='h-full pt-9 pb-16 w-[59.5rem] mx-auto'>
+                    <div className=' w-full text-[#316FE7] text-2xl font-extrabold text-center mb-14'>WeTech Ethoca拒付预警可以为您实现</div>
+                    <div className='w-full flex items-center justify-between flex-wrap gap-y-[3.875rem] gap-36'>
+                        <div className='flex flex-col items-center w-[13.25rem]'>
+                            <div className=' relative w-[11.125rem] h-[11.125rem]'>
+                                <Image src="/image/advantage-icons/advantage1.png" fill={true} alt="Ethoca拒付预警服务" />
+                            </div>
+                            <div className=' text-[#316FE7] text-base my-2'>反欺诈</div>
+                            <div className=' text-xs text-[#000] whitespace-nowrap'>采取行动阻止欺诈性订单的履行</div>
+                        </div>
+                        <div className='flex flex-col items-center w-[13.25rem]'>
+                            <div className=' relative w-[14rem] h-[10rem]'>
+                                <Image src="/image/advantage-icons/advantage8.png" fill={true} alt="Ethoca拒付预警服务" />
+                            </div>
+                            <div className=' text-[#316FE7] text-base my-2'>停止拒付</div>
+                            <div className=' text-xs text-[#000] whitespace-nowrap'>消除更多拒付并降低相关成本</div>
+                        </div>
+                        <div className='flex flex-col items-center w-[13.25rem]'>
+                            <div className=' relative w-[11rem] h-[10.75rem]'>
+                                <Image src="/image/advantage-icons/advantage9.png" fill={true} alt="Ethoca拒付预警服务" />
+                            </div>
+                            <div className=' text-[#316FE7] text-base my-2'>减少未来的欺诈</div>
+                            <div className=' text-xs text-[#000] whitespace-nowrap'>加强欺诈筛意，以识别未来欺诈行为并防止出现高峰</div>
+                        </div>
+                        <div className='flex flex-col items-center w-[13.25rem]'>
+                            <div className=' relative w-[13.25rem] h-[11.125rem]'>
+                                <Image src="/image/advantage-icons/advantage5.png" fill={true} alt="Ethoca拒付预警服务" />
+                            </div>
+                            <div className=' text-[#316FE7] text-base my-2'>查找相关欺诈</div>
+                            <div className=' text-xs text-[#000] whitespace-nowrap'>使用链接分析来消除相关欺诈订单</div>
+                        </div>
+                        <div className='flex flex-col items-center w-[13.25rem]'>
+                            <div className=' relative w-[12rem] h-[12rem]'>
+                                <Image src="/image/advantage-icons/advantage6.png" fill={true} alt="Ethoca拒付预警服务" />
+                            </div>
+                            <div className=' text-[#316FE7] text-base my-2'>增加接受度</div>
+                            <div className=' text-xs text-[#000] whitespace-nowrap'>发放更多退款可提高接受度并改善客户体验</div>
+                        </div>
+                        <div className='flex flex-col items-center w-[13.25rem]'>
+                            <div className=' relative w-[10.75rem] h-[11.625rem]'>
+                                <Image src="/image/advantage-icons/advantage7.png" fill={true} alt="Ethoca拒付预警服务" />
+                            </div>
+                            <div className=' text-[#316FE7] text-base my-2'>提高满意度</div>
+                            <div className=' text-xs text-[#000] whitespace-nowrap'>客户不再需要经历漫长而令人沮丧的退款流程</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

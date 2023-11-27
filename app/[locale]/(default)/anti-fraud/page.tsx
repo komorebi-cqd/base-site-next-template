@@ -77,7 +77,7 @@ const AntiFraud = () => {
             </div>
 
             {/* AI智能模型，成长型数据模型 */}
-            <div className='w-full h-[31.75rem] bg-slate-500'>
+            <div className='w-full h-[31.75rem] bg-slate-500 bg-[url("/image/anti-fraud/model-bg.png")] bg-center bg-no-repeat bg-cover'>
                 <div className=' font-bold text-2xl py-11 text-center text-[#FFFFFF]'>AI智能模型，成长型数据模型</div>
                 <div className='flex justify-between items-center max-w-[85rem] mx-auto'>
                     <div className=' relative w-[21.725rem] h-[18.38rem]'>

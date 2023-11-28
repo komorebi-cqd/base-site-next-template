@@ -8,7 +8,6 @@ pnpm dev
 
 打开 [http://localhost:3000](http://localhost:3000) .
 
-
 ## 目录讲解
 
 - actions
@@ -21,18 +20,49 @@ pnpm dev
 ```js
 //https://www.framer.com/motion/transition/#orchestration 编排
 const variantsUl = {
-    show: {
-        transition: { staggerChildren: 0, delayChildren: 6 }  
-        //delayChildren子动画首次执行延迟秒数  
-        //
-        // staggerChildren每个子动画延迟秒数 
-        //https://www.framer.com/motion/transition/###staggerchildren
-    },
-    hidden: {
-        transition: { staggerChildren: 0.05, staggerDirection: -1 }
-    }
+  show: {
+    transition: { staggerChildren: 0, delayChildren: 6 },
+    //delayChildren子动画首次执行延迟秒数
+    //
+    // staggerChildren每个子动画延迟秒数
+    //https://www.framer.com/motion/transition/###staggerchildren
+  },
+  hidden: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
 };
-
 ```
 
+```js
 
+server {
+    listen       80;
+    server_name   106.52.238.51;
+
+   location / {
+       #root项目文件的绝对路径
+       root /www/offsit;
+       #try_files $uri $uri.html $uri/ =404;
+       proxy_pass http://127.0.0.1:3000/;
+       proxy_http_version 1.1;
+       proxy_set_header Upgrade $http_upgrade;
+       proxy_set_header Connection 'upgrade';
+       proxy_set_header Host $host;
+       proxy_cache_bypass $http_upgrade;
+    }
+ #  location /_next/image{
+#       root /www/offsit/.next/static/media/;
+#}
+}
+
+
+server {
+    listen       80;
+    server_name   106.52.238.51;
+
+   location / {
+       #root项目文件的绝对路径
+       root /www/offsit;
+    }
+}
+```

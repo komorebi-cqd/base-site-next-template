@@ -3,17 +3,11 @@ import React, { useState } from 'react'
 import Input from '@/app/components/Inputs/Input'
 import Button from '@/app/components/Button';
 import { FieldValues, useForm, SubmitHandler } from 'react-hook-form';
-import { getCsrfToken, signIn } from 'next-auth/react';
+import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
-import useSWR from "swr";
-import { fetcher } from '@/lib/axios';
-
 
 const Login = () => {
-    const { data, error } = useSWR(['/apply/list', 'post' as const, {page: 1, size: 10}],(par) => fetcher(...par));
-    console.log(data, error,"data, error---/apply/list");
-    
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const router = useRouter();
     const {
@@ -28,16 +22,9 @@ const Login = () => {
         }
     });
 
-    getCsrfToken().then(res => {
-        console.log(res, "getCsrfToken---");
-
-    })
 
     const onSumbit: SubmitHandler<FieldValues> = data => {
-        console.log(data, "2222222222");
-
         setIsLoading(true);
-
         const loginToast = toast.loading("登录中");
         signIn('credentials', {
             ...data,

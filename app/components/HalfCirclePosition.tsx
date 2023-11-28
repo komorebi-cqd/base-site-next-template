@@ -19,8 +19,8 @@ const HalfCirclePosition = () => {
                         <div className='text-[#333333] text-base font-extrabold mb-3'>欺诈预防-支付风控</div>
                         <div className=' text-xs text-[rgba(51,51,51,0.85)] leading-5'>通过信用卡欺诈/设备风险识别等自研<br />支付风控类产品，运用大小模型+小模型<br />结合，并通过AI自动引擎实现风控自动决策</div>
                     </div>
-                    <div className=' relative w-[18.75rem] h-[18.75rem] flex-shrink-0'>
-                        <Image src="/image/early-warning/arrow.png" fill={true} alt="" />
+                    <div className=' relative w-[19.125rem] h-[18.75rem] flex-shrink-0'>
+                        <Image src="/image/home/home-center.png" fill={true} alt="" />
                     </div>
                     <div className=' relative half-item half-item2'>
                         <div className='text-[#333333] text-base font-extrabold mb-3'>风控预警-支付风控</div>

@@ -14,7 +14,7 @@ const AntiFraud = () => {
     return (
         <div>
             {/* 顶部 */}
-            <PageTop bgImg='/image/anti-fraud/top-bg.png' title='WeTech专注于出海支付风控服务' desc={desc} />
+            <PageTop bgImg='/image/anti-fraud/top-bg.png' title='WeTech专注于出海支付风控服务' desc={desc} topText='产品->信用反欺诈'/>
             {/* 传统对比wetech */}
             <div className='w-full h-[48.38rem] bg-gradient-to-b  from-[#F4F7FF] via-[rgba(224,238,255,0)] to-white py-24'>
                 <div className='flex flex-col justify-center max-w-[80rem] mx-auto'>

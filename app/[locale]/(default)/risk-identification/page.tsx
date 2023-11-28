@@ -13,7 +13,7 @@ const RiskIdentification = () => {
     return (
         <div>
             {/* 顶部 */}
-            <PageTop bgImg='/image/risk-identification/top-bg.png' title='设备风险识别' desc={desc} />
+            <PageTop bgImg='/image/risk-identification/top-bg.png' title='设备风险识别' desc={desc} topText='产品->设备风险识别'/>
             {/* 优势 */}
             <div className='w-full h-[28.565rem] risk-advantage-img'>
                 <div className=' max-w-[73.4rem] mx-auto'>

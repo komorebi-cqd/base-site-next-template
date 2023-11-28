@@ -13,12 +13,12 @@ const variantsDiv: Variants = {
             duration: 0.8,
             delay: 0.2,
             staggerChildren: 0.2,
-            delayChildren: 0.5,
+            delayChildren: 0.25,
         }
     },
     hidden: {
-        y: 100,
-        opacity: 0
+        y: 0,
+        opacity: 1
     }
 };
 
@@ -42,7 +42,7 @@ const variantsCDiv: Variants = {
 
 const SixAdvantage = () => {
     return (
-        <motion.div variants={variantsDiv} initial="hidden" whileInView="show" viewport={{ once: true}} className='w-full h-[448px] overflow-hidden relative'>
+        <motion.div variants={variantsDiv} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1}} className='w-full h-[448px] overflow-hidden relative'>
             {/* <Image src={"/image/homebg.png"} fill={true} alt='bg' /> */}
             <div className='w-full h-[448px] absolute top-0 bottom-0 left-0 right-0'>
                 <Image src={"/image/home/advantagebg.png"} priority={true} fill={true} alt="bg" />

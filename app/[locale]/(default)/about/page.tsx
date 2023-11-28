@@ -6,7 +6,9 @@ const About = () => {
     return (
         <div className='w-full'>
             {/* 顶部背景图 */}
-            <div className='w-full h-[51.125rem] bg-[url("/image/about/bg-top.png")] bg-no-repeat relative bg-cover bg-center'></div>
+            <div className='w-full h-[51.125rem] bg-[url("/image/about/bg-top.png")] bg-no-repeat relative bg-cover bg-center'>
+                <div className=' text-sm text-white pt-[8rem] max-w-4xl mx-auto pl-8 mb-3'>{"公司信息->关于我们"}</div>
+            </div>
             <div className='w-full h-[59.565rem] bg-gradient-to-b  from-[#E7F1FF] to-white'>
                 <div className='max-w-[78.75rem] mx-auto h-full flex flex-col'>
                     <div className='flex-1 flex justify-between items-center px-20'>

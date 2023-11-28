@@ -14,7 +14,7 @@ const EarlyWarning = () => {
     return (
         <div>
             {/* 顶部 */}
-            <PageTop bgImg='/image/early-warning/top-bg.png' title='争议预警于解决' desc={desc} />
+            <PageTop bgImg='/image/early-warning/top-bg.png' title='争议预警于解决' desc={desc} topText='产品->争议预警与解决'/>
             {/* 两个幻灯片 */}
             <div className='w-full h-[43.375rem] pt-20 bg-[url("/image/early-warning/swiper-bg.png")] bg-center bg-no-repeat bg-cover'>
                 <EarlyWarningSwiper />

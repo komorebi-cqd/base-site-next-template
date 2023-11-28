@@ -4,15 +4,8 @@ import Link from 'next/link'
 import Logo from './logo'
 import { usePathname } from 'next/navigation'
 import MobileMenu from './mobile-menu'
+import {navList} from "../utils/data";
 
-const navList = [
-    { id: 1, text: "首页", link: "/" },
-    { id: 2, text: "信用卡反欺诈", link: "/anti-fraud" },
-    { id: 3, text: "争议预警与解决", link: "/early-warning" },
-    { id: 4, text: "设备风险识别", link: "/risk-identification" },
-    { id: 5, text: "风险画像", link: "/risk-portrait" },
-    { id: 6, text: "关于我们", link: "/about" },
-]
 
 export default function Header() {
     const pathname = usePathname();
@@ -29,12 +22,12 @@ export default function Header() {
     }, [top])
 
     return (
-        <header className={`fixed w-full z-30 transition duration-300 ease-in-out ${!top ? ' bg-zinc-800  backdrop-blur-sm shadow-sm' : ''}`}>
-            <div className=" max-w-4xl mx-auto px-5 sm:px-6 ">
-                <div className="flex items-center justify-between h-16 md:h-36">
+        <header className={`fixed w-full z-30 transition duration-300 ease-in-out ${!top ? ' bg-[--header-bg]  backdrop-blur-sm shadow-sm' : ''}`}>
+            <div className=" max-w-4xl mx-auto px-5 sm:px-6 relative">
+                <div className="flex items-center justify-between h-28 md:h-36">
 
                     {/* Site branding */}
-                    <div className="shrink-0 mr-11">
+                    <div className="shrink-0 mr-11  z-50">
                         <Logo />
                     </div>
 
@@ -51,24 +44,6 @@ export default function Header() {
                                     </li>
                                 )
                             })}
-                            {/* <li>
-                                <Link href="/" className='hover:text-white hover:font-bold transition-all'>首页</Link>
-                            </li>
-                            <li>
-                                <Link href="/" className='hover:text-white hover:font-bold transition-all'>信用卡反欺诈</Link>
-                            </li>
-                            <li>
-                                <Link href="/" className='hover:text-white hover:font-bold transition-all'>争议预警与解决</Link>
-                            </li>
-                            <li>
-                                <Link href="/" className='hover:text-white hover:font-bold transition-all'>设备风险识别</Link>
-                            </li>
-                            <li>
-                                <Link href="/" className='hover:text-white hover:font-bold transition-all'>风险画像</Link>
-                            </li>
-                            <li>
-                                <Link href="/" className='hover:text-white hover:font-bold transition-all'>关于我们</Link>
-                            </li> */}
                         </ul>
                     </nav>
                     <MobileMenu />

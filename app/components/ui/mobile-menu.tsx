@@ -1,83 +1,130 @@
-'use client'
+import React from 'react'
+import { useRef } from "react";
+import { motion, frame, useCycle, SVGMotionProps } from "framer-motion";
+import { useDimensions } from "../utils/use-dimensions";
+import { navList } from "../utils/data";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation'
 
-import { useState, useRef, useEffect } from 'react'
-import { Transition } from '@headlessui/react'
-import Link from 'next/link'
 
-export default function MobileMenu() {
-    const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
+const sidebar = {
+    open: (height = 1000) => ({
+        clipPath: `circle(${height * 2 + 200}px at 100% 0px)`,
+        transition: {
+            type: "spring",
+            stiffness: 20,
+            restDelta: 2
+        }
+    }),
+    closed: {
+        clipPath: "circle(0px at 100% 0px)",
+        transition: {
+            delay: 0.5,
+            type: "spring",
+            stiffness: 400,
+            damping: 40
+        }
+    }
+};
 
-    const trigger = useRef<HTMLButtonElement>(null)
-    const mobileNav = useRef<HTMLDivElement>(null)
+const Path = (props: React.JSX.IntrinsicAttributes & SVGMotionProps<SVGPathElement> & React.RefAttributes<SVGPathElement>) => (
+    <motion.path
+        fill="transparent"
+        strokeWidth="3"
+        stroke="#fff"
+        strokeLinecap="round"
+        {...props}
+    />
+);
 
-    // close the mobile menu on click outside
-    useEffect(() => {
-        const clickHandler = ({ target }: { target: EventTarget | null }): void => {
-            if (!mobileNav.current || !trigger.current) return;
-            if (!mobileNavOpen || mobileNav.current.contains(target as Node) || trigger.current.contains(target as Node)) return;
-            setMobileNavOpen(false)
-        };
-        document.addEventListener('click', clickHandler)
-        return () => document.removeEventListener('click', clickHandler)
-    })
 
-    // close the mobile menu if the esc key is pressed
-    useEffect(() => {
-        const keyHandler = ({ keyCode }: { keyCode: number }): void => {
-            if (!mobileNavOpen || keyCode !== 27) return;
-            setMobileNavOpen(false)
-        };
-        document.addEventListener('keydown', keyHandler)
-        return () => document.removeEventListener('keydown', keyHandler)
-    })
+const MenuToggle = ({ toggle }: { toggle: () => void }) => (
+    <button onClick={toggle} className=' absolute top-1/2 -translate-y-1/2 w-12 h-12 right-8 flex items-center justify-center'>
+        <svg width="23" height="23" viewBox="0 0 23 23">
+            <Path
+                variants={{
+                    closed: { d: "M 2 2.5 L 20 2.5" },
+                    open: { d: "M 3 16.5 L 17 2.5" }
+                }}
+            />
+            <Path
+                d="M 2 9.423 L 20 9.423"
+                variants={{
+                    closed: { opacity: 1 },
+                    open: { opacity: 0 }
+                }}
+                transition={{ duration: 0.1 }}
+            />
+            <Path
+                variants={{
+                    closed: { d: "M 2 16.346 L 20 16.346" },
+                    open: { d: "M 3 2.5 L 17 16.346" }
+                }}
+            />
+        </svg>
+    </button>
+);
+
+const itemIds = [0, 1, 2, 3, 4];
+
+const menuUlVariants = {
+    open: {
+        transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+    },
+    closed: {
+        transition: { staggerChildren: 0.05, staggerDirection: -1 }
+    }
+};
+
+const menuLiVariants = {
+    open: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            y: { stiffness: 1000, velocity: -100 }
+        }
+    },
+    closed: {
+        y: 50,
+        opacity: 0,
+        transition: {
+            y: { stiffness: 1000 }
+        }
+    }
+};
+
+const MobileMenu = () => {
+    const pathname = usePathname();
+    const [isOpen, toggleOpen] = useCycle(false, true);
+    const containerRef = useRef(null);
+    const { height } = useDimensions(containerRef);
 
     return (
-        <div className="flex md:hidden">
-            {/* Hamburger button */}
-            <button
-                ref={trigger}
-                className={`hamburger ${mobileNavOpen && 'active'}`}
-                aria-controls="mobile-nav"
-                aria-expanded={mobileNavOpen}
-                onClick={() => setMobileNavOpen(!mobileNavOpen)}
+        <div className='md:hidden'>
+            <motion.nav
+                initial={false}
+                animate={isOpen ? "open" : "closed"}
+                custom={height}
+                ref={containerRef}
+                className=' absolute top-0 left-0 right-0 bottom-0 w-full'
             >
-                <span className="sr-only">Menu</span>
-                <svg className="w-6 h-6 fill-current text-gray-900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="4" width="24" height="2" />
-                    <rect y="11" width="24" height="2" />
-                    <rect y="18" width="24" height="2" />
-                </svg>
-            </button>
-
-            {/*Mobile navigation */}
-            <div ref={mobileNav}>
-                <Transition
-                    show={mobileNavOpen}
-                    as="nav"
-                    id="mobile-nav"
-                    className="absolute top-full h-screen pb-16 z-20 left-0 w-full overflow-scroll bg-white"
-                    enter="transition ease-out duration-200 transform"
-                    enterFrom="opacity-0 -translate-y-2"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-out duration-200"
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
-                >
-                    <ul className="px-5 py-2">
-                        <li>
-                            <Link href="/signin" className="flex font-medium w-full text-gray-600 hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>Sign in</Link>
-                        </li>
-                        <li>
-                            <Link href="/signup" className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 w-full my-2" onClick={() => setMobileNavOpen(false)}>
-                                <span>Sign up</span>
-                                <svg className="w-3 h-3 fill-current text-gray-400 shrink-0 ml-2 -mr-1" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fill="#999" fillRule="nonzero" />
-                                </svg>
+                <motion.div className=" absolute w-full top-0 left-0 right-0 h-screen bg-[--header-bg]" variants={sidebar} />
+                <motion.ul variants={menuUlVariants} className=' pl-16 pt-36 md:pt-[--header-height] flex flex-col items-start gap-y-7'>
+                    {navList.map(it => (
+                        <motion.li
+                            key={it.id}
+                            variants={menuLiVariants}
+                        >
+                            <Link href={it.link} onClick={() => toggleOpen()} className={`text-[#C7DAFF] transition-all hover:text-white font-bold relative before:absolute before:h-1 before:transition-all before:-bottom-4 before:rounded hover:before:w-5 before:bg-white before:left-0 ${(pathname === "/" && it.link === "/") || (pathname !== "/" && it.link !== "/" && pathname?.startsWith(it.link)) ? "text-white before:w-5" : "before:w-0"}`}>
+                                {it.text}
                             </Link>
-                        </li>
-                    </ul>
-                </Transition>
-            </div>
+                        </motion.li>
+                    ))}
+                </motion.ul>
+                <MenuToggle toggle={() => toggleOpen()} />
+            </motion.nav>
         </div>
     )
 }
+
+export default MobileMenu;

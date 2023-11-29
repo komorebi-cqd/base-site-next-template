@@ -14,11 +14,14 @@ export default function Header() {
     const scrollHandler = () => {
         window.scrollY > 10 ? setTop(false) : setTop(true)
     }
+    
 
     useEffect(() => {
         scrollHandler()
         window.addEventListener('scroll', scrollHandler)
-        return () => window.removeEventListener('scroll', scrollHandler)
+        return () => {
+            window.removeEventListener('scroll', scrollHandler);
+        }
     }, [top])
 
     return (

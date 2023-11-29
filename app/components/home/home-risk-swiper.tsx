@@ -70,51 +70,53 @@ const HomeRiskSwiper = () => {
 
     const [realIndex, setRealIndex] = useState(0);
     return (
-        <div className='lg:w-[46.25rem] mx-auto h-[15.25rem] relative'>
-            <Swiper
-                slidesOffsetBefore={30}
-                effect='coverflow'
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={4}
-                // freeMode={true}
-                // initialSlide={3}
-                loop={true}
-                observeParents={true}
-                coverflowEffect={{
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 70,
-                    modifier: 1,
-                    slideShadows: false
-                }}
-                observer={true}
-                loopAdditionalSlides={1}
-                onSlideChange={(e) => {
-                    setRealIndex(e.realIndex);
-                }}
-                modules={[EffectCoverflow]}
-                className="mySwiper w-full h-full relative"
-            >
-                {
-                    slideList.map(it => (
-                        <SwiperSlide className='!w-[12.75rem] h-full' key={it.id}>
-                            <div className='w-full h-full bg-white flex flex-col items-center shadow-md'>
-                                <div className="w-32 h-32 mx-auto relative mt-5">
-                                    <Image src={it.src} priority={true} fill={true} alt={it.alt} />
+        <div className='lg:w-[46.25rem] mx-auto'>
+            <div className='w-full mx-auto h-[15.25rem] relative'>
+                <Swiper
+                    slidesOffsetBefore={30}
+                    effect='coverflow'
+                    grabCursor={true}
+                    centeredSlides={true}
+                    slidesPerView={4}
+                    // freeMode={true}
+                    // initialSlide={3}
+                    loop={true}
+                    observeParents={true}
+                    coverflowEffect={{
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 70,
+                        modifier: 1,
+                        slideShadows: false
+                    }}
+                    observer={true}
+                    loopAdditionalSlides={1}
+                    onSlideChange={(e) => {
+                        setRealIndex(e.realIndex);
+                    }}
+                    modules={[EffectCoverflow]}
+                    className="mySwiper w-full h-full relative"
+                >
+                    {
+                        slideList.map(it => (
+                            <SwiperSlide className='!w-[12.75rem] h-full' key={it.id}>
+                                <div className='w-full h-full bg-white flex flex-col items-center shadow-md'>
+                                    <div className="w-32 h-32 mx-auto relative mt-5">
+                                        <Image src={it.src} priority={true} fill={true} alt={it.alt} />
+                                    </div>
+                                    <div className='bg-[rgba(49,111,231,0.15)] rounded-lg px-2 text-[#316FE7] text-[13px] h-4 leading-4 my-3'>{it.title}</div>
+                                    <div className=' text-xs text-[#333333] whitespace-normal px-4'>{it.desc}</div>
                                 </div>
-                                <div className='bg-[rgba(49,111,231,0.15)] rounded-lg px-2 text-[#316FE7] text-[13px] h-4 leading-4 my-3'>{it.title}</div>
-                                <div className=' text-xs text-[#333333] whitespace-normal px-4'>{it.desc}</div>
-                            </div>
-                        </SwiperSlide>
-                    ))
-                }
-            </Swiper>
+                            </SwiperSlide>
+                        ))
+                    }
+                </Swiper>
+            </div>
             <ul className='flex items-center justify-center gap-x-1 mt-8'>
                 {pag.map(it => {
-                    const opacity = Math.abs((realIndex % 4) - it) === 0 ? 1 : 1 - Math.abs((realIndex % 4) - it)  * 0.25;
+                    const opacity = Math.abs((realIndex % 4) - it) === 0 ? 1 : 1 - Math.abs((realIndex % 4) - it) * 0.25;
                     return (
-                        <li key={it} className={`w-[0.375rem] h-[0.375rem] rounded-full bg-[#316FE7] transition-all`} style={{opacity: opacity}}></li>
+                        <li key={it} className={`w-[0.375rem] h-[0.375rem] rounded-full bg-[#316FE7] transition-all`} style={{ opacity: opacity }}></li>
                     )
                 })}
             </ul>

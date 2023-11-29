@@ -83,6 +83,6 @@ body {
         @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2;
     }
     .sub-title{
-        @apply text-center font-bold text-4xl text-[--text-primary];
+        @apply text-center font-bold text-2xl lg:text-4xl text-[--text-primary];
     }
 }

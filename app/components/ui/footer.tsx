@@ -11,8 +11,8 @@ const productList = [
 
 const Footer = () => {
     return (
-        <footer className='w-full h-[508px] bg-[#071532] pt-[82px]'>
-            <div className='max-w-[1040px] mx-auto text-white flex justify-between items-start'>
+        <footer className='w-full pb-12 md:pb-[13.375rem] bg-[#071532] pt-[82px] '>
+            <div className='max-w-[1040px] mx-auto text-white flex flex-col md:flex-row  justify-between items-start'>
                 {/* 左边联系 */}
                 <div>
                     <div className=' mb-8 font-semibold text-5xl'>WeTech</div>
@@ -33,7 +33,7 @@ const Footer = () => {
                 </div>
 
                 {/* 右边产品和公司信息 */}
-                <div className='flex text-[#96BAFF] gap-x-44'>
+                <div className='flex flex-col md:flex-row text-[#96BAFF] gap-x-44'>
                     {/* 产品 */}
                     <div>
                         <div className='text-white text-base font-semibold mb-5'>产品</div>

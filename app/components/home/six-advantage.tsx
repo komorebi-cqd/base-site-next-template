@@ -56,8 +56,8 @@ const SixAdvantage = () => {
                             <Image src={it.src} priority={false} alt="" width={it.width} height={it.height} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
                         </motion.div>
                     ))} */}
-                <motion.div variants={variantsCDiv} className=' absolute bottom-[82px] left-0'>
-                    <Image src="/image/home/advantage1.png" priority={true} alt="" width={238} height={98} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
+                <motion.div variants={variantsCDiv} className=' absolute bottom-[82px] left-0 w-[14.875rem] h-[6.125rem]'>
+                    <Image src="/image/home/advantage1.png" priority={true} alt=""  objectFit='cover' fill={true} className=' transition-all hover:!scale-110 cursor-pointer' />
                 </motion.div>
                 <motion.div variants={variantsCDiv} className={`absolute bottom-[228px] left-[16.2%]`}>
                     <Image src="/image/home/advantage2.png" priority={true} alt="" width={255} height={94} className='object-cover transition-all hover:!scale-110 cursor-pointer' />

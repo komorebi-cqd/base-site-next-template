@@ -61,4 +61,8 @@ server {
        root /www/offsit;
     }
 }
+
 ```
+
+
+***source ~/.profile***

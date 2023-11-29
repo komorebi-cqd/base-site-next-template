@@ -20,8 +20,8 @@ const AntiFraud = () => {
                 <div className='flex flex-col justify-center max-w-[80rem] mx-auto'>
                     <div className='flex justify-between items-center max-w-[77.315rem] mx-auto w-full'>
                         <div className='flex-1'>
-                            <div className='text-[#316FE7] text-[1.75rem] font-extrabold'>传统风控</div>
-                            <div className=' text-base text-[#171717] mt-3'>
+                            <div className='sub-title text-left'>传统风控</div>
+                            <div className=' text-base text-[#171717] mt-5'>
                                 传统风控采用人工结合简单规则进行判定，<br />不仅成本高，效率低，还受人为因素邮箱，导致判定结果不理想
                             </div>
                         </div>
@@ -37,8 +37,8 @@ const AntiFraud = () => {
                             <Image src="/image/anti-fraud/wetech-risk-control.png" alt='wetech-risk-control' fill={true} />
                         </div>
                         <div>
-                            <div className='text-[#316FE7] text-[1.75rem] font-extrabold'>WeTech风控</div>
-                            <div className=' text-base text-[#171717] mt-3'>
+                            <div className='sub-title text-left'>WeTech风控</div>
+                            <div className=' text-base text-[#171717] mt-5'>
                                 WeTech信用卡反欺诈，是以人工智能算法为核心，<br />依托实时计算、决策引擎。知识图谱、终端态势感知等技术，<br />并基于对客户业务场景和需求的深度了解，为客户的出海业务保驾护航
                             </div>
                         </div>
@@ -49,15 +49,15 @@ const AntiFraud = () => {
             <div className='w-full h-[57.83rem] earth-bg2'>
                 <div className='w-[73.325rem] mx-auto'>
                     <div>
-                        <div className='text-center text-4xl text-[#316FE7] pt-12 mb-28'>信用卡反欺诈核心价值</div>
+                        <div className='sub-title pt-12 mb-28'>信用卡反欺诈核心价值</div>
                         <div className='flex justify-between items-center px-12'>
-                            <AdvantageItem title='降低欺诈率' desc={(<>精准、实时地做出欺诈风险决策，<br />识别风险用户，拒绝欺诈订单，降低欺诈率</>)} absImg={<div className=' absolute left-1/2 -top-[5.75rem] -translate-x-1/2 w-[13.5rem] h-[13.5rem]'>
+                            <AdvantageItem title='降低欺诈率' desc={(<>精准、实时地做出欺诈风险决策，<br />识别风险用户，拒绝欺诈订单，降低欺诈率</>)} absImg={<div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 w-[15rem] h-[15rem]'>
                                 <Image src="/image/advantage-icons/advantage1.png" alt='advantage1' fill={true} />
                             </div>} />
-                            <AdvantageItem title='提高订单通过率及营收' desc={(<>精准、实时地做出欺诈风险决策，<br />提高优质用户的订单通过率，增加加营收</>)} absImg={<div className=' absolute left-1/2 -top-[5.75rem] -translate-x-1/2 w-[13.5rem] h-[13.5rem]'>
-                                <Image src="/image/advantage-icons/advantage2.png" alt='advantage2' fill={true} />
+                            <AdvantageItem title='提高订单通过率及营收' desc={(<>精准、实时地做出欺诈风险决策，<br />提高优质用户的订单通过率，增加加营收</>)} absImg={<div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 w-[15rem] h-[15rem]'>
+                                <Image src="/image/advantage-icons/advantage4.png" alt='advantage2' fill={true} />
                             </div>} />
-                            <AdvantageItem title='消除拒付成本' desc={(<>主动阻止成本，<br />防止拒付和其他成本而影响到你的利润</>)} absImg={<div className=' absolute left-1/2 -top-[8rem] -translate-x-1/2 w-72 h-72'>
+                            <AdvantageItem title='消除拒付成本' desc={(<>主动阻止成本，<br />防止拒付和其他成本而影响到你的利润</>)} absImg={<div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 w-[15rem] h-[15rem]'>
                                 <Image src="/image/advantage-icons/advantage3.png" alt='advantage3' fill={true} />
                             </div>} />
 
@@ -65,7 +65,7 @@ const AntiFraud = () => {
                     </div>
                     <div className='w-full h-[1px] bg-[rgba(0,0,0,0.25)] mt-10'></div>
                     <div className='w-full'>
-                        <div className='text-[#316FE7] text-[1.75rem] text-center mt-10 mb-[4.88rem]'>WeTech专注于出海支付风控服务</div>
+                        <div className='sub-title mt-10 mb-[4.88rem]'>WeTech专注于出海支付风控服务</div>
                         <div className='flex justify-between items-center text-[#333] text-base'>
                             <div>具备上百个自定义AI特征，<br />拥有一支由上百名名专家组成的团队，专门从事风控业务的持续挖掘和优化<br />确保信用卡反欺诈持续在业界的优势，最大程度的采用自动化决策功能，简<br />化审核，降低欺诈率，最大限度减少拒付，保障你的营收和品牌。</div>
                             <div className=' relative w-[29.25rem] h-[6.25rem]'>

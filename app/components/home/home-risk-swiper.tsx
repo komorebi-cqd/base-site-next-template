@@ -70,7 +70,7 @@ const HomeRiskSwiper = () => {
 
     const [realIndex, setRealIndex] = useState(0);
     return (
-        <div className='w-[46.25rem] mx-auto h-[15.25rem] relative'>
+        <div className='lg:w-[46.25rem] mx-auto h-[15.25rem] relative'>
             <Swiper
                 slidesOffsetBefore={30}
                 effect='coverflow'

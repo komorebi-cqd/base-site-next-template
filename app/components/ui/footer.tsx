@@ -15,8 +15,8 @@ const Footer = () => {
             <div className='max-w-[1040px] mx-auto text-white flex justify-between items-start'>
                 {/* 左边联系 */}
                 <div>
-                    <div className=' mb-8 font-semibold text-5xl '>WeTech</div>
-                    <ul className='flex flex-col gap-y-5'>
+                    <div className=' mb-8 font-semibold text-5xl'>WeTech</div>
+                    <ul className='flex flex-col gap-y-5 text-sm'>
                         <li className='flex items-center gap-x-1'>
                             <Image src="/image/footer/phone.png" width={20} height={20} alt='WeTech-phone' />
                             <span>联系电话：13715293975</span>

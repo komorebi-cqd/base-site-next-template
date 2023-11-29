@@ -10,21 +10,54 @@ const desc = (
 );
 
 
+const warnList = [
+    {
+        src: "/image/advantage-icons/yj1.png",
+        title: "反欺诈",
+        desc: "采取行动阻止欺诈性订单的履行"
+    },
+    {
+        src: "/image/advantage-icons/yj2.png",
+        title: "停止拒付",
+        desc: "消除更多拒付并降低相关成本"
+    },
+    {
+        src: "/image/advantage-icons/yj3.png",
+        title: "减少未来的欺诈",
+        desc: "加强欺诈筛意，以识别未来欺诈行为并防止出现高峰"
+    },
+    {
+        src: "/image/advantage-icons/yj4.png",
+        title: "查找相关欺诈",
+        desc: "使用链接分析来消除相关欺诈订单"
+    },
+    {
+        src: "/image/advantage-icons/yj5.png",
+        title: "增加接受度",
+        desc: "发放更多退款可提高接受度并改善客户体验"
+    },
+    {
+        src: "/image/advantage-icons/yj6.png",
+        title: "提高满意度",
+        desc: "客户不再需要经历漫长而令人沮丧的退款流程"
+    },
+]
+
 const EarlyWarning = () => {
     return (
         <div>
             {/* 顶部 */}
-            <PageTop bgImg='/image/early-warning/top-bg.png' title='争议预警于解决' desc={desc} topText='产品->争议预警与解决'/>
+            <PageTop bgImg='/image/early-warning/top-bg.png' title='争议预警于解决' desc={desc} topText='产品->争议预警与解决' />
             {/* 两个幻灯片 */}
             <div className='w-full h-[43.375rem] pt-20 bg-[url("/image/early-warning/swiper-bg.png")] bg-center bg-no-repeat bg-cover'>
                 <EarlyWarningSwiper />
             </div>
             {/* RDR和CDRN拒付解决服务能够做 */}
             <div className='w-full min-h-[28.5rem] bg-[#F4F7FF]'>
-                <div className='max-w-[78.75rem] mx-auto'>
-                    <div className=' text-[1.75rem] text-[#316FE7] text-center pt-[2.625rem] font-extrabold'>RDR和CDRN拒付解决服务能够做什么？</div>
+                <div className='max-w-[83.75rem] mx-auto'>
+                    <div className=' text-4xl text-[#316FE7] text-center pt-[2.4rem] pb-2 font-extrabold'>RDR和CDRN拒付解决服务能够做什么？</div>
                     <div className='flex items-center flex-1'>
-                        <ul className='text-[0.9375rem] text-[rgba(0,0,0,0.85)] flex flex-col gap-y-1 py-4'>
+                        <ul className=' text-base text-[rgba(0,0,0,0.85)] flex flex-col gap-y-1 py-4'>
                             <li>
                                 <p>1.解决因商户本身行为等造成的拒付率过高的问题；</p>
                             </li>
@@ -57,36 +90,36 @@ const EarlyWarning = () => {
             </div>
             {/* 我们的优点 */}
             <div className='w-full min-h-[42.25rem] bg-[url("/image/early-warning/advantage-bg.png")] bg-center bg-no-repeat bg-cover'>
-                <div className='max-w-[67.56rem] mx-auto'>
-                    <div className='text-[#316FE7] text-2xl text-center font-bold pt-12 mb-10'>我们的优点</div>
-                    <div className=' text-sm text-[#333] w-full flex flex-wrap justify-center items-center gap-x-40'>
-                        <div className='flex flex-col items-center'>
-                            <div className=' relative w-[11.125rem] h-[11.125rem]'>
+                <div className='max-w-[67.1875rem] mx-auto'>
+                    <div className='text-[#316FE7] text-4xl text-center font-bold pt-8'>我们的优点</div>
+                    <div className=' text-sm text-[#333] font-bold w-full flex flex-wrap justify-center items-center gap-x-40'>
+                        <div className='flex flex-col items-center gap-y-5'>
+                            <div className=' relative w-[15rem] h-[15rem]'>
                                 <Image src="/image/advantage-icons/advantage1.png" fill={true} alt="避免争议以及拒付产生的高昂费用" />
                             </div>
                             <span>避免争议以及拒付产生的高昂费用</span>
                         </div>
                         <div className='flex flex-col items-center'>
-                            <div className=' relative w-[13.3125rem] h-[13.3125rem]'>
-                                <Image src="/image/advantage-icons/advantage4.png" fill={true} alt="覆盖全卡组" />
+                            <div className=' relative w-[15rem] h-[15rem]'>
+                                <Image src="/image/advantage-icons/advantage2.png" fill={true} alt="覆盖全卡组" />
                             </div>
                             <span>覆盖全卡组</span>
                         </div>
                         <div className='flex flex-col items-center'>
-                            <div className=' relative w-[13.3125rem] h-[13.3125rem]'>
+                            <div className=' relative w-[15rem] h-[15rem]'>
                                 <Image src="/image/advantage-icons/advantage3.png" fill={true} alt="减少争议和退款处理人工成本" />
                             </div>
                             <span>减少争议和退款处理人工成本</span>
                         </div>
                         <div className='flex flex-col items-center'>
-                            <div className=' relative w-[13.4375rem] h-[13.4375rem]'>
-                                <Image src="/image/advantage-icons/advantage2.png" fill={true} alt="自动决策、自动退款，减少运营操作" />
+                            <div className=' relative w-[15rem] h-[15rem]'>
+                                <Image src="/image/advantage-icons/advantage4.png" fill={true} alt="自动决策、自动退款，减少运营操作" />
                             </div>
                             <span>自动决策、自动退款，减少运营操作</span>
                         </div>
                         <div className='flex flex-col items-center'>
-                            <div className=' relative w-[14.0625rem] h-[9.8125rem]'>
-                                <Image src="/image/advantage-icons/advantage8.png" fill={true} alt="降低拒付率，不计入考核" />
+                            <div className=' relative w-[15rem] h-[15rem]'>
+                                <Image src="/image/advantage-icons/advantage5.png" fill={true} alt="降低拒付率，不计入考核" />
                             </div>
                             <span>降低拒付率，不计入考核</span>
                         </div>
@@ -100,7 +133,7 @@ const EarlyWarning = () => {
                         <Image src="/image/early-warning/fw.png" fill={true} alt="Ethoca拒付预警服务" />
                     </div>
                     <div className=' text-white'>
-                        <div className=' font-extrabold text-[1.75rem] mb-4 '>Ethoca拒付预警服务</div>
+                        <div className=' font-extrabold text-4xl mb-4 '>Ethoca拒付预警服务</div>
                         <ul className=' text-base flex flex-col gap-y-2'>
                             <li>通过分层防御来实现：</li>
                             <li>
@@ -118,50 +151,17 @@ const EarlyWarning = () => {
             {/* WeTech Ethoca拒付预警可以为您实现 */}
             <div className='w-full min-h-[45.25.rem] '>
                 <div className='h-full pt-9 pb-16 w-[59.5rem] mx-auto'>
-                    <div className=' w-full text-[#316FE7] text-2xl font-extrabold text-center mb-14'>WeTech Ethoca拒付预警可以为您实现</div>
+                    <div className=' w-full text-[#316FE7] text-[2rem] font-extrabold text-center mb-11'>WeTech Ethoca拒付预警可以为您实现</div>
                     <div className='w-full flex items-center justify-between flex-wrap gap-y-[3.875rem] gap-36'>
-                        <div className='flex flex-col items-center w-[13.25rem]'>
-                            <div className=' relative w-[11.125rem] h-[11.125rem]'>
-                                <Image src="/image/advantage-icons/advantage1.png" fill={true} alt="Ethoca拒付预警服务" />
+                        {warnList.map(it => (
+                            <div key={it.title} className='flex flex-col items-center w-[11.25rem]'>
+                                <div className=' relative w-[11.25rem] h-[11.25rem]'>
+                                    <Image src={it.src} fill={true} alt={it.title} />
+                                </div>
+                                <div className=' text-[#316FE7] text-base my-2'>{it.title}</div>
+                                <div className=' text-xs text-[#000] whitespace-nowrap'>{it.desc}</div>
                             </div>
-                            <div className=' text-[#316FE7] text-base my-2'>反欺诈</div>
-                            <div className=' text-xs text-[#000] whitespace-nowrap'>采取行动阻止欺诈性订单的履行</div>
-                        </div>
-                        <div className='flex flex-col items-center w-[13.25rem]'>
-                            <div className=' relative w-[14rem] h-[10rem]'>
-                                <Image src="/image/advantage-icons/advantage8.png" fill={true} alt="Ethoca拒付预警服务" />
-                            </div>
-                            <div className=' text-[#316FE7] text-base my-2'>停止拒付</div>
-                            <div className=' text-xs text-[#000] whitespace-nowrap'>消除更多拒付并降低相关成本</div>
-                        </div>
-                        <div className='flex flex-col items-center w-[13.25rem]'>
-                            <div className=' relative w-[11rem] h-[10.75rem]'>
-                                <Image src="/image/advantage-icons/advantage9.png" fill={true} alt="Ethoca拒付预警服务" />
-                            </div>
-                            <div className=' text-[#316FE7] text-base my-2'>减少未来的欺诈</div>
-                            <div className=' text-xs text-[#000] whitespace-nowrap'>加强欺诈筛意，以识别未来欺诈行为并防止出现高峰</div>
-                        </div>
-                        <div className='flex flex-col items-center w-[13.25rem]'>
-                            <div className=' relative w-[13.25rem] h-[11.125rem]'>
-                                <Image src="/image/advantage-icons/advantage5.png" fill={true} alt="Ethoca拒付预警服务" />
-                            </div>
-                            <div className=' text-[#316FE7] text-base my-2'>查找相关欺诈</div>
-                            <div className=' text-xs text-[#000] whitespace-nowrap'>使用链接分析来消除相关欺诈订单</div>
-                        </div>
-                        <div className='flex flex-col items-center w-[13.25rem]'>
-                            <div className=' relative w-[12rem] h-[12rem]'>
-                                <Image src="/image/advantage-icons/advantage6.png" fill={true} alt="Ethoca拒付预警服务" />
-                            </div>
-                            <div className=' text-[#316FE7] text-base my-2'>增加接受度</div>
-                            <div className=' text-xs text-[#000] whitespace-nowrap'>发放更多退款可提高接受度并改善客户体验</div>
-                        </div>
-                        <div className='flex flex-col items-center w-[13.25rem]'>
-                            <div className=' relative w-[10.75rem] h-[11.625rem]'>
-                                <Image src="/image/advantage-icons/advantage7.png" fill={true} alt="Ethoca拒付预警服务" />
-                            </div>
-                            <div className=' text-[#316FE7] text-base my-2'>提高满意度</div>
-                            <div className=' text-xs text-[#000] whitespace-nowrap'>客户不再需要经历漫长而令人沮丧的退款流程</div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>

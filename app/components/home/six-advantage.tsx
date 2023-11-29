@@ -48,9 +48,9 @@ const SixAdvantage = () => {
                 <Image src={"/image/home/advantagebg.png"} priority={true} fill={true} alt="bg" />
             </div>
             <div className='max-w-[1176px] mx-auto relative h-full'>
-                <motion.div variants={variantsCDiv} className=' absolute top-[25px] bottom-[56px] text-3xl text-white w-full text-center'>
+                <div className=' absolute top-[25px] bottom-[56px] text-3xl text-white w-full text-center'>
                     全球最前沿和最全风控数据库
-                </motion.div>
+                </div>
                 {/* {imgItems.map(it => (
                         <motion.div key={it.alt} variants={variantsCDiv} className={`absolute bottom-[${it.bottom}] left-[${it.left}]`}>
                             <Image src={it.src} priority={false} alt="" width={it.width} height={it.height} className='object-cover transition-all hover:!scale-110 cursor-pointer' />

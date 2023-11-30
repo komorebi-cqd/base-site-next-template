@@ -15,10 +15,10 @@ const RiskPortait = () => {
             {/* 顶部 */}
             <PageTop bgImg='/image/risk-portrait/top-bg.png' title='风险画像' desc={desc} topText='产品->风险画像' />
             {/* 优势 */}
-            <div className='w-full h-[28.565rem] risk-advantage-img'>
-                <div className=' max-w-[73.4rem] mx-auto'>
+            <div className='w-full pt-5 pb-9 risk-advantage-img'>
+                <div className=' max-w-[63.5rem] mx-auto'>
                     <div className=' sub-title pt-5 pb-4'>我们的优势</div>
-                    <div className='flex justify-between items-center mt-24'>
+                    <div className='flex flex-col md:flex-row items-center mt-24 gap-x-[2rem] gap-y-[6.25rem] md:gap-x-[6rem]'>
                         <AdvantageItem title='多维度风险画像' desc={(<>基本AI智能算法，从多个维度进行风险画像，<br />具备全面性和性高准确性</>)} absImg={<div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 w-48 h-48'>
                             <Image src="/image/advantage-icons/yj1.png" alt='多维度风险画像' fill={true} />
                         </div>} />
@@ -31,21 +31,21 @@ const RiskPortait = () => {
                     </div>
                 </div>
             </div>
-            <div className=' w-full h-[48.5rem] bg-gradient-to-b  from-[#E7F1FF] to-white'>
+            <div className=' w-full bg-gradient-to-b  from-[#E7F1FF] to-white'>
                 <div className=' max-w-[78.75rem] mx-auto h-full flex flex-col'>
-                    <div className='flex-1 flex justify-between items-center px-16'>
+                    <div className='flex-1 flex flex-col md:flex-row justify-between items-center px-3 md:px-20 pt-[3.5rem] pb-0 md:pb-[3.5rem]'>
                         <div>
                             <div className='sub-title text-left'>大数据分析+AI智能算法</div>
                             <div className='text-[#333333] text-base font-bold mt-5 mb-2'>WeTech专注于出海支付风控服务</div>
                             <div className='text-[#333333] text-base'>我们的风险画像基于海量的海外数据采集，结果大数据分析和整理，依赖AI<br />智能胜算法深度学习和多轮持续模型优化，并能基于海外市场需求，我们从<br />多个维度提供风险画像，主要包含IP画像、手机号画像、邮箱画像和地址画<br />像，并提供综合风险策略，可有效的解决垃圾注册、刷单、撸羊毛、识别风 险行为等多个场景。</div>
                         </div>
-                        <div className=' relative w-[23.63rem] h-[23.15rem]'>
+                        <div className=' relative w-[23.63rem] h-[23.15rem] flex-shrink-0'>
                             <Image src="/image/risk-portrait/item1.png" alt='anti-fraud-value' fill={true} />
                         </div>
                     </div>
                     <div className='w-full h-[1px] bg-[rgba(0,0,0,0.15)]'></div>
-                    <div className='flex-1 flex justify-between items-center px-16'>
-                        <div className=' relative w-[20rem] h-[18.75rem]'>
+                    <div className='flex-1 flex flex-col md:flex-row justify-between items-center px-3 md:px-20 py-[3.5rem]'>
+                        <div className=' relative w-[20rem] h-[18.75rem] flex-shrink-0'>
                             <Image src="/image/risk-portrait/item2.png" alt='anti-fraud-value' fill={true} />
                         </div>
                         <div>

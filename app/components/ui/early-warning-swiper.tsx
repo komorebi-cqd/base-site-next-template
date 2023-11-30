@@ -27,11 +27,11 @@ const EarlyWarningSwiper = () => {
     useEffect(() => {
     }, []);
     return (
-        <div className=' w-[84.125rem] h-[33.5rem]  mx-auto flex items-center justify-between'>
-            <div onClick={() => swiperInstance?.slideNext()} className=' relative w-[3.75rem] h-[3.75rem] flex-shrink-0 rotate-180 cursor-pointer'>
+        <div className=' max-w-[84.125rem] h-[33.5rem]  mx-auto flex items-center justify-center gap-x-5 lg:gap-x-16 px-2 xl:px-0'>
+            <div onClick={() => swiperInstance?.slideNext()} className=' relative w-[3.75rem] h-[3.75rem] flex-shrink-0 rotate-180 cursor-pointer hidden md:block'>
                 <Image src="/image/early-warning/arrow.png" fill={true} alt="WeTech-arrow" />
             </div>
-            <div className='w-[64.875rem] h-full bg-[rgba(255,255,255,0.75)] rounded-3xl relative'>
+            <div className='flex-1 h-full bg-[rgba(255,255,255,0.75)] rounded-3xl relative'>
                 <Swiper
                     slidesPerView={"auto"}
                     loop={true}
@@ -46,23 +46,23 @@ const EarlyWarningSwiper = () => {
                     className="mySwiper h-full"
                 >
                     <SwiperSlide className='w-full h-full'>
-                        <div className='w-full h-full pt-11 text-[rgba(0,0,0,0.85)]'>
-                            <div className='text-center text-[#316FE7] text-[2rem] font-medium'>快速争议解决（RDR）</div>
-                            <div className='text-center text-lg mt-10 mb-14'>通过为商户量身定做的强大的决策引擎，自动解决参与RDR发卡行推送的争议交易，以实现实时解决。</div>
-                            <ul className=' text-xl  w-2/3 mx-auto flex flex-col gap-y-7 pl-3'>
+                        <div className='w-full h-full pt-11 text-[rgba(0,0,0,0.85)] flex flex-col px-2 md:px-0'>
+                            <div className='text-center text-[#316FE7] text-3xl md:text-[2rem] font-medium'>快速争议解决（RDR）</div>
+                            <div className='text-center text-base md:text-lg mt-10 mb-14'>通过为商户量身定做的强大的决策引擎，自动解决参与RDR发卡行推送的争议交易，以实现实时解决。</div>
+                            <ul className=' text-lg md:text-xl mx-auto flex flex-col gap-y-7 md:pl-7'>
                                 {rdrList.map(it => (
-                                    <li className='relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-left-5 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>
+                                    <li className='relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>
                                 ))}
                             </ul>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='w-full h-full'>
-                        <div className='w-full h-full pt-11 text-[rgba(0,0,0,0.85)]'>
-                            <div className='text-center text-[#316FE7] text-[2rem] font-medium'>持卡人争议解决网络（CDRN）</div>
-                            <div className='text-center text-lg mt-10 mb-14'>通过卖家发起的退款，在72小时内解决参与CDRN发卡推送的争议交易</div>
-                            <ul className=' text-xl w-1/2 mx-auto flex flex-col gap-y-7 pl-12'>
+                        <div className='w-full h-full pt-11 text-[rgba(0,0,0,0.85)] flex flex-col px-2 md:px-0'>
+                            <div className='text-center text-[#316FE7] text-3xl md:text-[2rem] font-medium'>持卡人争议解决网络（CDRN）</div>
+                            <div className='text-center text-base md:text-lg mt-10 mb-14'>通过卖家发起的退款，在72小时内解决参与CDRN发卡推送的争议交易</div>
+                            <ul className=' text-lg md:text-xl  mx-auto flex flex-col gap-y-7 md:pr-20'>
                                 {cdrnList.map(it => (
-                                    <li className='relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-left-5 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>
+                                    <li className='relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>
                                 ))}
                             </ul>
                         </div>
@@ -70,7 +70,7 @@ const EarlyWarningSwiper = () => {
                 </Swiper>
                 <div className="swiper-pagination swiper-pagination-bullets !-bottom-12"></div>
             </div>
-            <div onClick={() => swiperInstance?.slidePrev()} className=' relative w-[3.75rem] h-[3.75rem] flex-shrink-0 cursor-pointer'>
+            <div onClick={() => swiperInstance?.slidePrev()} className=' relative w-[3.75rem] h-[3.75rem] flex-shrink-0 cursor-pointer hidden md:block'>
                 <Image src="/image/early-warning/arrow.png" fill={true} alt="WeTech-arrow" />
             </div>
         </div>

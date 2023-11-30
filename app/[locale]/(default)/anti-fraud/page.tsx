@@ -58,7 +58,7 @@ const AntiFraud = () => {
                 <div className='mx-auto max-w-[73.25rem] px-5'>
                     <div>
                         <div className='sub-title pt-12 mb-28'>信用卡反欺诈核心价值</div>
-                        <div className='flex flex-col md:flex-row justify-center items-center px-12 gap-x-[5.875rem] gap-y-[6.25rem] md:gap-0'>
+                        <div className='flex flex-col md:flex-row justify-center items-center px-12 gap-x-[2rem] gap-y-[6.25rem] md:gap-x-[5.875rem]'>
                             <AdvantageItem title='降低欺诈率' desc={(<>精准、实时地做出欺诈风险决策，<br />识别风险用户，拒绝欺诈订单，降低欺诈率</>)} absImg={<div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 w-[15rem] h-[15rem]'>
                                 <Image src="/image/advantage-icons/advantage1.png" alt='advantage1' fill={true} />
                             </div>} />

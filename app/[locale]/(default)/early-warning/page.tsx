@@ -53,10 +53,10 @@ const EarlyWarning = () => {
                 <EarlyWarningSwiper />
             </div>
             {/* RDR和CDRN拒付解决服务能够做 */}
-            <div className='w-full min-h-[28.5rem] bg-[#F4F7FF]'>
-                <div className='max-w-[83.75rem] mx-auto'>
-                    <div className=' text-4xl text-[#316FE7] text-center pt-[2.4rem] pb-2 font-extrabold'>RDR和CDRN拒付解决服务能够做什么？</div>
-                    <div className='flex items-center flex-1'>
+            <div className='w-full py-9 bg-[#F4F7FF]'>
+                <div className='max-w-[83.75rem] mx-auto px-3 md:px-0'>
+                    <div className='sub-title pb-2 font-extrabold'>RDR和CDRN拒付解决服务能够做什么？</div>
+                    <div className='flex items-center flex-1 flex-col lg:flex-row'>
                         <ul className=' text-base text-[rgba(0,0,0,0.85)] flex flex-col gap-y-1 py-4'>
                             <li>
                                 <p>1.解决因商户本身行为等造成的拒付率过高的问题；</p>
@@ -82,16 +82,20 @@ const EarlyWarning = () => {
                                 <p>通过及时的解决手段避免待处理拒付的堆积从而保护商家的账户，最重要的是不计入拒付率！</p>
                             </li>
                         </ul>
-                        <div className=' relative w-[41.69rem] h-[19.875rem] flex-shrink-0'>
-                            <Image src="/image/early-warning/lc.png" fill={true} alt="RDR和CDRN拒付解决服务" />
+                        <div className=' relative flex-shrink-0'>
+                            <Image src="/image/early-warning/lc.png" width={666} height={316} sizes="666px"
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                }} alt="RDR和CDRN拒付解决服务" />
                         </div>
                     </div>
                 </div>
             </div>
             {/* 我们的优点 */}
-            <div className='w-full min-h-[42.25rem] bg-[url("/image/early-warning/advantage-bg.png")] bg-center bg-no-repeat bg-cover'>
+            <div className='w-full pt-8 pb-10 bg-[url("/image/early-warning/advantage-bg.png")] bg-center bg-no-repeat bg-cover'>
                 <div className='max-w-[67.1875rem] mx-auto'>
-                    <div className='text-[#316FE7] text-4xl text-center font-bold pt-8'>我们的优点</div>
+                    <div className='sub-title'>我们的优点</div>
                     <div className=' text-sm text-[#333] font-bold w-full flex flex-wrap justify-center items-center gap-x-40'>
                         <div className='flex flex-col items-center gap-y-5'>
                             <div className=' relative w-[15rem] h-[15rem]'>
@@ -127,10 +131,14 @@ const EarlyWarning = () => {
                 </div>
             </div>
             {/* Ethoca拒付预警服务 */}
-            <div className='min-h-[22.5rem] h-[22.5rem] w-full bg-[#00206E]'>
-                <div className=' max-w-[80.875rem] h-full mx-auto flex justify-between items-center'>
-                    <div className='relative w-[35.5rem] h-[10.875rem] flex-shrink-0'>
-                        <Image src="/image/early-warning/fw.png" fill={true} alt="Ethoca拒付预警服务" />
+            <div className='min-h-[22.5rem] py-20 w-full bg-[#00206E]'>
+                <div className=' max-w-[80.875rem] h-full mx-auto flex flex-col lg:flex-row gap-y-4 justify-between items-center  px-3 md:px-0'>
+                    <div className='relative flex-shrink-0'>
+                        <Image src="/image/early-warning/fw.png" width={568} height={174} sizes="568px"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                            }} alt="Ethoca拒付预警服务" />
                     </div>
                     <div className=' text-white'>
                         <div className=' font-extrabold text-4xl mb-4 '>Ethoca拒付预警服务</div>
@@ -150,9 +158,9 @@ const EarlyWarning = () => {
             </div>
             {/* WeTech Ethoca拒付预警可以为您实现 */}
             <div className='w-full min-h-[45.25.rem] '>
-                <div className='h-full pt-9 pb-16 w-[59.5rem] mx-auto'>
-                    <div className=' w-full text-[#316FE7] text-[2rem] font-extrabold text-center mb-11'>WeTech Ethoca拒付预警可以为您实现</div>
-                    <div className='w-full flex items-center justify-between flex-wrap gap-y-[3.875rem] gap-36'>
+                <div className='h-full pt-9 pb-16 max-w-[59.5rem] mx-auto'>
+                    <div className=' w-full sub-title mb-11'>WeTech Ethoca拒付预警可以为您实现</div>
+                    <div className='w-full flex items-center justify-center flex-wrap gap-y-[3.875rem] gap-x-[11.875rem]'>
                         {warnList.map(it => (
                             <div key={it.title} className='flex flex-col items-center w-[11.25rem]'>
                                 <div className=' relative w-[11.25rem] h-[11.25rem]'>

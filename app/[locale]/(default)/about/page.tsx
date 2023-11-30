@@ -12,7 +12,7 @@ const About = () => {
             <div className='w-full py-12 bg-gradient-to-b  from-[#E7F1FF] to-white'>
                 <div className='max-w-[78.75rem] mx-auto h-full flex flex-col'>
                     <div className='flex-1 flex flex-col md:flex-row justify-between items-center px-3 md:px-20 pb-7'>
-                        <div className='max-w-[16rem] xl:max-w-[32.75rem] lg:max-w-[23rem]'>
+                        <div className='max-w-[20rem] xl:max-w-[32.75rem] lg:max-w-[23rem]'>
                             <div className='sub-title text-left mb-4'>关于我们</div>
                             <div className='text-[#333333] text-base'>WeTech深耕于金融行业，是腾讯在出海金融风控方面深度战略合作伙伴，WeTech专注于出海方向金融风控领域，是多场景、大数据、全智能出海金融科技产品服务商，WeTech拥有全球最前沿的数据库，强大的数据分析能力和风控模型，自动决策引擎，灵活多变的商业方案为辅助，支付公司等，致力于为商户与支付公司提供完善的风控方案，欺诈识别，降低拒付率，提高订单通过率，从而增加收入创造价值</div>
                         </div>

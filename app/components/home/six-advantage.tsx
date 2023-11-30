@@ -48,7 +48,7 @@ const SixAdvantage = () => {
                 <Image src={"/image/home/advantagebg.png"} priority={true} fill={true} alt="bg" />
             </div>
             <div className='max-w-[1176px] mx-auto relative h-full'>
-                <div className=' absolute top-[25px] bottom-[56px] text-3xl text-white w-full text-center'>
+                <div className=' absolute top-[25px] bottom-[56px] text-2xl md:text-3xl text-white w-full text-center'>
                     全球最前沿和最全风控数据库
                 </div>
                 {/* {imgItems.map(it => (

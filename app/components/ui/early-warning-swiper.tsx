@@ -49,7 +49,7 @@ const EarlyWarningSwiper = () => {
                         <div className='w-full h-full pt-11 text-[rgba(0,0,0,0.85)] flex flex-col px-2 md:px-0'>
                             <div className='text-center text-[#316FE7] text-3xl md:text-[2rem] font-medium'>快速争议解决（RDR）</div>
                             <div className='text-center text-base md:text-lg mt-10 mb-14'>通过为商户量身定做的强大的决策引擎，自动解决参与RDR发卡行推送的争议交易，以实现实时解决。</div>
-                            <ul className=' text-lg md:text-xl mx-auto flex flex-col gap-y-7 md:pl-7'>
+                            <ul className=' text-base md:text-xl mx-auto flex flex-col gap-y-7 md:pl-7'>
                                 {rdrList.map(it => (
                                     <li className='relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>
                                 ))}
@@ -60,7 +60,7 @@ const EarlyWarningSwiper = () => {
                         <div className='w-full h-full pt-11 text-[rgba(0,0,0,0.85)] flex flex-col px-2 md:px-0'>
                             <div className='text-center text-[#316FE7] text-3xl md:text-[2rem] font-medium'>持卡人争议解决网络（CDRN）</div>
                             <div className='text-center text-base md:text-lg mt-10 mb-14'>通过卖家发起的退款，在72小时内解决参与CDRN发卡推送的争议交易</div>
-                            <ul className=' text-lg md:text-xl  mx-auto flex flex-col gap-y-7 md:pr-20'>
+                            <ul className=' text-base md:text-xl  mx-auto flex flex-col gap-y-7 md:pr-20'>
                                 {cdrnList.map(it => (
                                     <li className='relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>
                                 ))}

@@ -56,23 +56,23 @@ const SixAdvantage = () => {
                             <Image src={it.src} priority={false} alt="" width={it.width} height={it.height} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
                         </motion.div>
                     ))} */}
-                <motion.div variants={variantsCDiv} className=' absolute bottom-[82px] left-0 w-[14.875rem] h-[6.125rem]'>
-                    <Image src="/image/home/advantage1.png" priority={true} alt=""  objectFit='cover' fill={true} className=' transition-all hover:!scale-110 cursor-pointer' />
+                <motion.div variants={variantsCDiv} className='  absolute bottom-[96px] left-0 w-[11.9rem] h-[4.9rem] md:w-[14.875rem] md:h-[6.125rem]'>
+                    <Image src="/image/home/advantage1.png" priority={true} alt="每日千万级用户上报" fill={true} className=' transition-all hover:!scale-110 cursor-pointer' />
                 </motion.div>
-                <motion.div variants={variantsCDiv} className={`absolute bottom-[228px] left-[16.2%]`}>
-                    <Image src="/image/home/advantage2.png" priority={true} alt="" width={255} height={94} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
+                <motion.div variants={variantsCDiv} className={`absolute bottom-[260px] sm:bottom-[228px] left-[5%] md:left-[16.2%] w-[12.7rem] h-[4.7rem] md:w-[15.875rem] md:h-[5.875rem]`}>
+                    <Image src="/image/home/advantage2.png" priority={true} alt="十亿设备指纹信誉数据"  fill={true} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
                 </motion.div>
-                <motion.div variants={variantsCDiv} className=' absolute bottom-[22px] left-[35.7%] '>
-                    <Image src="/image/home/advantage3.png" priority={true} alt="" width={152} height={91} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
+                <motion.div variants={variantsCDiv} className='  absolute bottom-[40px] sm:bottom-[22px] left-[35.7%] w-[7.6rem] h-[4.5rem] md:w-[9.5rem] md:h-[5.625rem]'>
+                    <Image src="/image/home/advantage3.png" priority={true} alt="全球风险邮箱库" fill={true} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
                 </motion.div>
-                <motion.div variants={variantsCDiv} className=' absolute bottom-[114px] right-[43%] '>
-                    <Image src="/image/home/advantage4.png" priority={true} alt="" width={107} height={86} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
+                <motion.div variants={variantsCDiv} className=' absolute bottom-[178px] sm:bottom-[114px] right-[43%] w-[5.4rem] h-[4.3rem] md:w-[6.75rem] md:h-[5.375rem]'>
+                    <Image src="/image/home/advantage4.png" priority={true} alt="全球黑IP库" fill={true} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
                 </motion.div>
-                <motion.div variants={variantsCDiv} className=' absolute bottom-[215px] right-[13.8%] '>
-                    <Image src="/image/home/advantage5.png" priority={true} alt="" width={221} height={98} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
+                <motion.div variants={variantsCDiv} className='  absolute bottom-[226px] sm:bottom-[215px] right-[5%] md:right-[13.8%] w-[11rem] h-[4.9rem] md:w-[13.75rem] md:h-[6.125rem]'>
+                    <Image src="/image/home/advantage5.png" priority={true} alt="业界最大安全号码库" fill={true} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
                 </motion.div>
-                <motion.div variants={variantsCDiv} className=' absolute bottom-[57px] right-0'>
-                    <Image src="/image/home/advantage6.png" priority={true} alt="" width={241} height={96} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
+                <motion.div variants={variantsCDiv} className=' absolute bottom-[115px] md:bottom-[57px] right-0 w-[12rem] h-[4.8rem] md:w-[15rem] md:h-[6rem]'>
+                    <Image src="/image/home/advantage6.png" priority={true} alt="业界最大的恶意网址黑库" fill={true} className='object-cover transition-all hover:!scale-110 cursor-pointer' />
                 </motion.div>
             </div>
         </motion.div>

@@ -13,15 +13,17 @@ async function Home() {
             <HomeTop />
             {/* AI支付风控，为跨境出海保驾护航 */}
             <div className='w-full h-auto lg:h-[56rem] relative'>
-                <div className="absolute -top-32 inset-x-0 mx-auto w-full xl:w-[79.5rem] h-auto risk-ai-bg rounded-2xl text-[#333] py-12">
+                <div className=" absolute -top-32 inset-x-0 mx-auto w-full xl:w-[79.5rem] h-auto risk-ai-bg rounded-2xl text-[#333] py-12">
                     {/* title */}
-                    <div className="flex items-center justify-center gap-x-5 mb-4">
-                        <span className=" block w-[1.375rem] h-[1.375rem] rounded-full bg-gradient-to-bl from-white to-[#316FE7] flex-shrink-0"></span>
-                        <span className=" text-2xl  md:text-[28px] font-semibold text-center">AI支付风控，为跨境出海保驾护航</span>
-                        <span className=" block w-[1.375rem] h-[1.375rem] rounded-full bg-gradient-to-bl from-white to-[#316FE7] flex-shrink-0"></span>
+                    <div className="px-4 md:px-0">
+                        <div className="flex items-center justify-center gap-x-5 mb-4">
+                            <span className=" block w-[1.375rem] h-[1.375rem] rounded-full bg-gradient-to-bl from-white to-[#316FE7] flex-shrink-0"></span>
+                            <span className=" text-2xl  md:text-[28px] font-semibold text-center">AI支付风控，为跨境出海保驾护航</span>
+                            <span className=" block w-[1.375rem] h-[1.375rem] rounded-full bg-gradient-to-bl from-white to-[#316FE7] flex-shrink-0"></span>
+                        </div>
+                        <div className="text-center">欺诈提醒--欺诈预防--争议解决--全链路--站式为商户提供专业，快速。易用成熟的支付风控产品</div>
+                        <div className="text-center text-xl md:text-[1.75rem] mt-4 mb-6 font-bold">全球欺诈仍在继续</div>
                     </div>
-                    <div className="text-center">欺诈提醒--欺诈预防--争议解决--全链路--站式为商户提供专业，快速。易用成熟的支付风控产品</div>
-                    <div className="text-center text-xl md:text-[1.75rem] mt-4 mb-6 font-bold">全球欺诈仍在继续</div>
                     {/* 幻灯片 */}
                     <ClientOnly>
                         <HomeRiskSwiper />
@@ -45,8 +47,8 @@ async function Home() {
                     <div className=" relative w-[17.6rem] h-[17.6rem] flex-shrink-0">
                         <Image src="/image/home/algorithm-img.png" fill={true} alt="algorithm-img" />
                     </div>
-                    <div>
-                        <div className="sub-title mb-7 pb-7 relative before:absolute before:bottom-0 before:left-0 before:w-48 before:h-[1px] before:bg-[rgba(0,0,0,0.1)]">
+                    <div className=" px-5 md:px-0">
+                        <div className="sub-title text-left mb-7 pb-7 relative before:absolute before:bottom-0 before:left-0 before:w-48 before:h-[1px] before:bg-[rgba(0,0,0,0.1)]">
                             强大技术及深度算法能力
                         </div>
                         <ul className=" max-w-md text-[rgba(51,51,51,0.85)] font-medium text-base pl-3">
@@ -70,7 +72,7 @@ async function Home() {
             </div>
             {/* 争议预警与解决 */}
             <div className=" w-full pt-[2.875rem] pb-[11.875rem] bg-[#00206F] text-center text-white relative">
-                <div className=" text-4xl font-extrabold pt-12 mb-8">争议预警与解决</div>
+                <div className=" text-4xl font-extrabold md:pt-12 mb-8">争议预警与解决</div>
                 <div className=" text-base font-medium leading-9 text-[rgba(255,255,255,0.85)]">实时获取拒付信息并快速做出响应及处理，<br />有效降低商户拒付率减少财务损失，避免进入卡组监控异常名单</div>
                 <div className="ab-c top-auto -bottom-52 shadow-md shadow-[rgba(34,95,212,0.08)] h-56 w-full lg:w-[71rem] bg-white flex justify-center items-center text-[#333333] text-base">
                     <div className=" relative flex flex-col justify-center h-full items-center flex-1 lg:flex-auto before:absolute before:bottom-1/2 before:right-0 before:w-[1px] before:h-32 before:translate-y-1/2 before:bg-[rgba(0,0,0,0.45)]">

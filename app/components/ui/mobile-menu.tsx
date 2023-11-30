@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRef } from "react";
-import { motion, frame, useCycle, SVGMotionProps } from "framer-motion";
+import { motion, AnimatePresence, useCycle, SVGMotionProps } from "framer-motion";
 import { useDimensions } from "../utils/use-dimensions";
 import { navList } from "../utils/data";
 import Link from 'next/link';
@@ -90,6 +90,10 @@ const menuLiVariants = {
         transition: {
             y: { stiffness: 1000 }
         }
+    },
+    exit: {
+        opacity: 0,
+        transition: { duration: 0.5, type: "linear", ease: [0.76, 0, 0.24, 1]}
     }
 };
 
@@ -109,21 +113,23 @@ const MobileMenu = () => {
                 className=' absolute top-0 left-0 right-0 bottom-0 w-full'
             >
                 <motion.div className=" absolute w-full top-0 left-0 right-0 h-screen bg-[--header-bg]" variants={sidebar} />
-                {
-                    isOpen &&
-                    <motion.ul variants={menuUlVariants} className=' pl-16 pt-36 md:pt-[--header-height] flex flex-col items-start gap-y-7'>
-                        {navList.map(it => (
-                            <motion.li
-                                key={it.id}
-                                variants={menuLiVariants}
-                            >
-                                <Link href={it.link} onClick={() => toggleOpen()} className={`text-[#C7DAFF] transition-all hover:text-white font-bold relative before:absolute before:h-1 before:transition-all before:-bottom-4 before:rounded hover:before:w-5 before:bg-white before:left-0 ${(pathname === "/" && it.link === "/") || (pathname !== "/" && it.link !== "/" && pathname?.startsWith(it.link)) ? "text-white before:w-5" : "before:w-0"}`}>
-                                    {it.text}
-                                </Link>
-                            </motion.li>
-                        ))}
-                    </motion.ul>
-                }
+                <AnimatePresence>
+                    {
+                        isOpen &&
+                        <motion.ul variants={menuUlVariants} initial="closed" exit="exit" className=' pl-16 pt-36 md:pt-[--header-height] flex flex-col items-start gap-y-7'>
+                            {navList.map(it => (
+                                <motion.li
+                                    key={it.id}
+                                    variants={menuLiVariants}
+                                >
+                                    <Link href={it.link} onClick={() => toggleOpen()} className={`text-[#C7DAFF] transition-all hover:text-white font-bold relative before:absolute before:h-1 before:transition-all before:-bottom-4 before:rounded hover:before:w-5 before:bg-white before:left-0 ${(pathname === "/" && it.link === "/") || (pathname !== "/" && it.link !== "/" && pathname?.startsWith(it.link)) ? "text-white before:w-5" : "before:w-0"}`}>
+                                        {it.text}
+                                    </Link>
+                                </motion.li>
+                            ))}
+                        </motion.ul>
+                    }
+                </AnimatePresence>
                 <MenuToggle toggle={() => toggleOpen()} />
             </motion.nav>
         </div>

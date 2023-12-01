@@ -22,7 +22,7 @@ const AntiFraud = () => {
                         <div className='flex-1'>
                             <div className='sub-title text-left'>传统风控</div>
                             <div className=' text-base text-[#171717] mt-5'>
-                                传统风控采用人工结合简单规则进行判定，<br />不仅成本高，效率低，还受人为因素邮箱，导致判定结果不理想
+                            传统风控采用人工结合简单规则进行判定，<br />不仅成本高，效率底，还受人为因素影响，导致判定结果不理想
                             </div>
                         </div>
                         <div className=' relative'>

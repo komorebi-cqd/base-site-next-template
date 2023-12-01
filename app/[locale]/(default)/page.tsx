@@ -21,7 +21,7 @@ async function Home() {
                             <span className=" text-2xl  md:text-[28px] font-semibold text-center">AI支付风控，为跨境出海保驾护航</span>
                             <span className=" block w-[1.375rem] h-[1.375rem] rounded-full bg-gradient-to-bl from-white to-[#316FE7] flex-shrink-0"></span>
                         </div>
-                        <div className="text-center">欺诈提醒--欺诈预防--争议解决--全链路--站式为商户提供专业，快速。易用成熟的支付风控产品</div>
+                        <div className="text-center">欺诈提醒--欺诈预防--争议解决--全链路一站式为商户提供专业、快速、易用且成熟的支付风控产品</div>
                         <div className="text-center text-xl md:text-[1.75rem] mt-4 mb-6 font-bold">全球欺诈仍在继续</div>
                     </div>
                     {/* 幻灯片 */}

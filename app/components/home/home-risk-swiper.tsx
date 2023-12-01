@@ -33,7 +33,7 @@ const slideList = [
         src: "/image/home/risk-item-4.png",
         alt: "risk-item-4",
         title: "铺货杂货",
-        desc: "针对杂货类商户低欺诈攻击在2020年涨3.0%，是欺诈分子热衷的行业"
+        desc: "针对杂货类商户低欺诈攻击在2020年涨30%，是欺诈分子热衷的行业"
     },
     {
         id: 5,

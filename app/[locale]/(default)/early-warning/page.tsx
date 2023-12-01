@@ -59,15 +59,15 @@ const EarlyWarning = () => {
                     <div className='flex items-center flex-1 flex-col lg:flex-row'>
                         <ul className=' text-base text-[rgba(0,0,0,0.85)] flex flex-col gap-y-1 py-4'>
                             <li>
-                                <p>1.解决因商户本身行为等造成的拒付率过高的问题；</p>
+                                <p>1.解决因商户本身行为等造成的拒付率过高的问题</p>
                             </li>
                             <li>
                                 <p>2.快速解决争议： </p>
-                                <p>可以自动解决拒付，自动退款，无需商户人工操作；</p>
+                                <p>可以自动解决拒付，自动退款，无需商户人工操作</p>
                             </li>
                             <li>
                                 <p>3.保障持卡人争议解决时效：</p>
-                                <p>通过商户在72小时内发起交易退款解决拒付，减少人力成本，还能提高用户体验感；</p>
+                                <p>通过商户在72小时内发起交易退款解决拒付，减少人力成本，还能提高用户体验感</p>
                             </li>
                             <li>
                                 <p>4.降低风险：</p>

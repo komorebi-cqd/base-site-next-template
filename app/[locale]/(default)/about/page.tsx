@@ -29,7 +29,9 @@ const About = () => {
                         <div className='sub-title mb-7 mt-14'>联系我们</div>
                         <div className='sm:w-[37.5rem] pb-20 bg-white shadow-[0_8px_8px_0_rgba(0,0,0,0.25)]'>
                             <ul className='flex flex-col gap-y-5 px-12'>
-                                <li className=' text-5xl mt-12 mb-3 text-[#203078] font-bold'>WeTech</li>
+                                <li className='relative -ml-8 pt-10'>
+                                    <Image src="/image/about-logo.png" width={254} height={60} alt='WeTech' />
+                                </li>
                                 <li className='flex items-start sm:items-center gap-x-1'>
                                     <Image src="/image/about/phone.png" className=' pt-1 sm:pt-0' width={20} height={20} alt='WeTech-phone' />
                                     <span>联系电话：13715293975</span>

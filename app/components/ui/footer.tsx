@@ -15,7 +15,9 @@ const Footer = () => {
             <div className='max-w-[1040px] mx-auto text-white flex flex-col md:flex-row justify-between items-start gap-y-6'>
                 {/* 左边联系 */}
                 <div>
-                    <div className=' mb-8 font-semibold text-5xl'>WeTech</div>
+                    <div className=' mb-8 relative'>
+                        <Image src="/image/foot-logo.png" width={296} height={73} alt='WeTech' />
+                    </div>
                     <ul className='flex flex-col gap-y-5 text-sm'>
                         <li className='flex items-center gap-x-1'>
                             <Image src="/image/footer/phone.png" width={20} height={20} alt='WeTech-phone' />

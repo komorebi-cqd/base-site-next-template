@@ -4,9 +4,11 @@ import HalfCirclePosition from "@/app/components/HalfCirclePosition";
 import SixAdvantage from "@/app/components/home/six-advantage";
 import HomeTop from "@/app/components/home/home-top";
 import Image from "next/image";
+import getIntl from "../intl";
 
-async function Home() {
-
+async function Home({ params: { locale } }: { params: { locale: string } }) {
+    console.log(locale);
+    const intl = await getIntl(locale);
     return (
         <main className=''>
             {/* 顶部大图 */}
@@ -18,11 +20,11 @@ async function Home() {
                     <div className="px-4 md:px-0">
                         <div className="flex items-center justify-center gap-x-5 mb-4">
                             <span className=" block w-[1.375rem] h-[1.375rem] rounded-full bg-gradient-to-bl from-white to-[#316FE7] flex-shrink-0"></span>
-                            <span className=" text-2xl  md:text-[28px] font-semibold text-center">AI支付风控，为跨境出海保驾护航</span>
+                            <span className={`font-semibold text-center ${locale === "en" ? "text-xl" : "text-2xl  md:text-[28px]"}`}>{intl.formatMessage({ id: 'home_block_top' })}</span>
                             <span className=" block w-[1.375rem] h-[1.375rem] rounded-full bg-gradient-to-bl from-white to-[#316FE7] flex-shrink-0"></span>
                         </div>
-                        <div className="text-center">欺诈提醒--欺诈预防--争议解决--全链路一站式为商户提供专业、快速、易用且成熟的支付风控产品</div>
-                        <div className="text-center text-xl md:text-[1.75rem] mt-4 mb-6 font-bold">全球欺诈仍在继续</div>
+                        <div className={`text-center mx-auto ${locale === "en" ? " text-sm max-w-[41.25rem]" : " text-base"}`}>{intl.formatMessage({ id: 'home_block_top_desc' })}</div>
+                        <div className={`text-center text-xl mt-4 mb-6 font-bold ${locale === "en" ? " text-xl" : " text-xl md:text-2xl"}`}>{intl.formatMessage({ id: 'home_block_top_small_des' })}</div>
                     </div>
                     {/* 幻灯片 */}
                     <ClientOnly>

@@ -1,6 +1,13 @@
 {
     "test": "test",
     "header": "home app",
-    "nav_about": "About",
-    "nav_list_one": "list-one"
+    "nav_one": "Home",
+    "nav_two": "Anti-Fraud",
+    "nav_three": "Dispute Alert and Resolution",
+    "nav_four": "Device Risk Identification",
+    "nav_five": "Risk Profiling",
+    "nav_six": "About Us",
+    "home_block_top": "AI payment risk control, safeguarding cross-border ventures.",
+    "home_block_top_desc": "Fraud alerts - fraud prevention - dispute resolution - a full-chain, one-stop solution providing merchants with professional, fast, user-friendly, and mature payment risk control products.",
+    "home_block_top_small_des": "Global fraud continues"
 }

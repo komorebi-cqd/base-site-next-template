@@ -45,7 +45,7 @@ const About = () => {
                                     <span>公司地址：深圳坂田办公室/深圳南山办公室</span>
                                 </li>
                                 <li>
-                                    <a href='https://bxp.test.wetech.vip/login?source=wetech-plat' className="py-2 px-3 bg-indigo-500 text-white text-sm font-semibold rounded-md shadow focus:outline-none">渠道联盟注册</a>
+                                    <a href='https://bxp.test.wetech.vip/login?source=wetech-website-union' target="_blank" className="py-2 px-3 bg-indigo-500 text-white text-sm font-semibold rounded-md shadow focus:outline-none">渠道联盟注册</a>
                                 </li>
                             </ul>
                         </div>

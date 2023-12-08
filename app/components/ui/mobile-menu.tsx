@@ -2,7 +2,7 @@ import React from 'react'
 import { useRef } from "react";
 import { motion, AnimatePresence, useCycle, SVGMotionProps } from "framer-motion";
 import { useDimensions } from "../utils/use-dimensions";
-import { navList } from "../utils/data";
+import { useNavList } from "../utils/data";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 
@@ -97,7 +97,10 @@ const menuLiVariants = {
     }
 };
 
-const MobileMenu = () => {
+type Params = Record<string, string | string[]> | null;
+
+const MobileMenu:React.FC<{params: Params}> = ({params}) => {
+    const {navList, reg} = useNavList();
     const pathname = usePathname();
     const [isOpen, toggleOpen] = useCycle(false, true);
     const containerRef = useRef(null);
@@ -122,7 +125,7 @@ const MobileMenu = () => {
                                     key={it.id}
                                     variants={menuLiVariants}
                                 >
-                                    <Link href={it.link} onClick={() => toggleOpen()} className={`text-[#C7DAFF] transition-all hover:text-white font-bold relative before:absolute before:h-1 before:transition-all before:-bottom-4 before:rounded hover:before:w-5 before:bg-white before:left-0 ${(pathname === "/" && it.link === "/") || (pathname !== "/" && it.link !== "/" && pathname?.startsWith(it.link)) ? "text-white before:w-5" : "before:w-0"}`}>
+                                    <Link href={params?.locale === "en" ? "/en" + it.link : it.link} onClick={() => toggleOpen()} className={`text-[#C7DAFF] transition-all hover:text-white font-bold relative before:absolute before:h-1 before:transition-all before:-bottom-4 before:rounded hover:before:w-5 before:bg-white before:left-0 ${((pathname?.replace(reg, "") === "/" || pathname?.replace(reg, "") === "")  && it.link === "/") || (pathname?.replace(reg, "") !== "/" && it.link !== "/" && pathname?.replace(reg, "")?.startsWith(it.link)) ? "text-white before:w-5" : "before:w-0"}`}>
                                         {it.text}
                                     </Link>
                                 </motion.li>

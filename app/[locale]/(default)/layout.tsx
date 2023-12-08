@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 
 export default async function DefaultRootLayout({
     children,
+    params
 }: {
     children: ReactNode;
     params: { locale: string };
@@ -23,7 +24,7 @@ export default async function DefaultRootLayout({
         <>
             <Header />
             {children}
-            <Footer />
+            <Footer locale={params.locale}/>
         </>
     );
 }

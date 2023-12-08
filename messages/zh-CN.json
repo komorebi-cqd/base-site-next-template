@@ -1,13 +1,18 @@
 {
-    "test": "测试",
-    "header": "首页app",
     "nav_one": "首页",
     "nav_two": "信用卡反欺诈",
     "nav_three": "争议预警与解决",
     "nav_four": "设备风险识别",
     "nav_five": "风险画像",
     "nav_six": "关于我们",
+    "foot_nav_one": "反欺诈风控",
     "home_block_top": "AI支付风控，为跨境出海保驾护航",
     "home_block_top_desc": "欺诈提醒--欺诈预防--争议解决--全链路一站式为商户提供专业、快速、易用且成熟的支付风控产品",
-    "home_block_top_small_des": "全球欺诈仍在继续"
+    "home_block_top_small_des": "全球欺诈仍在继续",
+    "phone": "联系电话：13715293975",
+    "email": "电子邮箱：business@wetech.vip",
+    "address": "公司地址：深圳坂田办公室/深圳南山办公室",
+    "foot_t": "产品",
+    "foot_company": "公司信息"
+    
 }

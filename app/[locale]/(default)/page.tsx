@@ -7,7 +7,6 @@ import Image from "next/image";
 import getIntl from "../intl";
 
 async function Home({ params: { locale } }: { params: { locale: string } }) {
-    console.log(locale);
     const intl = await getIntl(locale);
     return (
         <main className=''>

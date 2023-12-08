@@ -6,6 +6,9 @@
     "nav_five": "风险画像",
     "nav_six": "关于我们",
     "foot_nav_one": "反欺诈风控",
+    "jump_wetech_text": "立即体验",
+    "home_top_title": "多场景、大数据",
+    "home_top_title_des": "全智能金融科技服务商",
     "home_block_top": "AI支付风控，为跨境出海保驾护航",
     "home_block_top_desc": "欺诈提醒--欺诈预防--争议解决--全链路一站式为商户提供专业、快速、易用且成熟的支付风控产品",
     "home_block_top_small_des": "全球欺诈仍在继续",
@@ -13,6 +16,23 @@
     "email": "电子邮箱：business@wetech.vip",
     "address": "公司地址：深圳坂田办公室/深圳南山办公室",
     "foot_t": "产品",
-    "foot_company": "公司信息"
+    "foot_company": "公司信息",
+
+    "home_slide_one_title": "电子产品",
+    "home_slide_one_desc": "高危行业，因其单价高，一旦盗刷成功欺诈团伙获利颇高",
+    "home_slide_two_title": "奢侈品",
+    "home_slide_two_desc": "退换货政策滥用，优惠券滥用，容易出现友好型欺诈",
+    "home_slide_three_title": "游戏、礼品卡",
+    "home_slide_three_desc": "商户无需发货，欺诈分析可立即转卖且容易脱手",
+    "home_slide_four_title": "铺货杂货",
+    "home_slide_four_desc": "针对杂货类商户低欺诈攻击在2020年涨30%，是欺诈分子热衷的行业",
+
+    "home_half_circle_one_title": "欺诈预防-支付风控",
+    "home_half_circle_one_desc": "通过信用卡欺诈/设备风险识别等自研 支付风控类产品，运用大小模型+小模型 结合，并通过AI自动引擎实现风控自动决策",
+    "home_half_circle_two_title": "风控预警-支付风控",
+    "home_half_circle_two_desc": "携手VISA,针对VISA卡组，实现拒付自动 退款，不计入考核，降低商户拒付率",
+    "home_half_circle_two_desc_two": "携手ethoca,针对全卡组，是实现争议预警， 定制化解决，不计入考核降低拒付率",
+    "home_half_circle_three_title": "风控预警-支付风控",
+    "home_half_circle_three_desc": "通过自研风控类产品，运用大模型+小模型结合，并通过 AI自动引擎实现风控自动提醒，由商户自行决策"
     
 }

@@ -5,73 +5,83 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { EffectCoverflow } from 'swiper/modules';
+import { useIntl } from "react-intl";
+import { useParams } from 'next/navigation';
 
-const slideList = [
-    {
-        id: 1,
-        src: "/image/home/risk-item-1.png",
-        alt: "risk-item-1",
-        title: "电子产品",
-        desc: "高危行业，因其单价高，一旦盗刷成功欺诈团伙获利颇高"
-    },
-    {
-        id: 2,
-        src: "/image/home/risk-item-2.png",
-        alt: "risk-item-2",
-        title: "奢侈品",
-        desc: "退换货政策滥用，优惠券滥用，容易出现友好型欺诈"
-    },
-    {
-        id: 3,
-        src: "/image/home/risk-item-3.png",
-        alt: "risk-item-3",
-        title: "游戏、礼品卡",
-        desc: "商户无需发货，欺诈分析可立即转卖且容易脱手"
-    },
-    {
-        id: 4,
-        src: "/image/home/risk-item-4.png",
-        alt: "risk-item-4",
-        title: "铺货杂货",
-        desc: "针对杂货类商户低欺诈攻击在2020年涨30%，是欺诈分子热衷的行业"
-    },
-    {
-        id: 5,
-        src: "/image/home/risk-item-1.png",
-        alt: "risk-item-1",
-        title: "电子产品",
-        desc: "高危行业，因其单价高，一旦盗刷成功欺诈团伙获利颇高"
-    }, {
-        id: 6,
-        src: "/image/home/risk-item-2.png",
-        alt: "risk-item-2",
-        title: "奢侈品",
-        desc: "退换货政策滥用，优惠券滥用，容易出现友好型欺诈"
-    },
-    {
-        id: 7,
-        src: "/image/home/risk-item-3.png",
-        alt: "risk-item-3",
-        title: "游戏、礼品卡",
-        desc: "商户无需发货，欺诈分析可立即转卖且容易脱手"
-    },
-    {
-        id: 8,
-        src: "/image/home/risk-item-4.png",
-        alt: "risk-item-4",
-        title: "铺货杂货",
-        desc: "针对杂货类商户低欺诈攻击在2020年涨30%，是欺诈分子热衷的行业"
-    },
-];
+
+function useGetSildList(){
+    const { formatMessage } = useIntl();
+    const slideList = [
+        {
+            id: 1,
+            src: "/image/home/risk-item-1.png",
+            alt: "risk-item-1",
+            title: formatMessage({ id: "home_slide_one_title" }),
+            desc: formatMessage({ id: "home_slide_one_desc" })
+        },
+        {
+            id: 2,
+            src: "/image/home/risk-item-2.png",
+            alt: "risk-item-2",
+            title: formatMessage({ id: "home_slide_two_title" }),
+            desc: formatMessage({ id: "home_slide_two_desc" })
+        },
+        {
+            id: 3,
+            src: "/image/home/risk-item-3.png",
+            alt: "risk-item-3",
+            title: formatMessage({ id: "home_slide_three_title" }),
+            desc: formatMessage({ id: "home_slide_three_desc" })
+        },
+        {
+            id: 4,
+            src: "/image/home/risk-item-4.png",
+            alt: "risk-item-4",
+            title: formatMessage({ id: "home_slide_four_title" }),
+            desc: formatMessage({ id: "home_slide_four_desc" })
+        },
+        {
+            id: 5,
+            src: "/image/home/risk-item-1.png",
+            alt: "risk-item-1",
+            title: formatMessage({ id: "home_slide_one_title" }),
+            desc: formatMessage({ id: "home_slide_one_desc" })
+        }, {
+            id: 6,
+            src: "/image/home/risk-item-2.png",
+            alt: "risk-item-2",
+            title: formatMessage({ id: "home_slide_two_title" }),
+            desc: formatMessage({ id: "home_slide_two_desc" })
+        },
+        {
+            id: 7,
+            src: "/image/home/risk-item-3.png",
+            alt: "risk-item-3",
+            title: formatMessage({ id: "home_slide_three_title" }),
+            desc: formatMessage({ id: "home_slide_three_desc" })
+        },
+        {
+            id: 8,
+            src: "/image/home/risk-item-4.png",
+            alt: "risk-item-4",
+            title: formatMessage({ id: "home_slide_four_title" }),
+            desc: formatMessage({ id: "home_slide_four_desc" })
+        },
+    ];
+    return {
+        slideList
+    }
+}
 
 const pag = [0, 1, 2, 3];
 
 const HomeRiskSwiper = () => {
-
+    const params = useParams();
+    const { slideList } = useGetSildList();
     const [realIndex, setRealIndex] = useState(0);
     return (
         <div className='lg:w-[46.25rem] mx-auto'>
-            <div className='w-full mx-auto h-[15.25rem] relative'>
+            <div className={`w-full mx-auto relative ${params?.locale === "en" ? " h-72" : " h-[15.25rem]"}`}>
                 <Swiper
                     slidesOffsetBefore={30}
                     effect='coverflow'
@@ -105,7 +115,7 @@ const HomeRiskSwiper = () => {
                                         <Image src={it.src} priority={true} fill={true} alt={it.alt} />
                                     </div>
                                     <div className='bg-[rgba(49,111,231,0.15)] rounded-lg px-2 text-[#316FE7] text-[13px] h-4 leading-4 my-3'>{it.title}</div>
-                                    <div className=' text-xs text-[#333333] whitespace-normal px-4'>{it.desc}</div>
+                                    <div className=' text-xs text-[#333333] whitespace-normal px-4 hyphens-auto'>{it.desc}</div>
                                 </div>
                             </SwiperSlide>
                         ))

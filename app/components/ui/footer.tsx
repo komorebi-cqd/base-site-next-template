@@ -2,14 +2,11 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
 import getIntl from "@/app/[locale]/intl";
-import { useParams } from 'next/navigation'
 
 
 
 const Footer = async ({ locale }: { locale: string }) => {
-    console.log(locale);
     const intl = await getIntl(locale);
-
     const productList = [
         { id: 2, text: intl.formatMessage({ id: 'foot_nav_one' }), link: "/anti-fraud" },
         { id: 3, text: intl.formatMessage({ id: 'nav_three' }), link: "/early-warning" },

@@ -11,9 +11,9 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
     return (
         <main className=''>
             {/* 顶部大图 */}
-            <HomeTop />
+            <HomeTop locale={locale}/>
             {/* AI支付风控，为跨境出海保驾护航 */}
-            <div className='w-full h-auto lg:h-[56rem] relative'>
+            <div className={`w-full h-auto  relative `}>
                 <div className=" absolute -top-32 inset-x-0 mx-auto w-full xl:w-[79.5rem] h-auto risk-ai-bg rounded-2xl text-[#333] py-12">
                     {/* title */}
                     <div className="px-4 md:px-0">
@@ -30,7 +30,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                         <HomeRiskSwiper />
                     </ClientOnly>
                 </div>
-                <div className=" pt-[27rem] lg:pt-[26.25rem] md:pt-[27rem] w-full">
+                <div className={`pt-[27rem]  md:pt-[27rem] w-full ${locale === "en" ? "lg:pt-[28.25rem]" : "lg:pt-[25.25rem]"}`}>
                     <div className="w-full xl:w-[83.5rem] relative mx-auto overflow-hidden">
                         <ClientOnly>
                             <HalfCirclePosition />

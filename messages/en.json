@@ -6,6 +6,9 @@
     "nav_five": "Risk Profiling",
     "nav_six": "About Us",
     "foot_nav_one": "Anti-Fraud",
+    "jump_wetech_text": "Join our network",
+    "home_top_title": "Multiple scenes, Big data",
+    "home_top_title_des": "A Comprehensive Intelligent FinTech Service Provider",
     "home_block_top": "AI payment risk control, safeguarding cross-border ventures.",
     "home_block_top_desc": "Fraud alerts - fraud prevention - dispute resolution - a full-chain, one-stop solution providing merchants with professional, fast, user-friendly, and mature payment risk control products.",
     "home_block_top_small_des": "Global fraud continues",
@@ -13,5 +16,22 @@
     "email": "E-mail: business@wetech.vip",
     "address": "Company Address: Bantian Office/Nanshan Office, Longgang District, Shenzhen",
     "foot_t": "Services",
-    "foot_company": "Company information"
+    "foot_company": "Company information",
+
+    "home_slide_one_title": "Electronic",
+    "home_slide_one_desc": "products: the target industry of fraud syndicate, due to their high unit price, once a fraud occurs, it will bring huge losses to merchants.",
+    "home_slide_two_title": "Luxury goods",
+    "home_slide_two_desc": "Abusing of return and exchange policies, and misusing of coupons, prone to causing friendly fraud.",
+    "home_slide_three_title": "Gaming, gift card",
+    "home_slide_three_desc": "If a fraud occurs, the goods can be resold immediately without merchant shipping.",
+    "home_slide_four_title": "Grocery retail",
+    "home_slide_four_desc": "Fraud attacks on grocery merchants increased by 30% in 2020, making it an industry favored by fraudsters.",
+
+    "home_half_circle_one_title": "Fraud prevention- payment risk control",
+    "home_half_circle_one_desc": "based in self-developed payment risk control products,such,as credit card anti-fraud,device risk identification, use the combination of large model and small model,and realize automated decision-making of risk contnol through AI automatic engine",
+    "home_half_circle_two_title": "Dispute resolution- RDR/ethoca",
+    "home_half_circle_two_desc": "To cooperate with VISA,for Visa card, to realize automatically refund for chargebacks,and reduce the chargeback rate.",
+    "home_half_circle_two_desc_two": "To cooperate with ethoca, for all credit card, to resolve pre-disputes and reduce the chargeback rate.",
+    "home_half_circle_three_title": "Fraud notification- payment risk control",
+    "home_half_circle_three_desc": "based on self-developed payment risk control products, use the combination of large model and small model,and realize automated reminding of risk control through AI automatic engine, and seller makes decisions by themselves"
 }

@@ -2,7 +2,6 @@ import React from 'react'
 import getIntl from "@/app/[locale]/intl";
 
 const HomeTop = async ({ locale }: { locale: string }) => {
-    console.log(locale);
     const intl = await getIntl(locale);
     return (
         <div className='home-bg w-full h-[51.125rem] transition-all px-20 relative pt-40 xl:pt-60 lg:pl-44'>

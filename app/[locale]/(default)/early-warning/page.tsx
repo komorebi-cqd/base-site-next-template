@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import PageTop from '@/app/components/ui/page-top'
 import EarlyWarningSwiper from '@/app/components/ui/early-warning-swiper';
+import getIntl from "../../intl";
 
 const desc = (
     <>
@@ -43,11 +44,12 @@ const warnList = [
     },
 ]
 
-const EarlyWarning = () => {
+const EarlyWarning = async ({ params: { locale } }: { params: { locale: string } }) => {
+    const intl = await getIntl(locale);
     return (
         <div>
             {/* 顶部 */}
-            <PageTop bgImg='/image/early-warning/top-bg.png' title='争议预警与解决' desc={desc} topText='产品->争议预警与解决' />
+            <PageTop locale={locale} bgImg='/image/early-warning/top-bg.png' title='争议预警与解决' desc={desc} topText='产品->争议预警与解决' />
             {/* 两个幻灯片 */}
             <div className='w-full h-[43.375rem] pt-20 bg-[url("/image/early-warning/swiper-bg.png")] bg-center bg-no-repeat bg-cover'>
                 <EarlyWarningSwiper />

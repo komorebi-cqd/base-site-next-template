@@ -1,8 +1,10 @@
 import React from 'react'
 import Image from 'next/image';
+import getIntl from "../../intl";
 
 
-const About = () => {
+const About = async ({ params: { locale } }: { params: { locale: string } }) => {
+    const intl = await getIntl(locale);
     return (
         <div className='w-full'>
             {/* 顶部背景图 */}
@@ -13,8 +15,8 @@ const About = () => {
                 <div className='max-w-[78.75rem] mx-auto h-full flex flex-col'>
                     <div className='flex-1 flex flex-col md:flex-row justify-between items-center px-3 md:px-20 pb-7'>
                         <div className='max-w-[20rem] xl:max-w-[32.75rem] lg:max-w-[23rem]'>
-                            <div className='sub-title text-left mb-4'>关于我们</div>
-                            <div className='text-[#333333] text-base'>WeTech深耕于金融行业，是腾讯在出海金融风控方面深度战略合作伙伴，WeTech专注于出海方向金融风控领域，是多场景、大数据、全智能出海金融科技产品服务商，WeTech拥有全球最前沿的数据库，强大的数据分析能力和风控模型，自动决策引擎，灵活多变的商业方案为辅助，支付公司等，致力于为商户与支付公司提供完善的风控方案，欺诈识别，降低拒付率，提高订单通过率，从而增加收入创造价值</div>
+                            <div className={`sub-title text-left mb-4 ${locale === "en" ? " text-[32px]" : ""}`}>{intl.formatMessage({ id: 'about_title' })}</div>
+                            <div className='text-[#333333] text-base'>{intl.formatMessage({ id: 'about_des' })}</div>
                         </div>
                         <div className=' relative'>
                             <Image src="/image/about/about-r.png" alt='关于WeTech' width={465} height={316} sizes="465px"
@@ -25,24 +27,27 @@ const About = () => {
                         </div>
                     </div>
                     <div className='w-full h-[1px] bg-[rgba(0,0,0,0.15)]'></div>
-                    <div className='flex-1 flex items-center justify-center flex-col px-3 sm:p-0'>
-                        <div className='sub-title mb-7 mt-14'>联系我们</div>
+                    <div className='flex-1 flex items-center justify-center flex-col px-3 sm:p-0 text-sm'>
+                        <div className='sub-title mb-7 mt-14'>{intl.formatMessage({ id: 'about_contact_us' })}</div>
                         <div className='sm:w-[37.5rem] pb-20 bg-white shadow-[0_8px_8px_0_rgba(0,0,0,0.25)]'>
                             <ul className='flex flex-col gap-y-5 px-12'>
                                 <li className='relative -ml-8 pt-10'>
                                     <Image src="/image/about-logo.png" width={254} height={60} alt='WeTech' />
                                 </li>
                                 <li className='flex items-start sm:items-center gap-x-1'>
-                                    <Image src="/image/about/phone.png" className=' pt-1 sm:pt-0' width={20} height={20} alt='WeTech-phone' />
-                                    <span>联系电话：13715293975</span>
+                                    <Image src="/image/about/phone.png" className=' pt-1 sm:pt-0' width={16} height={16} alt='WeTech-phone' />
+                                    <span>{intl.formatMessage({ id: 'phone' })}</span>
                                 </li>
                                 <li className='flex items-start sm:items-center gap-x-1'>
-                                    <Image src="/image/about/email.png" className=' pt-1 sm:pt-0' width={20} height={20} alt='WeTech-email' />
-                                    <span>电子邮箱：business@wetech.vip</span>
+                                    <Image src="/image/about/email.png" className=' pt-1 sm:pt-0' width={16} height={16} alt='WeTech-email' />
+                                    <span>{intl.formatMessage({ id: 'email' })}</span>
                                 </li>
-                                <li className='flex items-start sm:items-center gap-x-1'>
-                                    <Image src="/image/about/address.png" className=' pt-1 sm:pt-0' width={20} height={20} alt='WeTech-address' />
-                                    <span>公司地址：深圳坂田办公室/深圳南山办公室</span>
+                                <li className='flex items-start gap-x-1'>
+                                    <Image src="/image/about/address.png" className=' pt-1' width={16} height={16} alt='WeTech-address' />
+                                    <div className='flex'>
+                                        <span className=' flex-shrink-0'>{intl.formatMessage({ id: 'address_text' })}</span>
+                                        <div className=' md:max-w-[300px]'>{intl.formatMessage({ id: 'address_detials' })}</div>
+                                    </div>
                                 </li>
                                 <li>
                                     <a href='https://bxp.test.wetech.vip/login?source=wetech-website-union' target="_blank" className="py-2 px-3 bg-indigo-500 text-white text-sm font-semibold rounded-md shadow focus:outline-none">渠道联盟注册</a>

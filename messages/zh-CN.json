@@ -33,6 +33,31 @@
     "home_half_circle_two_desc": "携手VISA,针对VISA卡组，实现拒付自动 退款，不计入考核，降低商户拒付率",
     "home_half_circle_two_desc_two": "携手ethoca,针对全卡组，是实现争议预警， 定制化解决，不计入考核降低拒付率",
     "home_half_circle_three_title": "风控预警-支付风控",
-    "home_half_circle_three_desc": "通过自研风控类产品，运用大模型+小模型结合，并通过 AI自动引擎实现风控自动提醒，由商户自行决策"
+    "home_half_circle_three_desc": "通过自研风控类产品，运用大模型+小模型结合，并通过 AI自动引擎实现风控自动提醒，由商户自行决策",
     
+    "advantage_title": "全球最前沿和最全风控数据库",
+    "advantage_one": "每日千万级用户自主上报",
+    "advantage_two": "数十亿设备指纹信誉数据",
+    "advantage_three": "全球风险邮箱库",
+    "advantage_four": "全球黑IP库",
+    "advantage_five": "业界最大安全号码库",
+    "advantage_six": "业界最大的恶意网址黑库",
+
+    "home_art_t": "强大技术及深度算法能力",
+    "home_art_t_one_des": "拥有全球最顶尖的技术团队及云服务能力",
+    "home_art_t_two_des": "基于多年沉淀的人工智能深度算法能力，实现对 全球各国语言、产品、购买行为等深度分析，并 建立标准模型",
+    "home_risk_pro_t": "反欺诈风控产品",
+    "home_risk_pro_des": "WeTech信用卡反欺诈，是以人工智能算法为核心， 依托实时计算、决策引擎、知识图谱、终端态势感 知等技术，并基于对客户业务场景和需求的深度了 解，为客户的出海业务保驾护航",
+
+    "home_zy_jj_t": "争议预警与解决",
+    "home_zy_jj_t_one_desc": "实时获取拒付信息并快速做出响应及处理，",
+    "home_zy_jj_t_two_desc": "有效降低商户拒付率减少财务损失，避免进入卡组监控异常名单",
+    "home_zy_jj_t_l": "Ethoca 争议拒付预警",
+    "home_zy_jj_t_r": "RDR/CDRN争议拒付预警",
+
+    "home_device_ad_t": "设备风险识别产品",
+    "home_device_ad_desc": "WeTech设备风险识别，具备全平台的设备可信标识生成能力， 包括APP/H5/小程序，移动端大盘十亿级设备落地验证， 冲突率/膨胀率/适配率等可控。性能、稳定性、容灾等方面， 经过内外产品多次迭代优化。产品能力覆盖面广， 从模型特征设计上，对高版本某些特征被限制之后向下兼容的支持， 验证过不断迭代升级，经历过AndroidQ和IOS14大升级。",
+    "home_fxhx_t": "风险画像",
+    "home_fxhx_desc": "WeTech风险画像，是基于多年沉淀的欺诈 团队对抗经验、终端安全技术和数据 分析建模能力，可以为客户提供多维风险画像"
+
 }

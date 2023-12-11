@@ -78,7 +78,16 @@ body {
     background: linear-gradient(90deg, #3D73F0 0%, rgba(153,180,244,0.39) 100%);
 }
 
+.advantage-block{
+    background: linear-gradient(180deg, #3782EF 0%, rgba(68,138,238,0.6) 100%);
+    text-align: center;
+    border-radius: 2.25rem;
+}
+
 @layer components {
+    .flex-c{
+      @apply flex flex-col justify-center items-center;
+    }
     .ab-c {
         @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2;
     }

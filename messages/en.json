@@ -33,5 +33,30 @@
     "home_half_circle_two_desc": "To cooperate with VISA,for Visa card, to realize automatically refund for chargebacks,and reduce the chargeback rate.",
     "home_half_circle_two_desc_two": "To cooperate with ethoca, for all credit card, to resolve pre-disputes and reduce the chargeback rate.",
     "home_half_circle_three_title": "Fraud notification- payment risk control",
-    "home_half_circle_three_desc": "based on self-developed payment risk control products, use the combination of large model and small model,and realize automated reminding of risk control through AI automatic engine, and seller makes decisions by themselves"
+    "home_half_circle_three_desc": "based on self-developed payment risk control products, use the combination of large model and small model,and realize automated reminding of risk control through AI automatic engine, and seller makes decisions by themselves",
+
+    "advantage_title": "The world's most cutting-edge and comprehensive risk control database",
+    "advantage_one": "Millions of users voluntarily report daily",
+    "advantage_two": "Several billions Device Fingerprint Reputation Data",
+    "advantage_three": "Global Risk Email Database",
+    "advantage_four": "Global Black IP Database",
+    "advantage_five": "The largest malicious URL blacklist in the industry",
+    "advantage_six": "The largest security number database in the industry",
+
+    "home_art_t": "Powerful technology and deep algorithmic capabilities",
+    "home_art_t_one_des": "Possessing a world-class technical team and cloud service capabilities",
+    "home_art_t_two_des": "Based on artificial intelligence and deep learning algorithms, we can do in-depth analysis of languages, products, and purchasing behaviors around the world, and establishes standard models",
+    "home_risk_pro_t": "Anti-Fraud",
+    "home_risk_pro_des": "WeTech credit card anti-fraud centres on artificial intelligence algorithms, and relies on technologies such as real-time computing, decision engines, knowledge graphs, and terminal situational awareness. And based on a deep understanding of customer business scenarios and needs, it helps to safeguard merchants' overseas operations.",
+
+    "home_zy_jj_t": "Dispute Alert and Resolution",
+    "home_zy_jj_t_one_desc": "Receive dispute cases in real time with fast response and resolution, to reduce chargeback",
+    "home_zy_jj_t_two_desc": "rate and financial losses, and to avoid being placed on card brand monitoring program list.",
+    "home_zy_jj_t_l": "Ethoca service",
+    "home_zy_jj_t_r": "RDR/CDRN service",
+
+    "home_device_ad_t": "Device Risk Identification",
+    "home_device_ad_desc": "Equipped with the capability to generate trusted device identifiers across all platforms, including APP/H5/mini-programs, with mobile terminal validation on over a billion devices. Its conflict rate, inflation rate, and adaptability rate are controllable. Through internal and external product development, its performance, stability, and disaster recovery have been iteratively improved. It covers a wide range, fand in terms of model feature design, it supports downward compatibility for high-version features that are restricted, and continuous iterative upgrades, having undergone major updates like Android Q and IOS 14.",
+    "home_fxhx_t": "Risk Profiling",
+    "home_fxhx_desc": "WeTech Risk Profiling is based on years of accumulated experience in combating fraud teams, terminal security technology, and data analysis modeling capabilities, enabling the provision of multi-dimensional risk profiles for clients"
 }

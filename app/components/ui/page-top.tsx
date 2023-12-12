@@ -18,7 +18,7 @@ const PageTop: React.FC<Props> = async ({ bgImg, title, desc, topText, locale })
                 {/* 标题 */}
                 <div className='flex items-center justify-center gap-x-4 pt-12 mb-5 px-4 md:px-0'>
                     <span className='block flex-shrink-0 w-[22px] h-[22px] rounded-full bg-gradient-to-bl from-white to-[#316FE7]'></span>
-                    <div className={` text-[#316FE7] font-semibold ${locale === "en" ? " text-xl" : "text-[1.75rem]"}`}>{title}</div>
+                    <div className={` text-[#316FE7] font-semibold text-center ${locale === "en" ? " text-xl" : "text-[1.75rem]"}`}>{title}</div>
                     <span className='block flex-shrink-0 w-[22px] h-[22px] rounded-full bg-gradient-to-bl from-white to-[#316FE7]'></span>
                 </div>
                 {/* 介绍 */}

@@ -13,7 +13,7 @@ const RiskIdentification = async ({ params: { locale } }: { params: { locale: st
     return (
         <div>
             {/* 顶部 */}
-            <PageTop locale={locale} bgImg='/image/risk-identification/top-bg.png' title={intl.formatMessage({ id: 'device_risk_t' })} desc={desc} topText='产品->设备风险识别' />
+            <PageTop locale={locale} bgImg='/image/risk-identification/top-bg.png' title={intl.formatMessage({ id: 'device_risk_t' })} desc={desc} topText={intl.formatMessage({ id: 'breadcrumbs_fxsb' })} />
             {/* 优势 */}
             <div className='w-full pt-5 pb-9 risk-advantage-img'>
                 <div className='flex flex-col'>
@@ -40,7 +40,7 @@ const RiskIdentification = async ({ params: { locale } }: { params: { locale: st
                             <div className='text-[#333333] text-base'>{intl.formatMessage({ id: 'dr_b_one_desc' })}</div>
                         </div>
                         <div className=' relative w-[19.25rem] h-[16.9rem] flex-shrink-0'>
-                            <Image src="/image/risk-identification/sf.png" alt='anti-fraud-value' fill={true} />
+                            <Image src={locale === "en" ? "/image/risk-identification/sf-en.png" : "/image/risk-identification/sf.png"} alt='anti-fraud-value' fill={true} />
                         </div>
                     </div>
                     <div className='w-full h-[1px] bg-[rgba(0,0,0,0.15)]'></div>

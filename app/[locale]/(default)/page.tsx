@@ -49,7 +49,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                         <Image src="/image/home/algorithm-img.png" fill={true} alt="algorithm-img" />
                     </div>
                     <div className={` px-5 md:px-0 ${locale === "en" ? "max-w-[550px]" : ""}`}>
-                        <div className={`sub-title text-left mb-7 pb-7 relative before:absolute before:bottom-0 before:left-0 before:w-48 before:h-[1px] before:bg-[rgba(0,0,0,0.1)] ${locale === "en" ? "text-3xl" : ""}`}>
+                        <div className={`sub-title text-left mb-7 pb-7 relative before:absolute before:bottom-0 before:left-0 before:w-48 before:h-[1px] before:bg-[rgba(0,0,0,0.1)] ${locale === "en" ? "text-[32px] leading-10" : ""}`}>
                             {intl.formatMessage({ id: 'home_art_t' })}
                         </div>
                         <ul className=" w-full text-[rgba(51,51,51,0.85)] font-medium text-base pl-3">
@@ -61,9 +61,9 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
             </div>
             {/* 反欺诈风控产品 */}
             <div className="w-full h-auto pt-[5.5rem] pb-[4rem] bg-white  px-2">
-                <div className=" max-w-[1150px] mx-auto flex flex-col md:flex-row justify-between items-center">
+                <div className="px-5 md:px-0  max-w-[1150px] mx-auto flex flex-col md:flex-row justify-between items-center">
                     <div className="max-w-[504px] order-2 md:order-1 mt-10 md:mt-0">
-                        <div className="sub-title text-left mb-7 pb-7 relative before:absolute before:bottom-0 before:left-0 before:w-48 before:h-[1px] before:bg-[rgba(0,0,0,0.1)]">{intl.formatMessage({ id: 'home_risk_pro_t' })}</div>
+                        <div className={`sub-title text-left mb-7 pb-7 relative before:absolute before:bottom-0 before:left-0 before:w-48 before:h-[1px] before:bg-[rgba(0,0,0,0.1)] ${locale === "en" ? "text-[32px]" : ""}`}>{intl.formatMessage({ id: 'home_risk_pro_t' })}</div>
                         <div className={`text-[rgba(51,51,51,0.85)] text-base max-w-[365px] ${locale === "en" ? "max-w-[560px]" : "max-w-[365px]"}`}>{intl.formatMessage({ id: 'home_risk_pro_des' })}</div>
                     </div>
                     <div className=" relative order-1 md:order-2">

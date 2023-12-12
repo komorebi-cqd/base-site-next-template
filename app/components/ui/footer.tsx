@@ -38,19 +38,19 @@ const Footer = async ({ locale }: { locale: string }) => {
                 </div>
 
                 {/* 右边产品和公司信息 */}
-                <div className='flex flex-col md:flex-row text-[#96BAFF] gap-y-6 md:gap-y-0 md:gap-x-44'>
+                <div className={`flex flex-col md:flex-row text-[#96BAFF] gap-y-6 md:gap-y-0  ${locale === "en" ? " gap-x-10" : "md:gap-x-44"}`}>
                     {/* 产品 */}
                     <div>
                         <div className='text-white text-base font-semibold mb-5'>{intl.formatMessage({ id: 'foot_t' })}</div>
                         <ul className='flex flex-col gap-y-2 text-sm'>
                             {productList.map(product => (<li key={product.id} className=''>
-                                <Link href={ locale === "en" ? "/en" + product.link : product.link}>{product.text}</Link>
+                                <Link href={locale === "en" ? "/en" + product.link : product.link}>{product.text}</Link>
                             </li>))}
                         </ul>
                     </div>
                     {/* 公司信息 */}
                     <div>
-                        <div className='text-white text-base font-semibold mb-5'>{intl.formatMessage({ id: 'foot_company' })}</div>
+                        <div className='text-white text-base font-semibold mb-5 whitespace-nowrap'>{intl.formatMessage({ id: 'foot_company' })}</div>
                         <ul className=' mb-6 text-sm'>
                             <li><Link href={locale === "en" ? "/en/about" : "/about"}>{intl.formatMessage({ id: 'nav_six' })}</Link></li>
                         </ul>

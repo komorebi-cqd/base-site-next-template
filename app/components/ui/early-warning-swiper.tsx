@@ -5,25 +5,38 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useParams } from 'next/navigation'
+import { useIntl } from "react-intl";
 
-const rdrList = [
-    { text: "根据商户设定的规则，通过强大的决策引擎自动解决争议" },
-    { text: "符合规则的争议将通过自动退款，以实时解决" },
-    { text: "客户发起争议时自动解决，以改善客户体验" },
-    { text: "RDR覆盖VISA卡组" },
-];
 
-const cdrnList = [
-    { text: "通过闭环网络接收以及直接交付" },
-    { text: "停止未来重复交易的争议" },
-    { text: "避免昂贵的费用，罚款" },
-    { text: "CDRN覆盖全卡组" },
-];
+function useGetIntlMessages() {
+    const { formatMessage } = useIntl();
+    const rdrList = [
+        { text: formatMessage({ id: "ew_slide_two_item_one" }) },
+        { text: formatMessage({ id: "ew_slide_two_item_two" })  },
+        { text: formatMessage({ id: "ew_slide_two_item_three" })  },
+        { text: formatMessage({ id: "ew_slide_two_item_four" })  },
+    ];
+    
+    const cdrnList = [
+        { text: formatMessage({ id: "ew_slide_one_item_one" }) },
+        { text: formatMessage({ id: "ew_slide_one_item_two" })  },
+        { text: formatMessage({ id: "ew_slide_one_item_three" })  },
+        { text: formatMessage({ id: "ew_slide_one_item_four" })  },
+    ];
+
+    return {
+        rdrList,
+        cdrnList
+    }
+}
 
 
 const EarlyWarningSwiper = () => {
+    const { formatMessage } = useIntl();
+    const params = useParams();
     const [swiperInstance, setSwiperInstance] = useState<any>(null);
-
+    const { rdrList, cdrnList } = useGetIntlMessages();
     useEffect(() => {
     }, []);
     return (
@@ -47,20 +60,20 @@ const EarlyWarningSwiper = () => {
                 >
                     <SwiperSlide className='w-full h-full'>
                         <div className='w-full h-full pt-11 text-[rgba(0,0,0,0.85)] flex flex-col px-2 md:px-0'>
-                            <div className='text-center text-[#316FE7] text-3xl md:text-[2rem] font-medium'>快速争议解决（RDR）</div>
-                            <div className='text-center text-base md:text-lg mt-10 mb-14'>通过为商户量身定做的强大的决策引擎，自动解决参与RDR发卡行推送的争议交易，以实现实时解决。</div>
-                            <ul className=' text-base md:text-xl mx-auto flex flex-col gap-y-7 md:pl-7'>
+                            <div className='text-center text-[#316FE7] text-3xl md:text-[2rem] font-medium'>{formatMessage({ id: "ew_slide_two_t" })}</div>
+                            <div className={`text-center text-base md:text-lg mx-auto ${params?.locale === "en"? " max-w-[770px] my-5 sm:mt-10 sm:mb-14 " : "mt-10 mb-14 "}`}>{formatMessage({ id: "ew_slide_two_desc" })}</div>
+                            <ul className={`text-base  mx-auto flex flex-col ${params?.locale === "en"? " max-w-[660px] gap-y-3 md:text-lg lg:text-xl" : "md:pl-7  gap-y-7 md:text-xl"}`}>
                                 {rdrList.map(it => (
-                                    <li className='relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>
+                                    <li className='relative pl-5 before:absolute before:top-3 before:-translate-y-1/2 before:left-0 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>
                                 ))}
                             </ul>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='w-full h-full'>
                         <div className='w-full h-full pt-11 text-[rgba(0,0,0,0.85)] flex flex-col px-2 md:px-0'>
-                            <div className='text-center text-[#316FE7] text-3xl md:text-[2rem] font-medium'>持卡人争议解决网络（CDRN）</div>
-                            <div className='text-center text-base md:text-lg mt-10 mb-14'>通过卖家发起的退款，在72小时内解决参与CDRN发卡推送的争议交易</div>
-                            <ul className=' text-base md:text-xl  mx-auto flex flex-col gap-y-7 md:pr-20'>
+                            <div className='text-center text-[#316FE7] text-3xl md:text-[2rem] font-medium'>{formatMessage({ id: "ew_slide_one_t" })}</div>
+                            <div className={`text-center text-base md:text-lg ${params?.locale === "en"? "my-5 sm:mt-10 sm:mb-14 " : "mt-10 mb-14 "}`}>{formatMessage({ id: "ew_slide_one_desc" })}</div>
+                            <ul className={`text-base  mx-auto flex flex-col ${params?.locale === "en"? " max-w-[690px] md:text-lg lg:text-xl gap-y-3 sm:gap-y-7" : "md:pr-20 md:text-xl gap-y-7"}`}>
                                 {cdrnList.map(it => (
                                     <li className='relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>
                                 ))}

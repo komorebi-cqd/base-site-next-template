@@ -14,11 +14,11 @@ const RiskPortait = async ({ params: { locale } }: { params: { locale: string } 
     return (
         <div>
             {/* 顶部 */}
-            <PageTop bgImg='/image/risk-portrait/top-bg.png' locale={locale} title={intl.formatMessage({ id: 'risk_profiling_t' })} desc={desc} topText='产品->风险画像' />
+            <PageTop bgImg='/image/risk-portrait/top-bg.png' locale={locale} title={intl.formatMessage({ id: 'risk_profiling_t' })} desc={desc} topText={intl.formatMessage({ id: 'breadcrumbs_fxhx' })} />
             {/* 优势 */}
             <div className='w-full pt-5 pb-9 risk-advantage-img'>
                 <div className='flex flex-col'>
-                    <div className=' sub-title pt-5 pb-4'>{intl.formatMessage({ id: 'our_advantage' })}</div>
+                    <div className={`sub-title pt-5 pb-4 ${locale === "en" ? "text-[32px]" : ""}`}>{intl.formatMessage({ id: 'our_advantage' })}</div>
                     <div className='flex flex-col justify-center md:flex-row items-center mt-24 gap-x-[2rem] xl:gap-x-[6rem] lg:gap-x-16 md:gap-x-4 gap-y-[6.25rem] '>
                         <AdvantageItem locale={locale} title={<div className='mt-[136px] whitespace-nowrap'>{intl.formatMessage({ id: 'rp_ys_one_t' })}</div>} desc={(<div className={`${locale === "en" ? "px-2" : " px-3 lg:px-5"}`}>{intl.formatMessage({ id: 'rp_ys_one_desc' })}</div>)} absImg={<div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 w-48 h-48'>
                             <Image src="/image/advantage-icons/yj1.png" alt={intl.formatMessage({ id: 'rp_ys_one_t' })} fill={true} />

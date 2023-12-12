@@ -9,7 +9,7 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
         <div className='w-full'>
             {/* 顶部背景图 */}
             <div className='w-full h-[51.125rem] bg-[url("/image/about/bg-top.png")] bg-no-repeat relative bg-cover bg-center'>
-                <div className=' text-sm text-white pt-[8rem] max-w-4xl mx-auto pl-8 mb-3'>{"公司信息->关于我们"}</div>
+                <div className=' text-sm text-white pt-[8rem] max-w-4xl mx-auto pl-8 mb-3'>{intl.formatMessage({ id: 'breadcrumbs_about' })}</div>
             </div>
             <div className='w-full py-12 bg-gradient-to-b  from-[#E7F1FF] to-white'>
                 <div className='max-w-[78.75rem] mx-auto h-full flex flex-col'>
@@ -19,7 +19,7 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
                             <div className='text-[#333333] text-base'>{intl.formatMessage({ id: 'about_des' })}</div>
                         </div>
                         <div className=' relative'>
-                            <Image src="/image/about/about-r.png" alt='关于WeTech' width={465} height={316} sizes="465px"
+                            <Image src="/image/about/about-r.png" alt='about-WeTech' width={465} height={316} sizes="465px"
                                 style={{
                                     width: '100%',
                                     height: 'auto',
@@ -28,7 +28,7 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
                     </div>
                     <div className='w-full h-[1px] bg-[rgba(0,0,0,0.15)]'></div>
                     <div className='flex-1 flex items-center justify-center flex-col px-3 sm:p-0 text-sm'>
-                        <div className='sub-title mb-7 mt-14'>{intl.formatMessage({ id: 'about_contact_us' })}</div>
+                        <div className={`sub-title mb-7 mt-14 ${locale === "en" ? " text-[32px]" : ""}`}>{intl.formatMessage({ id: 'about_contact_us' })}</div>
                         <div className='sm:w-[37.5rem] pb-20 bg-white shadow-[0_8px_8px_0_rgba(0,0,0,0.25)]'>
                             <ul className='flex flex-col gap-y-5 px-12'>
                                 <li className='relative -ml-8 pt-10'>

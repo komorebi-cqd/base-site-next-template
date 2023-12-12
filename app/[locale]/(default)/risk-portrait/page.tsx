@@ -36,7 +36,7 @@ const RiskPortait = async ({ params: { locale } }: { params: { locale: string } 
                 <div className=' max-w-[78.75rem] mx-auto h-full flex flex-col'>
                     <div className='flex-1 flex flex-col md:flex-row justify-between items-center px-3 md:px-20 pt-[3.5rem] pb-0 md:pb-[3.5rem]'>
                         <div className={` ${locale === "en" ? "max-w-[665px]" : "max-w-[28.275rem]"}`}>
-                            <div className={`sub-title text-left ${locale === "en" ? "max-w-[560px] text-[32px]" : ""}`}>{intl.formatMessage({ id: 'rp_ys_b_one_t' })}</div>
+                            <div className={`sub-title text-left ${locale === "en" ? "max-w-[560px] text-[32px] leading-10" : ""}`}>{intl.formatMessage({ id: 'rp_ys_b_one_t' })}</div>
                             <div className='text-[#333333] text-base font-bold mt-5 mb-2'>{intl.formatMessage({ id: 'rp_ys_b_one_sub_t' })}</div>
                             <div className='text-[#333333] text-base'>{intl.formatMessage({ id: 'rp_ys_b_one_desc' })}</div>
                         </div>

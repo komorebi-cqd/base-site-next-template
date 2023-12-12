@@ -48,11 +48,11 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                     <div className=" relative w-[17.6rem] h-[17.6rem] flex-shrink-0">
                         <Image src="/image/home/algorithm-img.png" fill={true} alt="algorithm-img" />
                     </div>
-                    <div className={` px-5 md:px-0 ${locale === "en" ? "max-w-[550px]" : ""}`}>
+                    <div className={` px-5 md:px-0 ${locale === "en" ? "max-w-[550px]" : "max-w-[400px]"}`}>
                         <div className={`sub-title text-left mb-7 pb-7 relative before:absolute before:bottom-0 before:left-0 before:w-48 before:h-[1px] before:bg-[rgba(0,0,0,0.1)] ${locale === "en" ? "text-[32px] leading-10" : ""}`}>
                             {intl.formatMessage({ id: 'home_art_t' })}
                         </div>
-                        <ul className=" w-full text-[rgba(51,51,51,0.85)] font-medium text-base pl-3">
+                        <ul className={`w-full text-[rgba(51,51,51,0.85)] font-medium text-base pl-3 ${locale === "en" ? "" : "max-w-[340px]"}`}>
                             <li className=" whitespace-normal mb-2 relative before:absolute before:top-3 before:-translate-y-1/2 before:-left-3 before:bg-[#316FE7] before:w-[5px] before:h-[5px] before:rounded-full">{intl.formatMessage({ id: 'home_art_t_one_des' })}</li>
                             <li className=" whitespace-normal relative before:absolute before:top-3 before:-translate-y-1/2 before:-left-3 before:bg-[#316FE7] before:w-[5px] before:h-[5px] before:rounded-full">{intl.formatMessage({ id: 'home_art_t_two_des' })}</li>
                         </ul>

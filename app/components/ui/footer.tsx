@@ -34,6 +34,10 @@ const Footer = async ({ locale }: { locale: string }) => {
                             <Image src="/image/footer/address.png" width={20} height={20} alt='WeTech-address' />
                             <span>{intl.formatMessage({ id: 'address' })}</span>
                         </li>
+                        <li className='flex flex-col'>
+                            <span>深圳云享家网络科技有限公司版权所有</span>
+                            <a className=' transition-all hover:text-[--text-primary]' target='_blank' href="https://beian.miit.gov.cn/">粤ICP备2021094662号-3</a>
+                        </li>
                     </ul>
                 </div>
 

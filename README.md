@@ -65,4 +65,10 @@ server {
 ```
 
 
+```js
+
+pm2 start npm --name "offsit" -- start
+```
+
+
 ***source ~/.profile***

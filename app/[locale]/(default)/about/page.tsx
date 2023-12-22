@@ -50,7 +50,7 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
                                     </div>
                                 </li>
                                 {locale !== "en" && <li>
-                                    <a href='https://bxp.test.wetech.vip/login?source=wetech-website-union' target="_blank" className="py-2 px-3 bg-indigo-500 text-white text-sm font-semibold rounded-md shadow focus:outline-none">加入渠道联盟</a>
+                                    <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className="py-2 px-3 bg-indigo-500 text-white text-sm font-semibold rounded-md shadow focus:outline-none">加入渠道联盟</a>
                                 </li>}
                             </ul>
                         </div>

@@ -16,37 +16,18 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
             {/* 顶部 */}
             <PageTop locale={locale} bgImg='/image/anti-fraud/top-bg.png' title={intl.formatMessage({ id: 'anti_fraud_t' })} desc={desc} topText={intl.formatMessage({ id: 'breadcrumbs_af' })} />
             {/* 传统对比wetech */}
-            <div className='w-full bg-gradient-to-b  from-[#F4F7FF] via-[rgba(224,238,255,0)] to-white py-24'>
-                <div className='flex flex-col justify-center max-w-[80rem] mx-auto'>
-                    <div className=' px-4 lg:px-0 flex justify-between flex-col lg:flex-row items-center mx-auto w-full'>
-                        <div className={`flex-1 ${locale === "en" ? "max-w-[488px] lg:max-w-[570px]" : "max-w-[488px] lg:max-w-[410px]"}`}>
-                            <div className={`sub-title text-left ${locale === "en" ? "text-[32px]" : ""}`}>{intl.formatMessage({ id: 'af_ctfk_t' })}</div>
-                            <div className=' text-base text-[#171717] mt-5'>{intl.formatMessage({ id: 'af_ctfk_desc' })}</div>
+            <div className='w-full px-4 py-6 bg-slate-400'>
+                <div className='max-w-[1200px] mx-auto  flex flex-col items-center gap-y-7'>
+                    <div className='w-full min-h-[300px] bg-white flex'>
+                        <div className='flex-[1_1_0%]'>
+                            <h3>{intl.formatMessage({ id: 'af_ctfk_t' })}</h3>
+                            <span>{intl.formatMessage({ id: 'af_ctfk_desc' })}</span>
                         </div>
-                        <div className=' relative'>
-                            <Image src={locale === "en" ? "/image/anti-fraud/traditional-risk-control-en.png" : "/image/anti-fraud/traditional-risk-control.png"} width={448} height={212} sizes="448px"
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                }} alt='traditional-risk-control' />
+                        <div className=' relative flex-[2_2_0%]'>
+                            <Image className=' object-contain' src="/image/advantage-icons/advantage1.png" alt='advantage1' fill={true} />
                         </div>
                     </div>
-                    <div className=' relative w-[2.38rem] h-[5.625rem] mx-auto my-3'>
-                        <Image src="/image/anti-fraud/multiple-arrow.png" alt='multiple-arrow' fill={true} />
-                    </div>
-                    <div className='px-4 lg:px-0 flex justify-between items-center flex-col lg:flex-row gap-6 md:gap-0'>
-                        <div className=' relative'>
-                            <Image src={locale === "en" ? "/image/anti-fraud/wetech-risk-control-en.png" : "/image/anti-fraud/wetech-risk-control.png"} width={670} height={184} sizes="448px"
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                }} alt='wetech-risk-control' />
-                        </div>
-                        <div className={`max-w-[488px]`}>
-                            <div className={`sub-title text-left ${locale === "en" ? "text-[32px]" : ""}`}>{intl.formatMessage({ id: 'af_wcfk_t' })}</div>
-                            <div className=' text-base text-[#171717] mt-5'>{intl.formatMessage({ id: 'af_wcfk_desc' })}</div>
-                        </div>
-                    </div>
+                    <div className='w-full  min-h-[300px]  bg-white'></div>
                 </div>
             </div>
             {/* 信用卡反欺诈核心价值 */}
@@ -71,7 +52,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                     <div className='w-full'>
                         <div className={`sub-title ${locale === "en" ? "text-[32px] max-w-[690px] mx-auto mt-6 mb-12" : "mt-10 md:mb-[4.88rem] "}`}>{intl.formatMessage({ id: 'af_zz_hw_t' })}</div>
                         <div className='flex flex-col md:flex-row justify-between items-center text-[#333] text-base'>
-                            <div className={`mt-10 mb-6 md:m-0 ${locale === "en" ? "max-w-[640px]" : "max-w-[528px]" }`}>{intl.formatMessage({ id: 'af_zz_hw_desc' })}</div>
+                            <div className={`mt-10 mb-6 md:m-0 ${locale === "en" ? "max-w-[640px]" : "max-w-[528px]"}`}>{intl.formatMessage({ id: 'af_zz_hw_desc' })}</div>
                             <div className=' relative flex-shrink-0'>
                                 <Image src={locale === "en" ? "/image/anti-fraud/intent-anti-fraud-en.png" : "/image/anti-fraud/intent-anti-fraud.png"} width={468} height={100} sizes="468px"
                                     style={{
@@ -103,7 +84,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                             }} />
                     </div>
                     <div className=' relative'>
-                        <Image src={locale === "en" ? "/image/anti-fraud/ai-model2-en.png" : "/image/anti-fraud/ai-model2.png"} alt='ai-model2'  width={514} height={210} sizes="514px"
+                        <Image src={locale === "en" ? "/image/anti-fraud/ai-model2-en.png" : "/image/anti-fraud/ai-model2.png"} alt='ai-model2' width={514} height={210} sizes="514px"
                             style={{
                                 width: '100%',
                                 height: 'auto',

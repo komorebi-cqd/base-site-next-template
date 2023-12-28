@@ -13,16 +13,16 @@ function useGetIntlMessages() {
     const { formatMessage } = useIntl();
     const rdrList = [
         { text: formatMessage({ id: "ew_slide_two_item_one" }) },
-        { text: formatMessage({ id: "ew_slide_two_item_two" })  },
-        { text: formatMessage({ id: "ew_slide_two_item_three" })  },
-        { text: formatMessage({ id: "ew_slide_two_item_four" })  },
+        { text: formatMessage({ id: "ew_slide_two_item_two" }) },
+        { text: formatMessage({ id: "ew_slide_two_item_three" }) },
+        { text: formatMessage({ id: "ew_slide_two_item_four" }) },
     ];
-    
+
     const cdrnList = [
         { text: formatMessage({ id: "ew_slide_one_item_one" }) },
-        { text: formatMessage({ id: "ew_slide_one_item_two" })  },
-        { text: formatMessage({ id: "ew_slide_one_item_three" })  },
-        { text: formatMessage({ id: "ew_slide_one_item_four" })  },
+        { text: formatMessage({ id: "ew_slide_one_item_two" }) },
+        { text: formatMessage({ id: "ew_slide_one_item_three" }) },
+        { text: formatMessage({ id: "ew_slide_one_item_four" }) },
     ];
 
     return {
@@ -40,11 +40,10 @@ const EarlyWarningSwiper = () => {
     useEffect(() => {
     }, []);
     return (
-        <div className=' max-w-[84.125rem] h-[33.5rem]  mx-auto flex items-center justify-center gap-x-5 lg:gap-x-16 px-2 xl:px-0'>
-            <div onClick={() => swiperInstance?.slideNext()} className=' relative w-[3.75rem] h-[3.75rem] flex-shrink-0 rotate-180 cursor-pointer hidden md:block'>
-                <Image src="/image/early-warning/arrow.png" fill={true} alt="WeTech-arrow" />
+        <div className=' w-1200 mx-auto flex items-center justify-center gap-x-5 lg:gap-x-16 px-2 xl:px-0'>
+            <div onClick={() => swiperInstance?.slideNext()} className=' relative w-[3.75rem] h-[3.75rem] rounded-full border-2 border-[#316FE7] flex-shrink-0 cursor-pointer hidden md:block after:block after:w-6 after:h-1 after:bg-[#316FE7] after:rounded-s after:absolute after:top-[19px] after:left-4 after:rotate-45 before:block before:w-6 before:h-1 before:bg-primary before:rounded-s before:absolute before:bottom-[19px] before:left-4 before:-rotate-45 hover:before:bg-white hover:after:bg-white hover:bg-primary rotate-180'>
             </div>
-            <div className='flex-1 h-full bg-[rgba(255,255,255,0.75)] rounded-3xl relative'>
+            <div className='flex-1 min-h-[480px] h-full bg-[#F5F9FC] rounded-3xl relative'>
                 <Swiper
                     slidesPerView={"auto"}
                     loop={true}
@@ -60,9 +59,9 @@ const EarlyWarningSwiper = () => {
                 >
                     <SwiperSlide className='w-full h-full'>
                         <div className='w-full h-full pt-11 text-[rgba(0,0,0,0.85)] flex flex-col px-2 md:px-0'>
-                            <div className='text-center text-[#316FE7] text-3xl md:text-[2rem] font-medium'>{formatMessage({ id: "ew_slide_two_t" })}</div>
-                            <div className={`text-center text-base md:text-lg mx-auto ${params?.locale === "en"? " max-w-[770px] my-5 sm:mt-10 sm:mb-14 " : "mt-10 mb-14 "}`}>{formatMessage({ id: "ew_slide_two_desc" })}</div>
-                            <ul className={`text-base  mx-auto flex flex-col ${params?.locale === "en"? " max-w-[660px] gap-y-3 md:text-lg lg:text-xl" : "md:pl-7  gap-y-7 md:text-xl"}`}>
+                            <div className='text-center text-[rgba(51,51,51,0.9)] text-2xl md:text-[38px] font-medium'>{formatMessage({ id: "ew_slide_two_t" })}</div>
+                            <div className={`text-center text-sm md:text-base font-semibold mx-auto ${params?.locale === "en" ? " max-w-[770px] my-5 sm:mt-10 sm:mb-14 " : "mt-10  mb-9"}`}>{formatMessage({ id: "ew_slide_two_desc" })}</div>
+                            <ul className={` text-sm mx-auto w-full flex flex-col ${params?.locale === "en" ? " max-w-[660px] gap-y-3" : "gap-y-7 max-w-[516px] "}`}>
                                 {rdrList.map(it => (
                                     <li className='relative pl-5 before:absolute before:top-3 before:-translate-y-1/2 before:left-0 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>
                                 ))}
@@ -71,9 +70,9 @@ const EarlyWarningSwiper = () => {
                     </SwiperSlide>
                     <SwiperSlide className='w-full h-full'>
                         <div className='w-full h-full pt-11 text-[rgba(0,0,0,0.85)] flex flex-col px-2 md:px-0'>
-                            <div className='text-center text-[#316FE7] text-3xl md:text-[2rem] font-medium'>{formatMessage({ id: "ew_slide_one_t" })}</div>
-                            <div className={`text-center text-base md:text-lg ${params?.locale === "en"? "my-5 sm:mt-10 sm:mb-14 " : "mt-10 mb-14 "}`}>{formatMessage({ id: "ew_slide_one_desc" })}</div>
-                            <ul className={`text-base  mx-auto flex flex-col ${params?.locale === "en"? " max-w-[690px] md:text-lg lg:text-xl gap-y-3 sm:gap-y-7" : "md:pr-20 md:text-xl gap-y-7"}`}>
+                            <div className='text-center text-[rgba(51,51,51,0.9)] text-2xl md:text-[38px] font-medium'>{formatMessage({ id: "ew_slide_one_t" })}</div>
+                            <div className={`text-center text-sm md:text-base font-semibold ${params?.locale === "en" ? "my-5 sm:mt-10 sm:mb-14 " : "mt-10 mb-9 "}`}>{formatMessage({ id: "ew_slide_one_desc" })}</div>
+                            <ul className={`text-sm  mx-auto  w-full flex flex-col ${params?.locale === "en" ? " max-w-[690px] gap-y-3 sm:gap-y-7" : "gap-y-7 max-w-[516px] "}`}>
                                 {cdrnList.map(it => (
                                     <li className='relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>
                                 ))}
@@ -83,8 +82,7 @@ const EarlyWarningSwiper = () => {
                 </Swiper>
                 <div className="swiper-pagination swiper-pagination-bullets !-bottom-12"></div>
             </div>
-            <div onClick={() => swiperInstance?.slidePrev()} className=' relative w-[3.75rem] h-[3.75rem] flex-shrink-0 cursor-pointer hidden md:block'>
-                <Image src="/image/early-warning/arrow.png" fill={true} alt="WeTech-arrow" />
+            <div onClick={() => swiperInstance?.slidePrev()} className=' relative w-[3.75rem] h-[3.75rem] rounded-full border-2 border-[#316FE7] flex-shrink-0 cursor-pointer hidden md:block after:block after:w-6 after:h-1 after:bg-[#316FE7] after:rounded-s after:absolute after:top-[19px] after:left-4 after:rotate-45 before:block before:w-6 before:h-1 before:bg-primary before:rounded-s before:absolute before:bottom-[19px] before:left-4 before:-rotate-45 hover:before:bg-white hover:after:bg-white hover:bg-primary'>
             </div>
         </div>
     )

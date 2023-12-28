@@ -49,132 +49,133 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
     )
     return (
         <div>
-            {/* 顶部 */}
-            <PageTop locale={locale} bgImg='/image/early-warning/top-bg.png' title={intl.formatMessage({ id: 'early_warning_t' })} desc={desc} topText={intl.formatMessage({ id: 'breadcrumbs_zy' })} />
-            {/* 两个幻灯片 */}
-            <div className='w-full h-[43.375rem] pt-20 bg-[url("/image/early-warning/swiper-bg.png")] bg-center bg-no-repeat bg-cover'>
+            {/* 顶部大图 */}
+            <div className="w-full  bg-[#020F15] max-h-[var(--top-h)] h-[var(--top-h)]">
+                <div className="max-w-[1440px] mx-auto h-full bg-[url('/image/early-warning/top-bg.png')] bg-contain bg-right-bottom bg-no-repeat  px-6 xl:px-0">
+                    <div className="flex flex-col text-white h-full max-w-[1200px] mx-auto pt-48 ">
+                        <h3 className=" text-[58px] font-bold">争议预警与解决</h3>
+                        <div className="flex flex-col text-[32px] mt-4 mb-6">
+                            <span>实时获取拒付信息、快速响应 </span>
+                            <span>有效降低商户拒付率</span>
+                        </div>
+                        <a href="#" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">立即体验</a>
+                    </div>
+                </div>
+            </div>
+            {/* 幻灯片 */}
+            <div className='w-full pt-16 pb-32 bg-white '>
                 <EarlyWarningSwiper />
             </div>
-            {/* RDR和CDRN拒付解决服务能够做 */}
-            <div className='w-full py-9 bg-[#F4F7FF]'>
-                <div className='max-w-[83.75rem] mx-auto px-3 md:px-0'>
-                    <div className={`sub-title pb-2 font-extrabold  ${locale === "en" ? " text-[32px]" : ""}`}>{intl.formatMessage({ id: 'ew_what_rdr_cdrn_t' })}</div>
-                    <div className='flex items-center flex-1 flex-col lg:flex-row'>
-                        <ul className=' text-base text-[rgba(0,0,0,0.85)] flex flex-col gap-y-1 py-4 px-4 xl:px-0'>
-                            <li>
-                                <p>{intl.formatMessage({ id: 'ew_what_rdr_cdrn_one' })}</p>
-                            </li>
-                            <li>
-                                <p>{intl.formatMessage({ id: 'ew_what_rdr_cdrn_two' })}</p>
-                                <p>{intl.formatMessage({ id: 'ew_what_rdr_cdrn_two_desc' })}</p>
-                            </li>
-                            <li>
-                                <p>{intl.formatMessage({ id: 'ew_what_rdr_cdrn_three' })}</p>
-                                <p>{intl.formatMessage({ id: 'ew_what_rdr_cdrn_three_desc' })}</p>
-                            </li>
-                            <li>
-                                <p>{intl.formatMessage({ id: 'ew_what_rdr_cdrn_four' })}</p>
-                                <p>{intl.formatMessage({ id: 'ew_what_rdr_cdrn_four_desc' })}</p>
-                            </li>
-                            <li>
-                                <p>{intl.formatMessage({ id: 'ew_what_rdr_cdrn_five' })}</p>
-                                <p>{intl.formatMessage({ id: 'ew_what_rdr_cdrn_five_desc' })}</p>
-                            </li>
-                            <li>
-                                <p>{intl.formatMessage({ id: 'ew_what_rdr_cdrn_six' })}</p>
-                                <p>{intl.formatMessage({ id: 'ew_what_rdr_cdrn_six_desc' })}</p>
-                            </li>
-                        </ul>
-                        <div className=' relative flex-shrink-0'>
-                            <Image src={locale === "en" ? "/image/early-warning/lc-en.png" : "/image/early-warning/lc.png"} width={666} height={316} sizes="666px"
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                }} alt={intl.formatMessage({ id: 'ew_what_rdr_cdrn_t' })} />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* 我们的优点 */}
-            <div className='w-full pt-8 pb-10 bg-[url("/image/early-warning/advantage-bg.png")] bg-center bg-no-repeat bg-cover'>
-                <div className='max-w-[79rem] mx-auto'>
-                    <div className='sub-title'>{intl.formatMessage({ id: 'our_advantage_two' })}</div>
-                    <div className=' text-sm text-[#333] font-bold w-full flex flex-wrap justify-center items-center gap-x-40'>
-                        <div className='flex flex-col items-center gap-y-5'>
-                            <div className=' relative w-[15rem] h-[15rem]'>
-                                <Image src="/image/advantage-icons/advantage1.png" fill={true} alt="WeTech" />
-                            </div>
-                            <span className=' max-w-[300px] text-center'>{intl.formatMessage({ id: 'ew_adv_one' })}</span>
-                        </div>
-                        <div className='flex flex-col items-center'>
-                            <div className=' relative w-[15rem] h-[15rem]'>
-                                <Image src="/image/advantage-icons/advantage2.png" fill={true} alt="WeTech" />
-                            </div>
-                            <span className=' max-w-[300px] text-center'>{intl.formatMessage({ id: 'ew_adv_two' })}</span>
-                        </div>
-                        <div className='flex flex-col items-center'>
-                            <div className=' relative w-[15rem] h-[15rem]'>
-                                <Image src="/image/advantage-icons/advantage3.png" fill={true} alt="WeTech" />
-                            </div>
-                            <span className=' max-w-[300px] text-center'>{intl.formatMessage({ id: 'ew_adv_three' })}</span>
-                        </div>
-                        <div className='flex flex-col items-center'>
-                            <div className=' relative w-[15rem] h-[15rem]'>
-                                <Image src="/image/advantage-icons/advantage4.png" fill={true} alt="WeTech" />
-                            </div>
-                            <span className=' max-w-[300px] text-center'>{intl.formatMessage({ id: 'ew_adv_four' })}</span>
-                        </div>
-                        <div className='flex flex-col items-center'>
-                            <div className=' relative w-[15rem] h-[15rem]'>
-                                <Image src="/image/advantage-icons/advantage5.png" fill={true} alt="WeTech" />
-                            </div>
-                            <span className=' max-w-[300px] text-center'>{intl.formatMessage({ id: 'ew_adv_five' })}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* Ethoca拒付预警服务 */}
-            <div className='min-h-[22.5rem] py-20 w-full bg-[#00206E]'>
-                <div className=' max-w-[80.875rem] h-full mx-auto flex flex-col lg:flex-row gap-y-4 justify-between items-center  px-3 md:px-0'>
-                    <div className='relative flex-shrink-0'>
-                        <Image src={locale === "en" ? "/image/early-warning/fw-en.png" : "/image/early-warning/fw.png"} width={568} height={174} sizes="568px"
-                            style={{
-                                width: '100%',
-                                height: 'auto',
-                            }} alt={intl.formatMessage({ id: 'ew_jf_serve_t' })} />
-                    </div>
-                    <div className=' text-white max-w-[592px]'>
-                        <div className=' font-extrabold text-4xl mb-4 '>{intl.formatMessage({ id: 'ew_jf_serve_t' })}</div>
-                        <ul className=' text-base flex flex-col gap-y-2'>
-                            <li>{intl.formatMessage({ id: 'ew_jf_serve_sub_t' })}</li>
-                            <li>
-                                <div>{intl.formatMessage({ id: 'ew_jf_serve_item_one' })}</div>
-                                <div className='indent-8'>{intl.formatMessage({ id: 'ew_jf_serve_item_one_desc' })}</div>
-                            </li>
-                            <li>
-                                <div>{intl.formatMessage({ id: 'ew_jf_serve_item_two' })}</div>
-                                <div className='indent-8'>{intl.formatMessage({ id: 'ew_jf_serve_item_two_desc' })}</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            {/* WeTech Ethoca拒付预警可以为您实现 */}
-            <div className='w-full min-h-[45.25.rem] '>
-                <div className='h-full pt-9 pb-16 max-w-7xl mx-auto'>
-                    <div className={` w-full sub-title mb-11 ${locale === "en" ? " text-[32px]" : ""}`}>{intl.formatMessage({ id: 'ew_jf_sx_t' })}</div>
-                    <div className={`w-full flex items-center justify-center flex-wrap gap-y-[3.875rem] ${locale === "en" ? "gap-x-28" : "gap-x-[11.875rem]"}`}>
-                        {warnList.map((it, index) => (
-                            <div key={it.title} className={`flex flex-col items-center ${locale === "en" ? " w-72" : "w-60"} `}>
-                                <div className=' relative w-[11.25rem] h-[11.25rem] flex-shrink-0'>
-                                    <Image src={it.src} fill={true} alt={it.title} />
+            {/* 拒付流程 */}
+            <div className=' bg-[rgba(199,218,255,0.1)] w-full pt-[72px] pb-12'>
+                <div className='w-1200 flex justify-stretch items-stretch gap-x-14 flex-col md:flex-row px-5 md:px-0'>
+                    <div className=' bg-white shadow-[-15px_15px_50px_15px_rgba(0,0,0,0.05)] rounded-[10px] pt-16 pb-14 md:pb-28 flex-1 box-border '>
+                        <ul className=' relative flex flex-col gap-y-[76px] px-12 pb-12 text-[rgba(51,51,51,0.95)] text-sm before:block before:absolute before:h-full before:w-[1px] before:bg-primary before:left-[63px] before:top-0 before:-bottom-6'>
+                            <li className=' pl-11 before:content-["1"] list-style-n'>顾客向发卡行针对交易发起拒付</li>
+                            <li className=' pl-11 before:content-["2"] list-style-n'>拒付会推送至RESOLVE</li>
+                            <li className=' pl-11 before:content-["3"] list-style-n'>
+                                <div>
+                                    <span className=' font-semibold'>CDRN拒付：</span>
+                                    <p>支持商家直接解决（CDRN）方案的发卡会暂停拒付</p>
                                 </div>
-                                <div className=' text-[#316FE7] text-base my-2'>{it.title}</div>
-                                <div className={`text-xs text-[#000] text-center  ${locale === "en" ? "" : "whitespace-nowrap"} ${index === 0 ? "max-w-[215px]" : ""} ${index === 1 ? "max-w-[200px]" : ""}  ${index === 5 ? "max-w-[242px]" : ""}`}>{it.desc}</div>
-                            </div>
-                        ))}
+                                <div>
+                                    <span className=' font-semibold'>Visa RDR 拒付：</span>
+                                    <p>支持RDR的发卡行会通过决策引擎，自动处理拒付</p>
+                                </div>
+                            </li>
+                            <li className=' pl-11 before:content-["4"] list-style-n'>成功避免拒付</li>
+                        </ul>
+                    </div>
+                    <div className=' relative w-full h-96 md:h-auto flex-auto md:flex-1'>
+                        <Image src="/image/early-warning/jylc.png" objectFit='contain' fill alt="" />
                     </div>
                 </div>
+            </div>
+
+            <div className="w-full min-h-[505px] bg-[url('/image/early-warning/ys-bg.png')] bg-cover bg-no-repeat pt-16 pb-28 text-[#333333]">
+                <div className='  text-[38px] font-semibold text-center pb-10 lg:pb-20'>我们的优势</div>
+                <div className='w-1200'>
+                    <ul className='flex items-center justify-between text-sm px-8 xl:px-0 flex-wrap lg:flex-nowrap gap-y-5'>
+                        <li className=' w-[155px] flex flex-col items-center lg:gap-y-5 flex-[100%] md:flex-[50%] lg:flex-1'>
+                            <div className=' relative w-full h-[155px]'>
+                                <Image src="/image/early-warning/ys1.png" objectFit='contain' fill alt="" />
+                            </div>
+                            <p className=' text-center whitespace-nowrap'>避免争议以及拒付产生的高昂费用</p>
+                        </li>
+                        <li className=' w-[155px] flex flex-col items-center lg:gap-y-5 flex-[100%] md:flex-[50%] lg:flex-1'>
+                            <div className=' relative w-full h-[155px]'>
+                                <Image src="/image/early-warning/ys2.png" objectFit='contain' fill alt="" />
+                            </div>
+                            <p className=' text-center whitespace-nowrap'>自动决策、自动退款，减少运营操作</p>
+                        </li>
+                        <li className=' w-[155px] flex flex-col items-center lg:gap-y-5 flex-[100%] md:flex-[50%] lg:flex-1'>
+                            <div className=' relative w-full h-[155px]'>
+                                <Image src="/image/early-warning/ys3.png" objectFit='contain' fill alt="" />
+                            </div>
+                            <p className=' text-center whitespace-nowrap'>减少争议和退款处理人工成本</p>
+                        </li>
+                        <li className=' w-[155px] flex flex-col items-center lg:gap-y-5 flex-[100%] md:flex-[50%] lg:flex-1'>
+                            <div className=' relative w-full h-[155px]'>
+                                <Image src="/image/early-warning/ys4.png" objectFit='contain' fill alt="" />
+                            </div>
+                            <p className=' text-center whitespace-nowrap'>降低拒付率，不计入考核</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            {/* Ethoca争议预警与解决 */}
+            <div className='w-full min-h-[515px] bg-gradient-to-b from-[rgba(220,232,255,0.65)] to-[rgba(220,232,255,0)] text-[#333] pt-16'>
+                <h3 className=' text-3xl text-[38px] text-center font-semibold'>Ethoca争议预警与解决</h3>
+
+            </div>
+            {/* 我们的优势2 */}
+            <div className=' bg-[#F3F5F9] w-full pb-14 pt-[60px] lg:pb-[134px]'>
+                <h3 className='text-3xl text-[38px] text-center font-semibold mb-10'>我们的优势</h3>
+                <ul className='w-1200 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 px-5 lg:px-0'>
+                    <li className='h-[327px] w-full bg-white rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center py-6'>
+                        <div className=' relative w-[155px] h-[155px]'>
+                            <Image src="/image/early-warning/adv-1.png" objectFit='contain' fill alt="" />
+                        </div>
+                        <h3 className=' text-primary text-2xl mt-5 mb-4'>反欺诈</h3>
+                        <p className=' text-[#000000] text-sm'>采取行动阻止欺诈性订单的履行</p>
+                    </li>
+                    <li className='h-[327px] w-full bg-white rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center py-6'>
+                        <div className=' relative w-[155px] h-[155px]'>
+                            <Image src="/image/early-warning/adv-2.png" objectFit='contain' fill alt="" />
+                        </div>
+                        <h3 className=' text-primary text-2xl mt-5 mb-4'>停止拒付</h3>
+                        <p className=' text-[#000000] text-sm'>消除更多拒付并降低相关成本</p>
+                    </li>
+                    <li className='h-[327px] w-full bg-white rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center py-6'>
+                        <div className=' relative w-[155px] h-[155px]'>
+                            <Image src="/image/early-warning/adv-3.png" objectFit='contain' fill alt="" />
+                        </div>
+                        <h3 className=' text-primary text-2xl mt-5 mb-4'>减少未来的欺诈</h3>
+                        <p className=' text-[#000000] text-sm max-w-[224px] text-center'>加强欺诈筛意，以识别未来欺诈行为并防止出现高峰</p>
+                    </li>
+                    <li className='h-[327px] w-full bg-white rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center py-6'>
+                        <div className=' relative w-[155px] h-[155px]'>
+                            <Image src="/image/early-warning/adv-4.png" objectFit='contain' fill alt="" />
+                        </div>
+                        <h3 className=' text-primary text-2xl mt-5 mb-4'>查找相关欺诈</h3>
+                        <p className=' text-[#000000] text-sm'>使用链接分析来消除相关欺诈订单</p>
+                    </li>
+                    <li className='h-[327px] w-full bg-white rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center py-6'>
+                        <div className=' relative w-[155px] h-[155px]'>
+                            <Image src="/image/early-warning/adv-5.png" objectFit='contain' fill alt="" />
+                        </div>
+                        <h3 className=' text-primary text-2xl mt-5 mb-4'>增加接受度</h3>
+                        <p className=' text-[#000000] text-sm'>发放更多退款可提高接受度并改善客户体验</p>
+                    </li>
+                    <li className='h-[327px] w-full bg-white rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center py-6'>
+                        <div className=' relative w-[155px] h-[155px]'>
+                            <Image src="/image/early-warning/adv-6.png" objectFit='contain' fill alt="" />
+                        </div>
+                        <h3 className=' text-primary text-2xl mt-5 mb-4'>提高满意度</h3>
+                        <p className=' text-[#000000] text-sm'>发放更多退款可提高接受度并改善客户体验</p>
+                    </li>
+
+                </ul>
             </div>
         </div>
     )

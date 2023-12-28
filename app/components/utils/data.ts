@@ -1,7 +1,7 @@
 import { useIntl } from "react-intl";
 
 function useNavList() {
-  const reg = /^\/en?/;
+  const reg = /^\/en/;
   const { formatMessage } = useIntl();
   const navList = [
     { id: 1, text: formatMessage({ id: "nav_one" }), link: "/" },

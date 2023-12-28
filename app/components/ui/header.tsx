@@ -30,10 +30,10 @@ export default function Header() {
     return (
         <header className={`fixed w-full z-30 transition duration-300 ease-in-out ${!top ? ' bg-[--header-bg]  backdrop-blur-sm shadow-sm' : ''}`}>
             <div className={`mx-auto px-5 relative ${params?.locale === "en" ? "max-w-[62.5rem]" : "max-w-[1440px]"}`}>
-                <div className="flex items-center justify-between h-28 md:h-36 gap-x-20">
+                <div className="flex items-center justify-between h-28 md:h-36 md:gap-x-6 lg:gap-x-12 xl:gap-x-20">
 
                     {/* Site branding */}
-                    <div className="shrink-0 mr-11  z-50">
+                    <div className="shrink-0 z-50">
                         <Logo />
                     </div>
 
@@ -52,7 +52,7 @@ export default function Header() {
                             })}
                         </ul>
                     </nav>
-                    <div className='flex justify-center items-center text-white text-sm'>
+                    <div className='justify-center items-center text-white text-sm hidden md:flex'>
                         <LocaleSwitcher />
                     </div>
 

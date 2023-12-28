@@ -3,16 +3,18 @@ import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import { useCurrentLocale } from 'next-i18n-router/client';
 import i18nConfig from '@/i18nConfig';
-import { Menu, Transition } from '@headlessui/react'
+import { Menu, Transition } from '@headlessui/react';
 
 
-export default function LanguageChanger() {
+
+export default function LanguageChanger({ fun }: { fun?: () => void }) {
     const router = useRouter();
     const currentPathname = usePathname();
     const currentLocale = useCurrentLocale(i18nConfig);
 
     const handleChange = (e: string) => {
-        if(e === "currentPathname") return;
+        fun?.();
+        if (e === currentLocale)  return;
         const newLocale = e;
 
         // set cookie for next-i18n-router
@@ -21,7 +23,6 @@ export default function LanguageChanger() {
         date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
         const expires = '; expires=' + date.toUTCString();
         document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
-
         if (
             currentLocale === i18nConfig.defaultLocale &&
             !i18nConfig.prefixDefault

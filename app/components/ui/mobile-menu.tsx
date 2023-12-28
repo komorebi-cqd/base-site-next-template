@@ -5,6 +5,7 @@ import { useDimensions } from "../utils/use-dimensions";
 import { useNavList } from "../utils/data";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
+import LocaleSwitcher from "@/app/components/LocaleSwitcher";
 
 
 const sidebar = {
@@ -130,6 +131,9 @@ const MobileMenu:React.FC<{params: Params}> = ({params}) => {
                                     </Link>
                                 </motion.li>
                             ))}
+                            <motion.li key="LocaleSwitcher" variants={menuLiVariants}>
+                                <LocaleSwitcher fun={toggleOpen}/>
+                            </motion.li>
                         </motion.ul>
                     }
                 </AnimatePresence>

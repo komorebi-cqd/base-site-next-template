@@ -36,7 +36,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
         <main>
             {/* 顶部大图 */}
             <div className="w-full  bg-[#242736] max-h-[var(--top-h)] h-[var(--top-h)]">
-                <div className="max-w-[1440px] mx-auto h-full bg-[url('/image/home/home-top-bg.png')] bg-contain bg-right-bottom bg-no-repeat">
+                <div className="max-w-[1440px] mx-auto h-full bg-[url('/image/home/home-top-bg.png')] bg-contain bg-right-bottom bg-no-repeat  px-6 xl:px-0">
                     <div className="flex flex-col text-white h-full max-w-[1200px] mx-auto pt-48 ">
                         <h3 className=" text-[58px] font-bold">多场景、大数据</h3>
                         <div className="flex flex-col text-[32px] mt-4 mb-6">
@@ -50,13 +50,13 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
             {/* <HomeTop locale={locale} /> */}
             {/* 全球欺诈仍在继续 */}
             <div className={`w-full h-auto  relative bg-[rgba(243,245,249,1)]`}>
-                <div className="w-1200 mx-auto  pt-16 pb-28 ">
-                    <div className="text-center text-[38px] text-[#333] pb-12 font-semibold">全球欺诈仍在继续</div>
-                    <ul className="w-full flex gap-x-8 mx-auto justify-center ">
+                <div className="w-1200 mx-auto pt-10 pb-10  lg:pt-16 lg:pb-28 ">
+                    <div className="text-center text-3xl lg:text-[38px] text-[#333] pb-12 font-semibold">全球欺诈仍在继续</div>
+                    <ul className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 px-6 xl:px-0">
                         {fraudTypeList.map((item) => (
-                            <li key={item.id} className="flex flex-col bg-white rounded-[10px] overflow-hidden flex-1">
+                            <li key={item.id} className="flex flex-col bg-white rounded-[10px] overflow-hidden basis-full md:basis-1/2 lg:basis-1/4">
                                 <div className="w-full relative h-[200px]">
-                                    <Image src={item.imgUrl} fill={true} alt="" />
+                                    <Image src={item.imgUrl} fill={true} objectFit="cover" alt="" />
                                 </div>
                                 <div className="flex justify-center flex-col items-center pb-12 pt-7 px-4">
                                     <div className=" pb-3 text-2xl text-center text-primary font-bold">{item.title}</div>
@@ -71,8 +71,8 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                 </div>
             </div>
             {/* 全球最前沿和最全风控数据库 */}
-            <div className="w-full min-h-[350px] pt-16">
-                <div className="w-1200 flex justify-between items-start h-full text-sm">
+            <div className="w-full min-h-[350px]  md:pt-16 py-10">
+                <div className="w-1200 flex justify-between items-start h-full text-sm px-5 xl:px-0 flex-col sm:flex-row gap-y-8">
                     <ul>
                         <div className="flex items-center mb-4">
                             <Image src="/image/home/home-qqqy.png" width={40} height={40} alt="" />
@@ -96,11 +96,11 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
             </div>
             {/* 我们的服务 */}
             <div className=" bg-[#F3F5F9] pb-10">
-                <div className="w-1200 py-9">
-                    <div className=" text-center font-semibold text-[38px] text-[#333] mb-8">我们的服务</div>
+                <div className="w-1200 py-9 px-5 xl:px-0">
+                    <div className=" text-center font-semibold  text-3xl lg:text-[38px] text-[#333] mb-8">我们的服务</div>
 
                     <div className="w-full flex flex-col gap-y-9 items-center text-[#333] text-sm">
-                        <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] pt-[72px] px-28">
+                        <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28  flex-col md:flex-row">
                             <div>
                                 <div className="text-primary text-2xl font-bold mb-8">信用卡反欺诈</div>
                                 <ul className=" leading-6">
@@ -109,11 +109,11 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                                     <li> · 并基于对客户业务场景和需求的深度了解，为客户的出海业务保驾护航</li>
                                 </ul>
                             </div>
-                            <div className=" relative w-[315px] h-[215px]">
-                                <Image src="/image/home/home-serve-1.png" fill alt="" />
+                            <div className=" relative w-full md:w-[315px] h-[215px]  flex-shrink-0">
+                                <Image src="/image/home/home-serve-1.png" objectFit="contain" fill alt="" />
                             </div>
                         </div>
-                        <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] pt-[72px] px-28 flex-row-reverse">
+                        <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28 flex-col-reverse md:flex-row-reverse">
                             <div>
                                 <div className="text-primary text-2xl font-bold mb-8">设备风险识别</div>
                                 <ul className=" leading-6">
@@ -122,11 +122,11 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                                     <li> · 冲突率/膨胀率/适配率等可控，产品能力覆盖面广</li>
                                 </ul>
                             </div>
-                            <div className=" relative w-[404px] h-[234px]">
-                                <Image src="/image/home/home-serve-2.png" fill alt="" />
+                            <div className=" relative w-full md:w-[404px] min-h-[180px] md:h-[234px]  flex-shrink-0">
+                                <Image src="/image/home/home-serve-2.png" objectFit="contain" fill alt="" />
                             </div>
                         </div>
-                        <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] pt-[72px] px-28">
+                        <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28  flex-col md:flex-row">
                             <div>
                                 <div className="text-primary text-2xl font-bold mb-8">风险画像</div>
                                 <ul className=" leading-6">
@@ -134,15 +134,15 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                                     <li> · 终端安全技术和数据分析建模能力，可以为客户提供多维风险画像</li>
                                 </ul>
                             </div>
-                            <div className=" relative w-[323px] h-[233px]">
-                                <Image src="/image/home/home-serve-3.png" fill alt="" />
+                            <div className=" relative w-full md:w-[323px] h-[233px] flex-shrink-0">
+                                <Image src="/image/home/home-serve-3.png" objectFit="contain" fill alt="" />
                             </div>
                         </div>
-                        <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] pt-[72px] px-28 flex-row-reverse">
+                        <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28   flex-col-reverse md:flex-row-reverse">
                             <div className="max-w-[524px]">
                                 <div className="text-primary text-2xl font-bold">争议预警与解决</div>
                                 <div className=" my-6">实时获取拒付信息并快速做出响应及处理，有效降低商户拒付率减少财务损失， 避免进入卡组监控异常名单</div>
-                                <div className="flex items-center justify-between text-sm text-[#333]">
+                                <div className="flex items-center justify-between text-sm text-[#333] flex-col lg:flex-row gap-y-5">
                                     <div className="w-[248px] h-[72px] rounded-lg bg-[#F3F5F9] flex items-center justify-center gap-x-2">
                                         <Image src="/image/home/home-zy-1.png" width={56} height={40} alt="" />
                                         <span>Ethoca争议预警及解决</span>
@@ -153,8 +153,8 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                                     </div>
                                 </div>
                             </div>
-                            <div className=" relative w-[300px] h-[256px]">
-                                <Image src="/image/home/home-serve-4.png" fill alt="" />
+                            <div className=" relative w-[300px] h-[256px] flex-shrink-0">
+                                <Image src="/image/home/home-serve-4.png" objectFit="contain" fill alt="" />
                             </div>
                         </div>
                     </div>

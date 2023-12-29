@@ -1,8 +1,27 @@
 import React from 'react'
 import Image from 'next/image';
-import PageTop from '@/app/components/ui/page-top';
-import AdvantageItem from '@/app/components/ui/advantage-item';
 import getIntl from "../../intl";
+
+
+const identificationModeList = [
+    { text: "海量海外数据", imgUrl: "/image/risk-portrait/sbfs-1.png" },
+    { text: "大数据分析+整理", imgUrl: "/image/risk-portrait/sbfs-2.png" },
+    { text: "AI智能算法 ", imgUrl: "/image/risk-portrait/sbfs-3.png" },
+    { text: "多轮持续模型优化 ", imgUrl: "/image/risk-portrait/sbfs-4.png" },
+    { text: "IP画像 ", imgUrl: "/image/risk-portrait/sbfs-5.png" },
+    { text: "手机号画像", imgUrl: "/image/risk-portrait/sbfs-6.png" },
+    { text: "邮箱画像 ", imgUrl: "/image/risk-portrait/sbfs-7.png" },
+    { text: "地址画像", imgUrl: "/image/risk-portrait/sbfs-8.png" },
+];
+
+const ourAdvList = [
+    { text: "多维度风险画像", desc: "基本AI智能算法，从多个维度进行 风险画像，具备全面性和性高准确性", imgUrl: "/image/early-warning/adv-1.png" },
+    { text: "全球采样数据库", desc: "丰富的全球生态采样能力， 高效的大数据分析和智能AI算法", imgUrl: "/image/early-warning/adv-2.png" },
+    { text: "定制化客户方案 ", desc: "专业定制服务团队， 便捷的接入流程和高效的响应机制", imgUrl: "/image/early-warning/adv-3.png" },
+];
+
+
+
 
 
 const RiskPortait = async ({ params: { locale } }: { params: { locale: string } }) => {
@@ -13,55 +32,70 @@ const RiskPortait = async ({ params: { locale } }: { params: { locale: string } 
     )
     return (
         <div>
-            {/* 顶部 */}
-            <PageTop bgImg='/image/risk-portrait/top-bg.png' locale={locale} title={intl.formatMessage({ id: 'risk_profiling_t' })} desc={desc} topText={intl.formatMessage({ id: 'breadcrumbs_fxhx' })} />
-            {/* 优势 */}
-            <div className='w-full pt-5 pb-9 risk-advantage-img'>
-                <div className='flex flex-col'>
-                    <div className={`sub-title pt-5 pb-4 ${locale === "en" ? "text-[32px]" : ""}`}>{intl.formatMessage({ id: 'our_advantage' })}</div>
-                    <div className='flex flex-col justify-center md:flex-row items-center mt-24 gap-x-[2rem] xl:gap-x-[6rem] lg:gap-x-16 md:gap-x-4 gap-y-[6.25rem] '>
-                        <AdvantageItem locale={locale} title={<div className='mt-[136px] whitespace-nowrap'>{intl.formatMessage({ id: 'rp_ys_one_t' })}</div>} desc={(<div className={`${locale === "en" ? "px-2" : " px-3 lg:px-5"}`}>{intl.formatMessage({ id: 'rp_ys_one_desc' })}</div>)} absImg={<div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 w-48 h-48'>
-                            <Image src="/image/advantage-icons/yj1.png" alt={intl.formatMessage({ id: 'rp_ys_one_t' })} fill={true} />
-                        </div>} />
-                        <AdvantageItem locale={locale} title={<div className='mt-[136px] whitespace-nowrap'>{intl.formatMessage({ id: 'rp_ys_two_t' })}</div>} desc={(<div className={`${locale === "en" ? "" : " px-3 lg:px-14"}`}>{intl.formatMessage({ id: 'rp_ys_two_desc' })}</div>)} absImg={<div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 w-48 h-48'>
-                            <Image src="/image/advantage-icons/yj2.png" alt={intl.formatMessage({ id: 'rp_ys_two_t' })} fill={true} />
-                        </div>} />
-                        <AdvantageItem locale={locale} title={<div className='mt-[136px] whitespace-nowrap'>{intl.formatMessage({ id: 'rp_ys_three_t' })}</div>} desc={(<div className={`${locale === "en" ? "" : "px-3 lg:px-14"}`}>{intl.formatMessage({ id: 'rp_ys_three_desc' })}</div>)} absImg={<div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 w-48 h-48'>
-                            <Image src="/image/advantage-icons/yj3.png" alt={intl.formatMessage({ id: 'rp_ys_three_t' })} fill={true} />
-                        </div>} />
+            {/* 顶部大图 */}
+            <div className="w-full  bg-[#000F28] max-h-[var(--top-h)] h-[var(--top-h)]">
+                <div className="max-w-[1440px] mx-auto h-full bg-[url('/image/risk-portrait/top-bg.png')] bg-contain bg-right-bottom bg-no-repeat  px-6 xl:px-0">
+                    <div className="flex flex-col text-white h-full max-w-[1200px] mx-auto pt-48 ">
+                        <h3 className=" text-[58px] font-bold">大数据分析+AI智能算法</h3>
+                        <div className="flex flex-col text-3xl mt-4 mb-6">
+                            <span>IP画像、手机号画像、邮箱画像、地址画像</span>
+                        </div>
+                        <a href="#" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">立即体验</a>
                     </div>
                 </div>
             </div>
-            <div className=' w-full bg-gradient-to-b  from-[#E7F1FF] to-white'>
-                <div className=' max-w-[78.75rem] mx-auto h-full flex flex-col'>
-                    <div className='flex-1 flex flex-col md:flex-row justify-between items-center px-3 md:px-20 pt-[3.5rem] pb-0 md:pb-[3.5rem]'>
-                        <div className={` ${locale === "en" ? "max-w-[665px]" : "max-w-[28.275rem]"}`}>
-                            <div className={`sub-title text-left ${locale === "en" ? "max-w-[560px] text-[32px] leading-10" : ""}`}>{intl.formatMessage({ id: 'rp_ys_b_one_t' })}</div>
-                            <div className='text-[#333333] text-base font-bold mt-5 mb-2'>{intl.formatMessage({ id: 'rp_ys_b_one_sub_t' })}</div>
-                            <div className='text-[#333333] text-base'>{intl.formatMessage({ id: 'rp_ys_b_one_desc' })}</div>
-                        </div>
-                        <div className=' relative flex-shrink-0'>
-                            <Image src="/image/risk-portrait/item1.png" alt='anti-fraud-value' width={378} height={370} sizes="378px"
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                }} />
-                        </div>
+            {/* 多维画像设计，提高风险识别精准度 */}
+            <div className='w-full bg-white pt-14 pb-[108px] text-[#333333]'>
+                <h3 className=' text-[38px] font-semibold text-center'>多维画像设计，提高风险识别精准度</h3>
+                <div className='flex items-center justify-center mt-4 mb-12 text-[rgba(0,0,0,0.69)] text-base flex-col'>
+                    <span>多维画像设计，提高风险识别精准度</span>
+                    <span>可有效的解决垃圾注册、刷单、薅羊毛、识别风险行为</span>
+                </div>
+                <div className='w-1200'>
+                    <ul className='grid grid-cols-4 gap-x-7 gap-y-8 text-2xl'>
+                        {identificationModeList.map(it => (
+                            <li key={it.text} className='w-full h-[260px] bg-white rounded-[10px] shadow-[0px_4px_40px_0px_rgba(43,89,255,0.08)] flex items-center flex-col pt-7'>
+                                <Image src={it.imgUrl} alt="" width={110} height={110} sizes="110px" />
+                                <span className=' pt-[28px]'>{it.text}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+            {/* 我们的团队 */}
+            <div className=' w-full bg-[rgba(49,111,231,0.05)] text-[#333] pt-[82px] pb-[90px]'>
+                <div className='w-1200 flex items-center px-5 lg:px-0 flex-col md:flex-row gap-y-5'>
+                    <div className='flex-1 w-full rounded-[10px] shadow-[0px_4px_40px_0px_rgba(43,89,255,0.08)] bg-white pt-10 md:pt-[72px] pb-14 md:pb-[108px] px-10 bg-[url("/image/risk-portrait/dhao.png")] bg-no-repeat bg-[right_36px_bottom_1rem] bg-[length:148px_110px]'>
+                        <h3 className=' text-primary font-semibold text-[38px] mb-7'>我们的团队</h3>
+                        <ul className='flex flex-col leading-6 text-sm'>
+                            <li>· 长期投入上百名风控专家，跟进海外风控动态  </li>
+                            <li>· 挖掘新的风险，洞察新的对抗，持续的优化模型和算法</li>
+                            <li>· 专业的定制化团队，依照您的要求，制定落地方案，高效执行，快速响应</li>
+                        </ul>
                     </div>
-                    <div className='w-full h-[1px] bg-[rgba(0,0,0,0.15)]'></div>
-                    <div className='flex-1 flex flex-col md:flex-row justify-between items-center px-3 md:px-20 py-[3.5rem]'>
-                        <div className=' relative flex-shrink-0'>
-                            <Image src="/image/risk-portrait/item2.png" alt='anti-fraud-value' width={320} height={300} sizes="320px"
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                }} />
-                        </div>
-                        <div className='max-w-[27rem]'>
-                            <div className={`sub-title text-left ${locale === "en" ? "text-[32px]" : ""}`}>{intl.formatMessage({ id: 'rp_ys_b_two_t' })}</div>
-                            <div className='text-[#333333] text-base mt-5'>{intl.formatMessage({ id: 'rp_ys_b_two_desc' })}</div>
-                        </div>
+                    <div className=' relative ml-5 lg:ml-20'>
+                        <Image src="/image/risk-portrait/our-tem.png" alt='' width={385} height={361} sizes="385px"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                            }} />
                     </div>
+                </div>
+            </div>
+            {/*我们的优势 */}
+            <div className=' w-full bg-white'>
+                <div className='w-1200 min-h-[548px] pt-10 pb-[94px]'>
+                    <h3 className=' text-[38px] font-semibold text-center pb-16'>我们的优势</h3>
+                    <ul className='flex gap-x-6'>
+                        {ourAdvList.map(it => (
+                            <li key={it.text} className='w-full h-[326px] bg-[#F3F5F9] rounded-[10px] flex flex-col items-center pt-5'>
+                                <Image src={it.imgUrl} alt='' width={155} height={155} sizes="155px"
+                                />
+                                <p className=' text-primary text-2xl mb-4 font-semibold'>{it.text}</p>
+                                <p className=' text-sm max-w-[224px] text-center'>{it.desc}</p>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </div>

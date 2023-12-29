@@ -125,8 +125,27 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
             </div>
             {/* Ethoca争议预警与解决 */}
             <div className='w-full min-h-[515px] bg-gradient-to-b from-[rgba(220,232,255,0.65)] to-[rgba(220,232,255,0)] text-[#333] pt-16'>
-                <h3 className=' text-3xl text-[38px] text-center font-semibold'>Ethoca争议预警与解决</h3>
-
+                <h3 className=' text-3xl text-[38px] text-center font-semibold mb-9'>Ethoca争议预警与解决</h3>
+                <div className='w-1200 flex justify-between items-center relative'>
+                    <div className=' z-10 rounded-2xl shadow-[0px_8px_16px_0px_rgba(0,0,0,0.1)] flex bg-[#EFF5FF] w-[580px] min-h-[270px] relative pt-[70px] pb-10 pl-8 pr-[50px]'>
+                        <div className=' relative w-full h-auto'>
+                            <Image src="/image/early-warning/zyyjj.png" fill alt='' className=' object-contain' />
+                        </div>
+                    </div>
+                    <div className='z-10 w-[350px] min-h-[300px] rounded-2xl bg-white shadow-[0px_8px_4px_0px_rgba(0,0,0,0.05)] pt-6 pr-3 pb-8 pl-6 text-sm'>
+                        <h3 className=' text-2xl'>Ethoca拒付预警服务</h3>
+                        <p className=' text-sm mb-7 mt-1'>通过分层防御来实现</p>
+                        <div className='w-full min-h-[72px] bg-[rgba(233,233,233,0.49)] rounded-[5px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.08)] text-[rgba(51,51,51,0.9)] py-[6px] px-2 leading-5 mb-5'>
+                            <p className=' font-normal'>预警：</p>
+                            <p>通过实时向持卡人和发卡机构提供详细的商户订单和购买历史信息，阻止善意欺诈</p>
+                        </div>
+                        <div className='w-full min-h-[72px] bg-[rgba(233,233,233,0.49)] rounded-[5px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.08)] text-[rgba(51,51,51,0.9)] py-[6px] px-2 leading-5'>
+                            <p className=' font-normal'>消除：</p>
+                            <p>通过向商家提供欺诈和纠纷的预警，打击欺诈和退款</p>
+                        </div>
+                    </div>
+                    <div style={{background: "linear-gradient(90deg, rgba(204,221,255,0.21) 0%, #FFFFFF 100%)"}} className=' absolute top-1/4 left-[48%] w-[287px] h-[155px] overflow-hidden before:block before:absolute before:bg-[#f3f7ff] before:left-0 before:right-0 before:-top-2 before:h-[64px] before:rounded-[0_0_50%_50%] after:bg-[#f8fbff] after:absolute after:left-0 after:right-0 after:-bottom-5 after:h-[80px] after:rounded-[50%_50%_0_0] after:shadow-[4px_0px_0px_4px_rgba(0,0,0,0.1)]'></div>
+                </div>
             </div>
             {/* 我们的优势2 */}
             <div className=' bg-[#F3F5F9] w-full pb-14 pt-[60px] lg:pb-[134px]'>

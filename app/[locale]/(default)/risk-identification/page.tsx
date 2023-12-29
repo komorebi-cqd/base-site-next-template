@@ -5,6 +5,12 @@ import AdvantageItem from '@/app/components/ui/advantage-item';
 import getIntl from "../../intl";
 
 
+const ourAdvList = [
+    { text: "模型准确率高，稳定可靠", desc: "动静态特征相结合，AI智能模型， 提高准确性，确保稳定性", imgUrl: "/image/early-warning/ys1.png" },
+    { text: "全平台、适配性好", desc: "动静态特征相结合，AI智能模型， 高兼容，有效对抗设备信息篡改", imgUrl: "/image/early-warning/ys2.png" },
+    { text: "多维度，反诈骗能力强 ", desc: "多维度设备信息，大数据分析， AI智能算法和智能风控系统，有效 对抗伪造，机控和撸羊毛", imgUrl: "/image/early-warning/ys3.png" },
+];
+
 const RiskIdentification = async ({ params: { locale } }: { params: { locale: string } }) => {
     const intl = await getIntl(locale);
     const desc = (
@@ -12,47 +18,64 @@ const RiskIdentification = async ({ params: { locale } }: { params: { locale: st
     )
     return (
         <div>
-            {/* 顶部 */}
-            <PageTop locale={locale} bgImg='/image/risk-identification/top-bg.png' title={intl.formatMessage({ id: 'device_risk_t' })} desc={desc} topText={intl.formatMessage({ id: 'breadcrumbs_fxsb' })} />
-            {/* 优势 */}
-            <div className='w-full pt-5 pb-9 risk-advantage-img'>
-                <div className='flex flex-col'>
-                    <div className=' sub-title pt-5 pb-4'>{intl.formatMessage({ id: 'our_advantage' })}</div>
-                    <div className='flex flex-col justify-center md:flex-row  items-center mt-24 gap-y-[6.25rem] gap-x-[2rem] md:gap-x-4 xl:gap-x-[6rem] lg:gap-x-16'>
-                        <AdvantageItem locale={locale} title={<div className={`text-center  ${locale === "en" ? "mt-[110px] px-1 lg:px-4" : "mt-[138px]"}`}>{intl.formatMessage({ id: 'dr_one_t' })}</div>} desc={(<div className={`${locale === "en" ? " px-6" : " px-12"}`}>{intl.formatMessage({ id: 'dr_one_desc' })}</div>)} absImg={<div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 w-48 h-48'>
-                            <Image src="/image/advantage-icons/yj1.png" alt={intl.formatMessage({ id: 'dr_one_t' })} fill={true} />
-                        </div>} />
-                        <AdvantageItem locale={locale}  title={<div className={`text-center  ${locale === "en" ? "mt-[110px] px-1 lg:px-6" : "mt-[138px]"}`}>{intl.formatMessage({ id: 'dr_two_t' })}</div>} desc={(<div className={`${locale === "en" ? " px-3" : " px-7"}`}>{intl.formatMessage({ id: 'dr_two_desc' })}</div>)} absImg={<div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 w-48 h-48'>
-                            <Image src="/image/advantage-icons/yj2.png" alt={intl.formatMessage({ id: 'dr_two_t' })} fill={true} />
-                        </div>} />
-                        <AdvantageItem locale={locale} title={<div className={`text-center  ${locale === "en" ? "mt-[110px] px-1 lg:px-6" : "mt-[138px]"}`}>{intl.formatMessage({ id: 'dr_three_t' })}</div>} desc={(<div className={`${locale === "en" ? " px-2" : " px-4"}`}>{intl.formatMessage({ id: 'dr_three_desc' })}</div>)} absImg={<div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 w-48 h-48'>
-                            <Image src="/image/advantage-icons/yj3.png" alt={intl.formatMessage({ id: 'dr_three_t' })} fill={true} />
-                        </div>} />
+            {/* 顶部大图 */}
+            <div className="w-full  bg-gradient-to-r from-[#185BDD] to-[#042081] max-h-[var(--top-h)] h-[var(--top-h)]">
+                <div className="max-w-[1440px] mx-auto h-full bg-[url('/image/risk-identification/computed.png')] bg-[length:610px_400px] bg-[right_bottom_56px] bg-no-repeat  px-6 xl:px-0">
+                    <div className="flex flex-col text-white h-full max-w-[1200px] mx-auto pt-48 ">
+                        <h3 className=" text-[58px] font-bold">大数据分析+AI智能算法</h3>
+                        <div className="flex flex-col text-3xl mt-4 mb-16">
+                            <span>AI智能模型，多维度设备信息，覆盖面广，识别准确率高</span>
+                        </div>
+                        <a href="#" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">立即体验</a>
                     </div>
                 </div>
             </div>
-            <div className=' w-full bg-gradient-to-b  from-[#E7F1FF] to-white'>
-                <div className=' max-w-[78.75rem] mx-auto h-full flex flex-col'>
-                    <div className='flex-1 flex flex-col md:flex-row justify-between items-center px-3 md:px-20 py-[3.5rem]'>
-                        <div className={` ${locale === "en" ? "max-w-[600px]" : "max-w-[28.275rem]"}`}>
-                            <div className={`sub-title text-left ${locale === "en" ? "max-w-[436px] text-[32px]" : ""}`}>{intl.formatMessage({ id: 'dr_b_one_t' })}</div>
-                            <div className='text-[#333333] text-base font-bold mt-5 mb-2'>{intl.formatMessage({ id: 'dr_b_one_sub_t' })}</div>
-                            <div className='text-[#333333] text-base'>{intl.formatMessage({ id: 'dr_b_one_desc' })}</div>
+            <div className='w-full bg-[#F3F5F9] py-16'>
+                <div className='w-1200 text-[#333]'>
+                    <div className='w-full p-14 bg-white  rounded-xl flex justify-between mb-10'>
+                        <div className='flex-1 pt-16'>
+                            <h3 className=' text-primary text-[38px] font-semibold'>大数据分析+AI智能算法</h3>
+                            <p className='max-w-[400px] font-semibold text-base mt-3 mb-4'>WeTech AI智能风控系统，可有效对抗设备伪造，机控、薅羊毛等恶意的行为</p>
+                            <ul className=' text-sm leading-6 pl-4 '>
+                                <li className=' relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2'>多维度设备信息</li>
+                                <li className=' relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2'>大数据分析</li>
+                                <li className=' relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2'>AI智能算法</li>
+                                <li className=' relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2'>生成唯一可信标识</li>
+                            </ul>
                         </div>
-                        <div className=' relative w-[19.25rem] h-[16.9rem] flex-shrink-0'>
-                            <Image src={locale === "en" ? "/image/risk-identification/sf-en.png" : "/image/risk-identification/sf.png"} alt='anti-fraud-value' fill={true} />
-                        </div>
-                    </div>
-                    <div className='w-full h-[1px] bg-[rgba(0,0,0,0.15)]'></div>
-                    <div className='flex-1 flex flex-col md:flex-row justify-between items-center px-3 md:px-20 py-[3.5rem]'>
-                        <div className=' relative w-[17.25rem] h-[16.25rem] flex-shrink-0'>
-                            <Image src="/image/risk-identification/dsj.png" alt='anti-fraud-value' fill={true} />
-                        </div>
-                        <div className={` ${locale === "en" ? "max-w-[480px]" : "max-w-[28.275rem]"}`}>
-                            <div className={`sub-title text-left ${locale === "en" ? "text-[32px]" : ""}`}>{intl.formatMessage({ id: 'dr_b_two_t' })}</div>
-                            <div className='text-[#333333] text-base mt-5'>{intl.formatMessage({ id: 'dr_b_two_desc' })}</div>
+                        <div className='w-[430px] h-[418px] relative bg-[rgba(49,111,231,0.08)] rounded-[10px] px-7'>
+                            <Image className=' object-contain' src="/image/risk-identification/sf.png" alt='' fill />
                         </div>
                     </div>
+                    <div className='w-full p-14 bg-white  rounded-xl flex justify-between flex-row-reverse'>
+                        <div className='flex-1 pt-16 max-w-[416px] '>
+                            <h3 className=' text-primary text-[38px] font-semibold'>大数据</h3>
+                            <p className='font-semibold text-base mt-3 mb-4'>具备海外设备变化的洞察先机，帮助业务提前感知潜在风险</p>
+                            <ul className=' text-sm leading-6 pl-4 '>
+                                <li className=' relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2'>上亿移动设备</li>
+                                <li className=' relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2'>百人专业团队</li>
+                            </ul>
+                        </div>
+                        <div className='w-[430px] h-[418px] relative bg-[rgba(49,111,231,0.08)] rounded-[10px] px-7'>
+                            <Image className=' object-contain' src="/image/risk-identification/dsj.png" alt='' fill />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/*我们的优势 */}
+            <div className=' w-full bg-white'>
+                <div className='w-1200 min-h-[548px] py-16'>
+                    <h3 className=' text-[38px] font-semibold text-center pb-16'>我们的优势</h3>
+                    <ul className='flex gap-x-6'>
+                        {ourAdvList.map(it => (
+                            <li key={it.text} className='w-full h-[326px] bg-[rgba(241,241,241,0.58)] rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center pt-5'>
+                                <Image src={it.imgUrl} alt='' width={155} height={155} sizes="155px"
+                                />
+                                <p className=' text-primary text-2xl mb-4 font-semibold'>{it.text}</p>
+                                <p className=' text-sm max-w-[210px] text-center'>{it.desc}</p>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </div>

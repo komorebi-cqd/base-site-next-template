@@ -108,7 +108,7 @@ const MobileMenu:React.FC<{params: Params}> = ({params}) => {
     const { height } = useDimensions(containerRef);
 
     return (
-        <div className='md:hidden'>
+        <div className={`${params?.locale === "en" ? "xl:hidden" : "md:hidden"}`}>
             <motion.nav
                 initial={false}
                 animate={isOpen ? "open" : "closed"}

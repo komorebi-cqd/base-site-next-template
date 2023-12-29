@@ -8,10 +8,14 @@ import getIntl from "@/app/[locale]/intl";
 const Footer = async ({ locale }: { locale: string }) => {
     const intl = await getIntl(locale);
     const productList = [
-        { id: 2, text: intl.formatMessage({ id: 'foot_nav_one' }), link: "/anti-fraud" },
-        { id: 3, text: intl.formatMessage({ id: 'nav_three' }), link: "/early-warning" },
-        { id: 4, text: intl.formatMessage({ id: 'nav_four' }), link: "/risk-identification" },
-        { id: 5, text: intl.formatMessage({ id: 'nav_five' }), link: "/risk-portrait" },
+        { id: 2, text: intl.formatMessage({ id: "nav_two" }), link: "/anti-fraud" },
+        { id: 3, text: intl.formatMessage({ id: "nav_three" }), link: "/risk-identification" },
+        {
+            id: 4,
+            text: intl.formatMessage({ id: "nav_four" }),
+            link: "/risk-portrait",
+        },
+        { id: 5, text: intl.formatMessage({ id: "nav_five" }), link: "/early-warning" },
     ]
     return (
         <footer className='w-full pb-12 md:pb-[13.375rem] bg-[#071532] pt-[82px] px-10 md:px-0'>
@@ -35,7 +39,7 @@ const Footer = async ({ locale }: { locale: string }) => {
                             <span>{intl.formatMessage({ id: 'address' })}</span>
                         </li>
                         <li className='flex flex-col'>
-                            <span>深圳云享家网络科技有限公司版权所有</span>
+                            <span>{intl.formatMessage({ id: 'foot_company_name' })}</span>
                             <a className=' transition-all hover:text-[--text-primary]' target='_blank' href="https://beian.miit.gov.cn/">粤ICP备2021094662号-3</a>
                         </li>
                     </ul>

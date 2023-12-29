@@ -4,13 +4,14 @@ import { usePathname } from 'next/navigation';
 import { useCurrentLocale } from 'next-i18n-router/client';
 import i18nConfig from '@/i18nConfig';
 import { Menu, Transition } from '@headlessui/react';
-
+import { useIntl } from "react-intl";
 
 
 export default function LanguageChanger({ fun }: { fun?: () => void }) {
     const router = useRouter();
     const currentPathname = usePathname();
     const currentLocale = useCurrentLocale(i18nConfig);
+    const { formatMessage } = useIntl();
 
     const handleChange = (e: string) => {
         fun?.();
@@ -42,7 +43,7 @@ export default function LanguageChanger({ fun }: { fun?: () => void }) {
     return (
         <Menu as="div" className="relative inline-block text-left">
             <div className='flex justify-center items-center text-white text-sm'>
-                <span>语言：</span>
+                <span>{formatMessage({ id: "language" })}：</span>
                 <Menu.Button>{currentLocale === "zh-CN" ? "简体中文" : "English-en"}</Menu.Button>
             </div>
             <Transition

@@ -38,7 +38,7 @@ export default function Header() {
                     </div>
 
                     {/* Desktop navigation */}
-                    <nav className="hidden md:flex md:grow h-full">
+                    <nav className={`hidden md:grow h-full ${params?.locale === "en" ? "xl:flex" : " md:flex"}`}>
                         {/* Desktop sign in links */}
                         <ul className="flex grow justify-between flex-wrap items-center text-sm text-[#C7DAFF]">
                             {navList.map(nav => {
@@ -52,7 +52,7 @@ export default function Header() {
                             })}
                         </ul>
                     </nav>
-                    <div className='justify-center items-center text-white text-sm hidden md:flex'>
+                    <div className={`justify-center items-center text-white text-sm hidden ${params?.locale === "en" ? "xl:flex" : " md:flex"}`}>
                         <LocaleSwitcher />
                     </div>
 

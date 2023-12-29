@@ -37,14 +37,14 @@ const RiskIdentification = async ({ params: { locale } }: { params: { locale: st
                             <h3 className=' text-primary text-[38px] font-semibold'>大数据分析+AI智能算法</h3>
                             <p className='max-w-[400px] font-semibold text-base mt-3 mb-4'>WeTech AI智能风控系统，可有效对抗设备伪造，机控、薅羊毛等恶意的行为</p>
                             <ul className=' text-sm leading-6 pl-4 '>
-                                <li className=' relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2'>多维度设备信息</li>
-                                <li className=' relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2'>大数据分析</li>
-                                <li className=' relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2'>AI智能算法</li>
-                                <li className=' relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2'>生成唯一可信标识</li>
+                                <li className=' list-style-c'>多维度设备信息</li>
+                                <li className=' list-style-c'>大数据分析</li>
+                                <li className=' list-style-c'>AI智能算法</li>
+                                <li className=' list-style-c'>生成唯一可信标识</li>
                             </ul>
                         </div>
                         <div className='w-[430px] h-[418px] relative bg-[rgba(49,111,231,0.08)] rounded-[10px] px-7'>
-                            <Image className=' object-contain' src="/image/risk-identification/sf.png" alt='' fill />
+                            <Image className=' object-contain' src={locale === "en" ? "/image/risk-identification/sf-en.png" : "/image/risk-identification/sf.png"} alt='' fill />
                         </div>
                     </div>
                     <div className='w-full p-14 bg-white  rounded-xl flex justify-between flex-row-reverse'>
@@ -52,8 +52,8 @@ const RiskIdentification = async ({ params: { locale } }: { params: { locale: st
                             <h3 className=' text-primary text-[38px] font-semibold'>大数据</h3>
                             <p className='font-semibold text-base mt-3 mb-4'>具备海外设备变化的洞察先机，帮助业务提前感知潜在风险</p>
                             <ul className=' text-sm leading-6 pl-4 '>
-                                <li className=' relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2'>上亿移动设备</li>
-                                <li className=' relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2'>百人专业团队</li>
+                                <li className=' list-style-c'>上亿移动设备</li>
+                                <li className=' list-style-c'>百人专业团队</li>
                             </ul>
                         </div>
                         <div className='w-[430px] h-[418px] relative bg-[rgba(49,111,231,0.08)] rounded-[10px] px-7'>

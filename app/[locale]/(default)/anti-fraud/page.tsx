@@ -36,7 +36,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                             <li>· 成本高，效率低，受人为因素影响，导致判定结果不理想</li>
                         </ul>
                         <div className=' relative flex-shrink-0 w-[692px] h-[248px]'>
-                            <Image objectFit='contain' src="/image/anti-fraud/ct-fk.png" alt='advantage1' fill={true} />
+                            <Image objectFit='contain' src={locale === "en" ? "/image/anti-fraud/ct-fk-en.png" : "/image/anti-fraud/ct-fk.png"} alt='advantage1' fill={true} />
                         </div>
                     </div>
                     <div className='w-full min-h-[300px] bg-white flex p-6 gap-x-12 flex-row-reverse'>
@@ -47,7 +47,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                             <li>· 并基于对客户业务场景和需求的深度了解，为客户的出海业 务保驾护航</li>
                         </ul>
                         <div className=' relative flex-shrink-0 w-[692px] h-[248px]'>
-                            <Image objectFit='contain' src="/image/anti-fraud/wc-fk.png" alt='advantage1' fill={true} />
+                            <Image objectFit='contain' src={locale === "en" ? "/image/anti-fraud/wc-fk-en.png" : "/image/anti-fraud/wc-fk.png"} alt='advantage1' fill={true} />
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                         <li>· 最大程度的采用自动化决策功能</li>
                     </ul>
                     <div className=' relative '>
-                        <Image src={locale === "en" ? "/image/anti-fraud/wczzhwfk.png" : "/image/anti-fraud/wczzhwfk.png"} alt='ai-model1' width={724} height={363} sizes="724px"
+                        <Image src={locale === "en" ? "/image/anti-fraud/wczzhwfk-en.png" : "/image/anti-fraud/wczzhwfk.png"} alt='ai-model1' width={724} height={363} sizes="724px"
                             style={{
                                 width: '100%',
                                 height: 'auto',
@@ -76,7 +76,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                 <div className=' font-bold text-3xl lg:text-[38px] mb-16 text-center text-[#FFFFFF]'>{intl.formatMessage({ id: 'af_al_model_t' })}</div>
                 <div className='flex flex-col md:flex-row justify-between items-center max-w-[85rem] mx-auto'>
                     <div className=' relative '>
-                        <Image src={locale === "en" ? "/image/anti-fraud/ai-model1.png" : "/image/anti-fraud/ai-model1.png"} alt='ai-model1' width={347} height={294} sizes="347px"
+                        <Image src={locale === "en" ? "/image/anti-fraud/ai-model1-en.png" : "/image/anti-fraud/ai-model1.png"} alt='ai-model1' width={347} height={294} sizes="347px"
                             style={{
                                 width: '100%',
                                 height: 'auto',
@@ -90,7 +90,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                             }} />
                     </div>
                     <div className=' relative'>
-                        <Image src={locale === "en" ? "/image/anti-fraud/ai-model2.png" : "/image/anti-fraud/ai-model2.png"} alt='ai-model2' width={485} height={332} sizes="485px"
+                        <Image src={locale === "en" ? "/image/anti-fraud/ai-model2-en.png" : "/image/anti-fraud/ai-model2.png"} alt='ai-model2' width={485} height={332} sizes="485px"
                             style={{
                                 width: '100%',
                                 height: 'auto',

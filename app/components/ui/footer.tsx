@@ -15,7 +15,7 @@ const Footer = async ({ locale }: { locale: string }) => {
     ]
     return (
         <footer className='w-full pb-12 md:pb-[13.375rem] bg-[#071532] pt-[82px] px-10 md:px-0'>
-            <div className='max-w-[1040px] mx-auto text-white flex flex-col md:flex-row justify-between items-start gap-y-6'>
+            <div className='w-1200 text-white flex flex-col md:flex-row justify-between items-start gap-y-6'>
                 {/* 左边联系 */}
                 <div>
                     <div className=' mb-8 relative'>

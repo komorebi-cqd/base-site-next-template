@@ -56,7 +56,7 @@ export default function LanguageChanger({ fun }: { fun?: () => void }) {
 
             </Transition>
             <Menu.Items>
-                <Menu.Items className="absolute right-0 mt-2 w-24 origin-top-right divide-y divide-gray-100 rounded-md overflow-hidden bg-[rgba(41,44,49,0.68)] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] ring-1 ring-black/5 focus:outline-none">
+                <Menu.Items className="absolute right-0 mt-2 w-24 origin-top-right divide-y divide-gray-100 overflow-hidden bg-[rgba(41,44,49,0.68)] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] ring-1 ring-black/5 focus:outline-none">
                     <div>
                         <Menu.Item >
                             {({ active }) => (

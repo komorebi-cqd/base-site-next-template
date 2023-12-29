@@ -33,7 +33,7 @@ const RiskPortait = async ({ params: { locale } }: { params: { locale: string } 
     return (
         <div>
             {/* 顶部大图 */}
-            <div className="w-full  bg-[#000F28] max-h-[var(--top-h)] h-[var(--top-h)]">
+            <div className="w-full  bg-[#00061a] max-h-[var(--top-h)] h-[var(--top-h)]">
                 <div className="max-w-[1440px] mx-auto h-full bg-[url('/image/risk-portrait/top-bg.png')] bg-contain bg-right-bottom bg-no-repeat  px-6 xl:px-0">
                     <div className="flex flex-col text-white h-full max-w-[1200px] mx-auto pt-48 ">
                         <h3 className=" text-[58px] font-bold">大数据分析+AI智能算法</h3>
@@ -74,7 +74,7 @@ const RiskPortait = async ({ params: { locale } }: { params: { locale: string } 
                         </ul>
                     </div>
                     <div className=' relative ml-5 lg:ml-20'>
-                        <Image src="/image/risk-portrait/our-tem.png" alt='' width={385} height={361} sizes="385px"
+                        <Image src={locale === "en" ? "/image/risk-portrait/our-tem-en.png" : "/image/risk-portrait/our-tem.png"} alt='' width={385} height={361} sizes="385px"
                             style={{
                                 width: '100%',
                                 height: 'auto',

@@ -104,4 +104,7 @@ body {
     .list-style-n{
         @apply relative before:absolute  before:left-0 before:-top-1 before:z-10 before:w-[30px] before:h-[30px] before:leading-[30px] before:rounded-full before:text-white before:bg-primary before:block before:text-center before:text-xl
     }
+    .list-style-c{
+        @apply relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2;
+    }
 }

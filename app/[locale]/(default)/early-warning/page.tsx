@@ -87,7 +87,7 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
                         </ul>
                     </div>
                     <div className=' relative w-full h-96 md:h-auto flex-auto md:flex-1'>
-                        <Image src="/image/early-warning/jylc.png" objectFit='contain' fill alt="" />
+                        <Image src={locale === "en" ? "/image/early-warning/jylc-en.png" : "/image/early-warning/jylc.png"} objectFit='contain' fill alt="" />
                     </div>
                 </div>
             </div>
@@ -129,7 +129,7 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
                 <div className='w-1200 flex justify-between items-center relative'>
                     <div className=' z-10 rounded-2xl shadow-[0px_8px_16px_0px_rgba(0,0,0,0.1)] flex bg-[#EFF5FF] w-[580px] min-h-[270px] relative pt-[70px] pb-10 pl-8 pr-[50px]'>
                         <div className=' relative w-full h-auto'>
-                            <Image src="/image/early-warning/zyyjj.png" fill alt='' className=' object-contain' />
+                            <Image src={locale === "en" ? "/image/early-warning/zyyjj-en.png" : "/image/early-warning/zyyjj.png"} fill alt='' className=' object-contain' />
                         </div>
                     </div>
                     <div className='z-10 w-[350px] min-h-[300px] rounded-2xl bg-white shadow-[0px_8px_4px_0px_rgba(0,0,0,0.05)] pt-6 pr-3 pb-8 pl-6 text-sm'>

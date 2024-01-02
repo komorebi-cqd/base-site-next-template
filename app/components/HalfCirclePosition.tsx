@@ -16,7 +16,7 @@ const HalfCirclePosition: React.FC<Props> = async ({ locale }) => {
                 <div className={`text-center font-bold  pt-16 pb-8 ${locale === 'en' ? " text-2xl" : "text-3xl lg:text-[38px] "}`}>
                     {intl.formatMessage({ id: 'home_half_circle_title' })}
                 </div>
-                <div className={`relative z-10  h-full mx-auto w-full flex flex-col items-center justify-between text-sm pb-[1.875rem] ${locale === "en" ? "pt-[6.75rem]" : " pt-3 md:pt-[3.75rem]"}`}>
+                <div className={`relative z-10  h-full mx-auto w-full flex flex-col items-center justify-between text-sm pb-[1.875rem] ${locale === "en" ? "md:pt-[6.75rem]" : " pt-3 md:pt-[3.75rem]"}`}>
                     <div className='w-full flex flex-col md:flex-row gap-5 md:gap-0 md:items-start px-10 md:px-[4rem]'>
                         <div className=' relative half-item half-item1 order-5 md:order-1'>
                             <div className={`text-[#333333] text-2xl font-extrabold mb-3  ${locale === "en" ? "w-[13.25rem]" : ""}`}>{intl.formatMessage({ id: 'home_half_circle_one_title' })}</div>

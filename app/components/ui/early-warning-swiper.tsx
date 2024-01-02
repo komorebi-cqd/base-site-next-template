@@ -59,19 +59,19 @@ const EarlyWarningSwiper = () => {
                 >
                     <SwiperSlide className='w-full h-full'>
                         <div className='w-full h-full pt-11 text-[rgba(0,0,0,0.85)] flex flex-col px-2 md:px-0'>
-                            <div className='text-center text-[rgba(51,51,51,0.9)] text-2xl md:text-[38px] font-medium'>{formatMessage({ id: "ew_slide_two_t" })}</div>
-                            <div className={`text-center text-sm md:text-base font-semibold mx-auto ${params?.locale === "en" ? " max-w-[770px] my-5 sm:mt-10 sm:mb-14 " : "mt-10  mb-9"}`}>{formatMessage({ id: "ew_slide_two_desc" })}</div>
+                            <div className={`text-center text-[#333] font-medium ${params?.locale === "en" ? " text-4xl font-black" : "text-2xl md:text-[38px]"}`}>{formatMessage({ id: "ew_slide_two_t" })}</div>
+                            <div className={`text-center text-sm md:text-base font-semibold mx-auto ${params?.locale === "en" ? " max-w-[670px] my-5 sm:mt-10 sm:mb-14 " : "mt-10  mb-9"}`}>{formatMessage({ id: "ew_slide_two_desc" })}</div>
                             <ul className={` text-sm mx-auto w-full flex flex-col ${params?.locale === "en" ? " max-w-[660px] gap-y-3" : "gap-y-7 max-w-[516px] "}`}>
                                 {rdrList.map(it => (
-                                    <li className='relative pl-5 before:absolute before:top-3 before:-translate-y-1/2 before:left-0 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>
+                                    <li className='relative pl-5 before:absolute before:top-[10px] before:-translate-y-1/2 before:left-0 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>
                                 ))}
                             </ul>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='w-full h-full'>
                         <div className='w-full h-full pt-11 text-[rgba(0,0,0,0.85)] flex flex-col px-2 md:px-0'>
-                            <div className='text-center text-[rgba(51,51,51,0.9)] text-2xl md:text-[38px] font-medium'>{formatMessage({ id: "ew_slide_one_t" })}</div>
-                            <div className={`text-center text-sm md:text-base font-semibold ${params?.locale === "en" ? "my-5 sm:mt-10 sm:mb-14 " : "mt-10 mb-9 "}`}>{formatMessage({ id: "ew_slide_one_desc" })}</div>
+                            <div className={`text-center text-[#333] font-medium ${params?.locale === "en" ? " text-4xl font-black" : "text-2xl md:text-[38px]"}`}>{formatMessage({ id: "ew_slide_one_t" })}</div>
+                            <div className={`text-center mx-auto text-sm md:text-base font-semibold ${params?.locale === "en" ? "max-w-[625px] my-5 sm:mt-10 sm:mb-14 " : "mt-10 mb-9 "}`}>{formatMessage({ id: "ew_slide_one_desc" })}</div>
                             <ul className={`text-sm  mx-auto  w-full flex flex-col ${params?.locale === "en" ? " max-w-[690px] gap-y-3 sm:gap-y-7" : "gap-y-7 max-w-[516px] "}`}>
                                 {cdrnList.map(it => (
                                     <li className='relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:bg-[#316FE7] before:w-[0.625rem] before:h-[0.625rem] before:rounded-full' key={it.text}>{it.text}</li>

@@ -67,7 +67,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
 
             {/* AI智能模型，成长型数据模型 */}
             <div className='w-full pt-12 pb-16 bg-[#071532]'>
-                <div className=' font-bold text-3xl lg:text-[38px] mb-16 text-center text-[#FFFFFF]'>{intl.formatMessage({ id: 'af_al_model_t' })}</div>
+                <div className=' font-bold text-3xl lg:text-[38px] mb-16 text-center text-[#FFFFFF]'>{intl.formatMessage({ id: 'ar_al_model' })}</div>
                 <div className='flex flex-col md:flex-row justify-between items-center max-w-[85rem] mx-auto'>
                     <div className=' relative '>
                         <Image src={locale === "en" ? "/image/anti-fraud/ai-model1-en.png" : "/image/anti-fraud/ai-model1.png"} alt='ai-model1' width={347} height={294} sizes="347px"

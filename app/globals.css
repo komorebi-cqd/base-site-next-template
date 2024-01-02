@@ -107,4 +107,7 @@ body {
     .list-style-c{
         @apply relative before:block before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:-left-4 before:top-2;
     }
+    .list-style-dot{
+        @apply relative pl-4 before:content-['·'] before:absolute before:top-[1px] before:left-1
+    }
 }

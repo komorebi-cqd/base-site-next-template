@@ -1,7 +1,6 @@
 import HalfCirclePosition from "@/app/components/HalfCirclePosition";
 import Image from "next/image";
 import getIntl from "../intl";
-import { title } from "process";
 
 
 
@@ -132,7 +131,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                                 <div className="text-primary text-2xl font-bold mb-8">{serveContent.antiRisk.title}</div>
                                 <ul className={`leading-6 ${locale === 'en' ? ' max-w-[466px]' : ''}`}>
                                     {serveContent.antiRisk.list.map(it => (
-                                        <li className="relative pl-4 before:content-['·'] before:absolute before:top-[1px] before:left-1" key={it.id}>{it.title}</li>
+                                        <li className="list-style-dot" key={it.id}>{it.title}</li>
                                     ))}
                                 </ul>
                             </div>
@@ -145,7 +144,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                                 <div className="text-primary text-2xl font-bold mb-8">{serveContent.deviceRisk.title}</div>
                                 <ul className={`leading-6 ${locale === 'en' ? ' max-w-[428px]' : ''}`}>
                                     {serveContent.deviceRisk.list.map(it => (
-                                        <li className=" relative pl-4 before:content-['·'] before:absolute before:top-[1px] before:left-1" key={it.id}>{it.title}</li>
+                                        <li className=" list-style-dot" key={it.id}>{it.title}</li>
                                     ))}
                                 </ul>
                             </div>
@@ -158,7 +157,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                                 <div className="text-primary text-2xl font-bold mb-8">{serveContent.riskProfile.title}</div>
                                 <ul className={`leading-6 ${locale === 'en' ? ' max-w-[540px]' : ''}`}>
                                     {serveContent.riskProfile.list.map(it => (
-                                        <li className=" relative pl-4 before:content-['·'] before:absolute before:top-[1px] before:left-1" key={it.id}>{it.title}</li>
+                                        <li className=" list-style-dot" key={it.id}>{it.title}</li>
                                     ))}
                                 </ul>
                             </div>

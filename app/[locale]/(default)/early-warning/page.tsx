@@ -86,7 +86,7 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
                         </ul>
                     </div>
                     <div className=' relative w-full h-96 md:h-auto flex-auto md:flex-1'>
-                        <Image src={locale === "en" ? "/image/early-warning/jylc-en.png" : "/image/early-warning/jylc.png"} objectFit='contain' fill alt="" />
+                        <Image src={locale === "en" ? "/image/early-warning/jylc-en.png" : "/image/early-warning/jylc.png"} className=' object-contain' fill alt="" />
                     </div>
                 </div>
             </div>
@@ -97,25 +97,25 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
                     <ul className='flex items-center justify-between text-sm px-8 xl:px-0 flex-wrap lg:flex-nowrap gap-y-5'>
                         <li className=' w-[155px] flex flex-col items-center lg:gap-y-5 flex-[100%] md:flex-[50%] lg:flex-1'>
                             <div className=' relative w-full h-[155px]'>
-                                <Image src="/image/early-warning/ys1.png" objectFit='contain' fill alt="" />
+                                <Image src="/image/early-warning/ys1.png" className=' object-contain' fill alt="" />
                             </div>
                             <p className={`text-center ${locale === 'en' ? ' max-w-[260px]' : 'whitespace-nowrap '}`}>{intl.formatMessage({ id: 'ew_top_adv_one' })}</p>
                         </li>
                         <li className=' w-[155px] flex flex-col items-center lg:gap-y-5 flex-[100%] md:flex-[50%] lg:flex-1'>
                             <div className=' relative w-full h-[155px]'>
-                                <Image src="/image/early-warning/ys2.png" objectFit='contain' fill alt="" />
+                                <Image src="/image/early-warning/ys2.png" className=' object-contain' fill alt="" />
                             </div>
                             <p className={`text-center ${locale === 'en' ? ' max-w-[260px]' : 'whitespace-nowrap '}`}>{intl.formatMessage({ id: 'ew_top_adv_two' })}</p>
                         </li>
                         <li className=' w-[155px] flex flex-col items-center lg:gap-y-5 flex-[100%] md:flex-[50%] lg:flex-1'>
                             <div className=' relative w-full h-[155px]'>
-                                <Image src="/image/early-warning/ys3.png" objectFit='contain' fill alt="" />
+                                <Image src="/image/early-warning/ys3.png" className=' object-contain' fill alt="" />
                             </div>
                             <p className={`text-center ${locale === 'en' ? ' max-w-[280px]' : 'whitespace-nowrap '}`}>{intl.formatMessage({ id: 'ew_top_adv_three' })}</p>
                         </li>
                         <li className=' w-[155px] flex flex-col items-center lg:gap-y-5 flex-[100%] md:flex-[50%] lg:flex-1'>
                             <div className=' relative w-full h-[155px]'>
-                                <Image src="/image/early-warning/ys4.png" objectFit='contain' fill alt="" />
+                                <Image src="/image/early-warning/ys4.png" className=' object-contain' fill alt="" />
                             </div>
                             <p className={`text-center ${locale === 'en' ? ' max-w-[280px]' : 'whitespace-nowrap '}`}>{intl.formatMessage({ id: 'ew_top_adv_four' })}</p>
                         </li>
@@ -153,7 +153,7 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
                     {advList.map((adv, index) => (
                         <li key={index} className='h-[327px] w-full bg-white rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center py-6'>
                             <div className=' relative w-[155px] h-[155px]'>
-                                <Image src={adv.src} objectFit='contain' fill alt="" />
+                                <Image src={adv.src} className=' object-contain' fill alt="" />
                             </div>
                             <h3 className=' text-primary text-2xl mt-5 mb-4'>{adv.title}</h3>
                             <p className={`text-[#000000] text-center text-sm ${locale === 'en' ? 'max-w-[320px]' : ''}`}>{adv.desc}</p>
@@ -162,35 +162,35 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
 
                     {/* <li className='h-[327px] w-full bg-white rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center py-6'>
                         <div className=' relative w-[155px] h-[155px]'>
-                            <Image src="/image/early-warning/adv-2.png" objectFit='contain' fill alt="" />
+                            <Image src="/image/early-warning/adv-2.png" className=' object-contain' fill alt="" />
                         </div>
                         <h3 className=' text-primary text-2xl mt-5 mb-4'>{intl.formatMessage({ id: 'ew_adv_two_t' })}</h3>
                         <p className=' text-[#000000] text-sm'>{intl.formatMessage({ id: "ew_adv_two_desc" })}</p>
                     </li>
                     <li className='h-[327px] w-full bg-white rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center py-6'>
                         <div className=' relative w-[155px] h-[155px]'>
-                            <Image src="/image/early-warning/adv-3.png" objectFit='contain' fill alt="" />
+                            <Image src="/image/early-warning/adv-3.png" className=' object-contain' fill alt="" />
                         </div>
                         <h3 className=' text-primary text-2xl mt-5 mb-4'>{intl.formatMessage({ id: 'ew_adv_three_t' })}</h3>
                         <p className=' text-[#000000] text-sm max-w-[224px] text-center'>{intl.formatMessage({ id: "ew_adv_three_desc" })}</p>
                     </li>
                     <li className='h-[327px] w-full bg-white rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center py-6'>
                         <div className=' relative w-[155px] h-[155px]'>
-                            <Image src="/image/early-warning/adv-4.png" objectFit='contain' fill alt="" />
+                            <Image src="/image/early-warning/adv-4.png" className=' object-contain' fill alt="" />
                         </div>
                         <h3 className=' text-primary text-2xl mt-5 mb-4'>{intl.formatMessage({ id: 'ew_adv_four_t' })}</h3>
                         <p className=' text-[#000000] text-sm'>{intl.formatMessage({ id: "ew_adv_four_desc" })}</p>
                     </li>
                     <li className='h-[327px] w-full bg-white rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center py-6'>
                         <div className=' relative w-[155px] h-[155px]'>
-                            <Image src="/image/early-warning/adv-5.png" objectFit='contain' fill alt="" />
+                            <Image src="/image/early-warning/adv-5.png" className=' object-contain' fill alt="" />
                         </div>
                         <h3 className=' text-primary text-2xl mt-5 mb-4'>{intl.formatMessage({ id: 'ew_adv_five_t' })}</h3>
                         <p className=' text-[#000000] text-sm'>{intl.formatMessage({ id: "ew_adv_five_desc" })}</p>
                     </li>
                     <li className='h-[327px] w-full bg-white rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center py-6'>
                         <div className=' relative w-[155px] h-[155px]'>
-                            <Image src="/image/early-warning/adv-6.png" objectFit='contain' fill alt="" />
+                            <Image src="/image/early-warning/adv-6.png" className=' object-contain' fill alt="" />
                         </div>
                         <h3 className=' text-primary text-2xl mt-5 mb-4'>{intl.formatMessage({ id: 'ew_adv_six_t' })}</h3>
                         <p className=' text-[#000000] text-sm'>{intl.formatMessage({ id: "ew_adv_six_desc" })}</p>

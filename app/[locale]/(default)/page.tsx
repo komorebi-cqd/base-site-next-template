@@ -82,7 +82,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                         {fraudTypeList.map((item) => (
                             <li key={item.id} className="flex flex-col bg-white rounded-[10px] overflow-hidden basis-full md:basis-1/2 lg:basis-1/4">
                                 <div className="w-full relative h-[200px]">
-                                    <Image src={item.imgUrl} fill={true} objectFit="cover" alt="" />
+                                    <Image src={item.imgUrl} fill={true} className=" object-cover" alt="" />
                                 </div>
                                 <div className="flex justify-center flex-col items-center pb-12 pt-7 px-4">
                                     <div className=" pb-3 text-2xl text-center text-primary font-bold">{item.title}</div>
@@ -136,7 +136,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                                 </ul>
                             </div>
                             <div className=" relative w-full md:w-[315px] h-[215px]  flex-shrink-0">
-                                <Image src="/image/home/home-serve-1.png" objectFit="contain" fill alt="" />
+                                <Image src="/image/home/home-serve-1.png" className=" object-contain" fill alt="" />
                             </div>
                         </div>
                         <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28 flex-col-reverse md:flex-row-reverse">
@@ -149,7 +149,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                                 </ul>
                             </div>
                             <div className=" relative w-full md:w-[404px] min-h-[180px] md:h-[234px]  flex-shrink-0">
-                                <Image src="/image/home/home-serve-2.png" objectFit="contain" fill alt="" />
+                                <Image src="/image/home/home-serve-2.png" className=" object-contain" fill alt="" />
                             </div>
                         </div>
                         <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28  flex-col md:flex-row">
@@ -162,7 +162,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                                 </ul>
                             </div>
                             <div className=" relative w-full md:w-[323px] h-[233px] flex-shrink-0">
-                                <Image src="/image/home/home-serve-3.png" objectFit="contain" fill alt="" />
+                                <Image src="/image/home/home-serve-3.png" className=" object-contain" fill alt="" />
                             </div>
                         </div>
                         <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28   flex-col-reverse md:flex-row-reverse">
@@ -181,7 +181,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                                 </div>
                             </div>
                             <div className=" relative w-[300px] h-[256px] flex-shrink-0">
-                                <Image src="/image/home/home-serve-4.png" objectFit="contain" fill alt="" />
+                                <Image src="/image/home/home-serve-4.png" className=" object-contain" fill alt="" />
                             </div>
                         </div>
                     </div>

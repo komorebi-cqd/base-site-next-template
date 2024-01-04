@@ -97,7 +97,7 @@ const RiskPortait = async ({ params: { locale } }: { params: { locale: string } 
                             <li key={it.text} className=' flex-1 w-full min-w-[260px] max-w-[383px] h-[326px] bg-[#F3F5F9] rounded-[10px] flex flex-col items-center pt-5'>
                                 <Image src={it.imgUrl} alt='' width={155} height={155} sizes="155px"
                                 />
-                                <p className={`text-primary mb-4 font-semibold ${locale === 'en' ? 'text-base lg:text-xl' : 'text-2xl'}`}>{it.text}</p>
+                                <p className={`text-primary mb-4 text-center font-semibold ${locale === 'en' ? 'text-xl' : 'text-2xl'}`}>{it.text}</p>
                                 <p className={` text-sm text-center ${locale === 'en' ? 'max-w-[320px]' : 'max-w-[224px]'} ${index !== 0 && locale === 'en' ? 'max-w-[290px]' : ''}`}>{it.desc}</p>
                             </li>
                         ))}

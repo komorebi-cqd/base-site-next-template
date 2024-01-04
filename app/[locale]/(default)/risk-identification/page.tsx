@@ -50,8 +50,8 @@ const RiskIdentification = async ({ params: { locale } }: { params: { locale: st
                                 <li className=' list-style-c'>{intl.formatMessage({ id: "dri_bigdataai_four" })}</li>
                             </ul>
                         </div>
-                        <div className='relative flex-auto max-w-[430px] rounded-[10px] px-7 '>
-                            <Image className=' object-contain' src={locale === "en" ? "/image/risk-identification/sf-en.png" : "/image/risk-identification/sf.png"} alt='' width={430} height={413} style={{
+                        <div className='relative flex-auto  max-w-[430px] px-7 overflow-hidden'>
+                            <Image className=' object-contain rounded-[10px]' src={locale === "en" ? "/image/risk-identification/sf-en.png" : "/image/risk-identification/sf.png"} alt='' width={430} height={413} style={{
                                 width: "100%",
                                 height: "auto",
                             }} />
@@ -66,8 +66,8 @@ const RiskIdentification = async ({ params: { locale } }: { params: { locale: st
                                 <li className=' list-style-c'>{intl.formatMessage({ id: "dri_bigdata_two" })}</li>
                             </ul>
                         </div>
-                        <div className='  relative rounded-[10px] px-7 max-w-[430px]'>
-                            <Image className=' object-contain' src="/image/risk-identification/dsj.png" alt='' width={430} height={413} style={{
+                        <div className='relative px-7 max-w-[430px]'>
+                            <Image className=' object-contain rounded-[10px]' src="/image/risk-identification/dsj.png" alt='' width={430} height={413} style={{
                                 width: "100%",
                                 height: "auto",
                             }} />

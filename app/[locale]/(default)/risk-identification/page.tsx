@@ -17,7 +17,7 @@ const RiskIdentification = async ({ params: { locale } }: { params: { locale: st
             {/* 顶部大图 */}
             <div className="w-full  bg-gradient-to-r from-[#185BDD] to-[#042081] max-h-[var(--top-h)] h-[var(--top-h)]">
                 <div className="max-w-[1440px] mx-auto h-full lg:bg-[url('/image/risk-identification/computed.png')] bg-[length:305px_200px]  xl:bg-[length:610px_400px] bg-[right_bottom_0%]  lg:bg-[right_bottom_56px] bg-no-repeat  px-6 xl:px-0">
-                    <div className="flex flex-col text-white h-full max-w-[1200px] mx-auto pt-40 lg:pt-48 ">
+                    <div className={`flex flex-col text-white h-full max-w-[1200px] mx-auto   ${locale === 'en' ? ' pt-36 sm:pt-40 lg:pt-48' : 'pt-40 sm:pt-48'}`}>
                         <h3 className={`font-bold text-5xl ${locale === "en" ? ' max-w-[714px] lg:text-[55px]' : 'lg:text-[58px] '}`}>{intl.formatMessage({ id: "dri_top_title" })}</h3>
                         <div className={`flex flex-col mt-4 ${locale === "en" ? "max-w-[730px] text-[25px] mb-7" : "text-3xl mb-16"}`}>
                             <span>{intl.formatMessage({ id: "dri_top_desc" })}</span>
@@ -30,7 +30,7 @@ const RiskIdentification = async ({ params: { locale } }: { params: { locale: st
                 <div className='w-1200 text-[#333] px-5 md:px-0'>
                     <div className='w-full p-5 md:p-14 bg-white gap-y-5 rounded-xl flex flex-col md:flex-row justify-between mb-10'>
                         <div className='flex-1 pt-5 md:pt-16'>
-                            <h3 className={`text-primary text-[38px] font-semibold ${locale === 'en' ? ' max-w-[468px]' : ''}`}>{intl.formatMessage({ id: "dri_bigdataai_t" })}</h3>
+                            <h3 className={`text-primary leading-tight text-[38px] font-semibold ${locale === 'en' ? ' max-w-[468px]' : ''}`}>{intl.formatMessage({ id: "dri_bigdataai_t" })}</h3>
                             <p className={`font-semibold text-base mt-3 mb-4 ${locale === 'en' ? 'max-w-[468px]' : 'max-w-[400px]'}`}>{intl.formatMessage({ id: "dri_bigdataai_desc" })}</p>
                             <ul className=' text-sm leading-6 pl-4 '>
                                 <li className=' list-style-c'>{intl.formatMessage({ id: "dri_bigdataai_one" })}</li>
@@ -68,9 +68,9 @@ const RiskIdentification = async ({ params: { locale } }: { params: { locale: st
             <div className=' w-full bg-white'>
                 <div className='w-1200 min-h-[548px] py-16 px-5 lg:px-0'>
                     <h3 className=' text-[38px] font-semibold text-center pb-16'>{intl.formatMessage({ id: "our_advantage" })}</h3>
-                    <ul className='flex flex-col lg:flex-row gap-x-6 gap-y-6'>
+                    <ul className='flex flex-wrap items-center justify-center gap-x-6 gap-y-6'>
                         {ourAdvList.map((it, index) => (
-                            <li key={it.text} className='w-full h-[326px] bg-[rgba(241,241,241,0.58)] rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center pt-5'>
+                            <li key={it.text} className='w-full flex-1 h-[326px] max-w-[383px] min-w-[280px] bg-[rgba(241,241,241,0.58)] rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] flex flex-col items-center pt-5'>
                                 <Image src={it.imgUrl} alt='' width={155} height={155} sizes="155px"
                                 />
                                 <p className={`text-primary font-semibold text-center ${locale === 'en' ? ' text-xl max-w-[270px] mb-2 leading-6' : 'text-2xl mb-4'}`}>{it.text}</p>

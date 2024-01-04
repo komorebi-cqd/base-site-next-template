@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image';
-import PageTop from '@/app/components/ui/page-top'
 import EarlyWarningSwiper from '@/app/components/ui/early-warning-swiper';
 import getIntl from "../../intl";
 
@@ -44,17 +43,15 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
             desc: intl.formatMessage({ id: 'ew_adv_six_desc' })
         },
     ]
-    const desc = (
-        <div className={`mx-auto ${locale === "en" ? "max-w-[850px]" : "max-w-[450px]"}`}>{intl.formatMessage({ id: 'early_warning_desc' })}</div>
-    )
+   
     return (
         <div>
             {/* 顶部大图 */}
             <div className="w-full  bg-[#020F15] max-h-[var(--top-h)] h-[var(--top-h)]">
                 <div className="max-w-[1440px] mx-auto h-full bg-[url('/image/early-warning/top-bg.png')] bg-contain bg-right-bottom bg-no-repeat  px-6 xl:px-0">
-                    <div className="flex flex-col text-white h-full max-w-[1200px] mx-auto pt-48 ">
-                        <h3 className={`text-[58px] font-bold ${locale === 'en' ? 'max-w-[480px]' : ''}`}>{intl.formatMessage({ id: 'early_warning_t' })}</h3>
-                        <div className={`flex flex-col mt-4 mb-6 ${locale === 'en' ? 'max-w-[470px] text-lg' : 'text-[32px] '}`}>
+                    <div className={`flex flex-col text-white h-full max-w-[1200px] mx-auto ${locale === 'en' ? ' pt-36 md:pt-48 ' : 'pt-40 sm:pt-48'}`}>
+                        <h3 className={` text-5xl lg:leading-[72px] font-bold ${locale === 'en' ? 'max-w-[480px] lg:text-6xl' : 'lg:text-[58px]'}`}>{intl.formatMessage({ id: 'early_warning_t' })}</h3>
+                        <div className={`flex flex-col mt-4 mb-6 ${locale === 'en' ? 'max-w-[470px] text-lg' : 'text-[32px] max-w-[420px]'}`}>
                             <span>{intl.formatMessage({ id: 'early_warning_desc' })}</span>
                         </div>
                         <a href="#" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({ id: 'jump_wetech_text' })}</a>
@@ -125,8 +122,8 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
             {/* Ethoca争议预警与解决 */}
             <div className='w-full min-h-[515px] bg-gradient-to-b from-[rgba(220,232,255,0.65)] to-[rgba(220,232,255,0)] text-[#333] py-16'>
                 <h3 className=' text-3xl text-[38px] text-center font-semibold mb-9'>{intl.formatMessage({ id: 'ew_zyyjj_t' })}</h3>
-                <div className='w-1200 flex justify-between items-center relative'>
-                    <div className=' z-10 rounded-2xl shadow-[0px_8px_16px_0px_rgba(0,0,0,0.1)] flex bg-[#EFF5FF] w-[580px] min-h-[270px] relative pt-[70px] pb-10 pl-8 pr-[50px]'>
+                <div className='w-1200 flex justify-between items-center relative flex-col md:flex-row gap-y-10 px-5 sm:px-0'>
+                    <div className=' z-10 rounded-2xl shadow-[0px_8px_16px_0px_rgba(0,0,0,0.1)] flex bg-[#EFF5FF] max-w-[580px] w-full min-h-[240px] relative pt-0 sm:pt-[70px] pb-0 sm:pb-10 pl-6 sm:pl-8 pr-6 sm:pr-[50px]'>
                         <div className=' relative w-full h-auto'>
                             <Image src={locale === "en" ? "/image/early-warning/zyyjj-en.png" : "/image/early-warning/zyyjj.png"} fill alt='' className=' object-contain' />
                         </div>
@@ -143,7 +140,7 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
                             <p>{intl.formatMessage({ id: 'ew_zyyjj_c_item_two_desc' })}</p>
                         </div>
                     </div>
-                    <div style={{ background: "linear-gradient(90deg, rgba(204,221,255,0.21) 0%, #FFFFFF 100%)" }} className=' absolute top-1/4 left-[48%] w-[287px] h-[155px] overflow-hidden before:block before:absolute before:bg-[#f3f7ff] before:left-0 before:right-0 before:-top-2 before:h-[64px] before:rounded-[0_0_50%_50%] after:bg-[#f8fbff] after:absolute after:left-0 after:right-0 after:-bottom-5 after:h-[80px] after:rounded-[50%_50%_0_0] after:shadow-[4px_0px_0px_4px_rgba(0,0,0,0.1)]'></div>
+                    <div style={{ background: "linear-gradient(90deg, rgba(204,221,255,0.21) 0%, #FFFFFF 100%)" }} className=' hidden lg:block absolute top-1/4 left-[48%] w-[287px] h-[155px] overflow-hidden before:block before:absolute before:bg-[#f3f7ff] before:left-0 before:right-0 before:-top-2 before:h-[64px] before:rounded-[0_0_50%_50%] after:bg-[#f8fbff] after:absolute after:left-0 after:right-0 after:-bottom-5 after:h-[80px] after:rounded-[50%_50%_0_0] after:shadow-[4px_0px_0px_4px_rgba(0,0,0,0.1)]'></div>
                 </div>
             </div>
             {/* 我们的优势2 */}

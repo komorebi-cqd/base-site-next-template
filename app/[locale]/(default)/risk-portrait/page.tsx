@@ -34,8 +34,8 @@ const RiskPortait = async ({ params: { locale } }: { params: { locale: string } 
             {/* 顶部大图 */}
             <div className="w-full  bg-[#00061a] max-h-[var(--top-h)] h-[var(--top-h)]">
                 <div className="max-w-[1440px] mx-auto h-full bg-[url('/image/risk-portrait/top-bg.png')] bg-contain bg-right-bottom bg-no-repeat  px-6 xl:px-0">
-                    <div className="flex flex-col text-white h-full max-w-[1200px] mx-auto pt-48 ">
-                        <h3 className={`font-bold ${locale === 'en' ? ' text-[55px] max-w-[675px]' : 'text-[58px] '}`}>{intl.formatMessage({id: 'rp_top_title'})}</h3>
+                    <div className={`flex flex-col text-white h-full max-w-[1200px] mx-auto ${locale === 'en' ? ' pt-36 md:pt-48 ' : 'pt-40 sm:pt-48'}`}>
+                        <h3 className={`font-bold text-5xl ${locale === 'en' ? ' lg:text-[55px] max-w-[675px]' : 'lg:text-[58px] '}`}>{intl.formatMessage({id: 'rp_top_title'})}</h3>
                         <div className={`flex flex-col mt-4 mb-6 ${locale === 'en' ? ' max-w-[460px] text-[25px]' : 'text-3xl'}`}>
                             <span>{intl.formatMessage({id: 'rp_top_desc'})}</span>
                         </div>
@@ -46,12 +46,12 @@ const RiskPortait = async ({ params: { locale } }: { params: { locale: string } 
             {/* 多维画像设计，提高风险识别精准度 */}
             <div className='w-full bg-white pt-14 pb-[108px] text-[#333333]'>
                 <h3 className={`text-[38px] font-semibold text-center mx-auto ${locale === 'en' ? ' max-w-[900px]' : ''}`}>{intl.formatMessage({id: 'rp_sj_t'})}</h3>
-                <div className={`flex items-center justify-center mt-8 mb-12 text-[rgba(0,0,0,0.69)] text-base ${locale === 'en' ? '' : 'flex-col'}`}>
+                <div className={`mx-auto text-center mt-8 mb-12 text-[rgba(0,0,0,0.69)] text-base ${locale === 'en' ? '' : 'flex items-center justify-center flex-col'}`}>
                     <span>{intl.formatMessage({id: 'rp_sj_desc_one'})}</span>
                     <span>{intl.formatMessage({id: 'rp_sj_desc_two'})}</span>
                 </div>
                 <div className='w-1200'>
-                    <ul className='grid grid-cols-4 gap-x-7 gap-y-8 text-2xl'>
+                    <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-7 gap-y-8 text-2xl px-5 md:px-0'>
                         {identificationModeList.map(it => (
                             <li key={it.text} className='w-full h-[260px] bg-white rounded-[10px] shadow-[0px_4px_40px_0px_rgba(43,89,255,0.08)] flex items-center flex-col pt-7'>
                                 <Image src={it.imgUrl} alt="" width={110} height={110} sizes="110px" />
@@ -85,12 +85,12 @@ const RiskPortait = async ({ params: { locale } }: { params: { locale: string } 
             <div className=' w-full bg-white'>
                 <div className='w-1200 min-h-[548px] pt-10 pb-[94px]'>
                     <h3 className=' text-[38px] font-semibold text-center pb-16'>{intl.formatMessage({id: 'our_advantage'})}</h3>
-                    <ul className='flex gap-x-6'>
+                    <ul className='flex justify-center flex-wrap gap-x-6 gap-y-6'>
                         {ourAdvList.map((it, index) => (
-                            <li key={it.text} className='w-full h-[326px] bg-[#F3F5F9] rounded-[10px] flex flex-col items-center pt-5'>
+                            <li key={it.text} className=' flex-1 w-full min-w-[260px] max-w-[383px] h-[326px] bg-[#F3F5F9] rounded-[10px] flex flex-col items-center pt-5'>
                                 <Image src={it.imgUrl} alt='' width={155} height={155} sizes="155px"
                                 />
-                                <p className={`text-primary mb-4 font-semibold ${locale === 'en' ? ' text-xl' : 'text-2xl'}`}>{it.text}</p>
+                                <p className={`text-primary mb-4 font-semibold ${locale === 'en' ? 'text-base lg:text-xl' : 'text-2xl'}`}>{it.text}</p>
                                 <p className={` text-sm text-center ${locale === 'en' ? 'max-w-[320px]' : 'max-w-[224px]'} ${index !== 0 && locale === 'en' ? 'max-w-[290px]' : ''}`}>{it.desc}</p>
                             </li>
                         ))}

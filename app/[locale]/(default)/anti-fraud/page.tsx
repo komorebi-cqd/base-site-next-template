@@ -11,8 +11,8 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
             {/* 顶部大图 */}
             <div className="w-full  bg-[#161616] max-h-[var(--top-h)] h-[var(--top-h)]">
                 <div className="max-w-[1440px] mx-auto h-full bg-[url('/image/anti-fraud/anti-fraud-top-bg.png')] bg-contain bg-right-bottom bg-no-repeat  px-6 xl:px-0">
-                    <div className="flex flex-col text-white h-full max-w-[1200px] mx-auto pt-48 ">
-                        <h3 className={`font-bold text-5xl ${locale === "en" ? "max-w-[620px] leading-[68px] lg:text-[72px]" : "lg:text-[58px] "}`}>{intl.formatMessage({ id: 'ar_top_title' })}</h3>
+                    <div className={`flex flex-col text-white h-full max-w-[1200px] mx-auto  ${locale === 'en' ? 'pt-36 sm:pt-48' : ' pt-40 sm:pt-48'}`}>
+                        <h3 className={`font-bold text-5xl ${locale === "en" ? "max-w-[620px] lg:text-[72px]" : "lg:text-[58px] "}`}>{intl.formatMessage({ id: 'ar_top_title' })}</h3>
                         <div className={`flex flex-col mt-4 mb-6 ${locale === "en" ? " text-lg max-w-[620px]" : " text-[32px]  max-w-[570px]"}`}>
                             <span>{intl.formatMessage({ id: 'ar_top_desc' })}</span>
                         </div>
@@ -114,8 +114,8 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
             {/* 我们的优势 */}
             <div className='w-full bg-[#F3F5F9] pt-14 pb-16'>
                 <div className=' text-[#333] text-center text-3xl lg:text-[38px] font-semibold mb-10'>{intl.formatMessage({ id: 'our_advantage' })}</div>
-                <div className='w-1200 flex flex-col md:flex-row gap-x-6 text-sm text-[#000000] px-5 gap-y-6'>
-                    <div className='w-full bg-white h-[327px] flex flex-col items-center pt-4 rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)]'>
+                <div className='w-1200 flex items-center justify-center flex-col md:flex-row gap-x-6 text-sm text-[#000000] px-5 gap-y-6'>
+                    <div className='w-full max-w-[383px] bg-white h-[327px] flex flex-col items-center pt-4 rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)]'>
                         <div className=' relative'>
                             <Image src="/image/anti-fraud/ys1.png" alt='arrow' width={155} height={155} sizes="155px"
                                 style={{
@@ -126,7 +126,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                         <h3 className={`text-primary font-semibold text-center ${locale === "en" ? " text-xl my-2" : "text-2xl mt-2 mb-4"}`}>{intl.formatMessage({ id: 'ar_adv_one_t' })}</h3>
                         <div className={`text-center ${locale === 'en' ? 'max-w-[270px] leading-5' : 'max-w-[210px] leading-6'}`}>{intl.formatMessage({ id: 'ar_adv_one_des' })}</div>
                     </div>
-                    <div className='w-full bg-white h-[327px] flex flex-col items-center pt-4 rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)]'>
+                    <div className='w-full max-w-[383px] bg-white h-[327px] flex flex-col items-center pt-4 rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)]'>
                         <div className=' relative'>
                             <Image src="/image/anti-fraud/ys2.png" alt='arrow' width={155} height={155} sizes="155px"
                                 style={{
@@ -137,7 +137,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                         <h3 className={`text-primary font-semibold text-center ${locale === "en" ? "text-xl max-w-[240px] my-[6px] leading-5" : "text-2xl mt-2 mb-4"}`}>{intl.formatMessage({ id: 'ar_adv_two_t' })}</h3>
                         <div className={`text-center ${locale === 'en' ? ' max-w-[260px] leading-5' : 'max-w-[210px] leading-6'}`}>{intl.formatMessage({ id: 'ar_adv_two_des' })}</div>
                     </div>
-                    <div className='w-full bg-white min-h-[327px] flex flex-col items-center pt-4 rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)]'>
+                    <div className='w-full max-w-[383px] bg-white min-h-[327px] flex flex-col items-center pt-4 rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)]'>
                         <div className=' relative'>
                             <Image src="/image/anti-fraud/ys3.png" alt='arrow' width={155} height={155} sizes="155px"
                                 style={{

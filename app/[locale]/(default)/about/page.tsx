@@ -10,9 +10,9 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
             {/* 顶部大图 */}
             <div className="w-full  bg-[#262626] max-h-[var(--top-h)] h-[var(--top-h)] bg-[url('/image/about/top-bg.png')] bg-contain bg-right-bottom bg-no-repeat">
                 <div className="max-w-[1440px] mx-auto h-full  bg-no-repeat  px-6 xl:px-0">
-                    <div className="flex flex-col text-white h-full max-w-[1200px] mx-auto pt-40 lg:pt-48 ">
-                        <h3 className={`font-bold text-5xl ${locale === 'en' ? 'lg:text-[55px] ' : 'lg:text-[58px] '}`}>{intl.formatMessage({id: "about_top_t"})}</h3>
-                        <div className={`flex flex-col text-3xl mt-4 mb-6 ${locale === 'en' ? 'max-w-[781px]' : ''}`}>
+                    <div className={`flex flex-col text-white h-full max-w-[1200px] mx-auto ${locale === 'en' ? 'pt-24 sm:pt-40 lg:pt-48 ' : ' pt-40 sm:pt-48'}`}>
+                        <h3 className={`font-bold text-5xl leading-[64px] ${locale === 'en' ? 'lg:text-[55px] ' : 'lg:text-[58px] '}`}>{intl.formatMessage({id: "about_top_t"})}</h3>
+                        <div className={`flex flex-col text-3xl mt-6 mb-12 ${locale === 'en' ? 'max-w-[781px]' : ''}`}>
                             <span>{intl.formatMessage({id: "about_top_des"})}</span>
                             <span>{intl.formatMessage({id: "about_top_des_two"})}</span>
                         </div>
@@ -30,7 +30,7 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
                             <p>{intl.formatMessage({id: "about_content_two"})}</p>
                         </div>
                     </div>
-                    <div className='flex-1 relative w-full h-auto lg:max-w-[516px] mx-auto'>
+                    <div className='flex-1 relative w-full h-auto lg:max-w-[516px] mx-auto lg:mt-14'>
                         <Image src="/image/about/aboutus-bg.png" alt='about-WeTech' width={516} height={310} style={{
                             width: '100%',
                             height: "auto"
@@ -60,9 +60,9 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
                                 <div className=' md:max-w-[300px]'>{intl.formatMessage({ id: 'address_detials' })}</div>
                             </div>
                         </li>
-                        {locale !== "en" && <li>
+                         <li>
                             <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className="py-2 px-3 bg-indigo-500 text-white text-sm font-semibold rounded-md shadow focus:outline-none">加入渠道联盟</a>
-                        </li>}
+                        </li>
                     </ul>
                 </div>
             </div>

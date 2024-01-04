@@ -64,7 +64,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
             {/* 顶部大图 */}
             <div className="w-full  bg-[#242736] max-h-[var(--top-h)] h-[var(--top-h)]">
                 <div className="max-w-[1440px] mx-auto h-full bg-[url('/image/home/home-top-bg.png')] bg-contain  md:bg-[length:auto_56%] lg:bg-contain bg-right-bottom bg-no-repeat  px-6 xl:px-0">
-                    <div className="flex flex-col text-white h-full max-w-[1200px] mx-auto pt-48 ">
+                    <div className={`flex flex-col text-white h-full max-w-[1200px] mx-auto ${locale === 'en' ? 'pt-36 sm:pt-48 ' : 'pt-48'}`}>
                         <h3 className={`text-5xl lg:text-[58px] font-bold ${locale === "en" ? "max-w-[520px]" : ""}`}>{intl.formatMessage({ id: 'home_top_title' })}</h3>
                         <div className={`flex flex-col  mt-4 mb-6 ${locale === "en" ? " text-lg" : " text-3xl lg:text-[32px] "}`}>
                             <span>{intl.formatMessage({ id: 'home_top_title_des' })}</span>
@@ -78,13 +78,13 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
             <div className={`w-full h-auto  relative bg-[rgba(243,245,249,1)]`}>
                 <div className="w-1200 mx-auto pt-10 pb-10  lg:pt-16 lg:pb-28 ">
                     <div className="text-center text-3xl lg:text-[38px] text-[#333] pb-12 font-semibold">{intl.formatMessage({ id: 'home_slide_title' })}</div>
-                    <ul className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 px-6 xl:px-0">
+                    <ul className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 px-5 xl:px-0">
                         {fraudTypeList.map((item) => (
                             <li key={item.id} className="flex flex-col bg-white rounded-[10px] overflow-hidden basis-full md:basis-1/2 lg:basis-1/4">
                                 <div className="w-full relative h-[200px]">
                                     <Image src={item.imgUrl} fill={true} className=" object-cover" alt="" />
                                 </div>
-                                <div className="flex justify-center flex-col items-center pb-12 pt-7 px-4">
+                                <div className="flex justify-center flex-col items-center py-7 px-4 min-h-[162px]">
                                     <div className=" pb-3 text-2xl text-center text-primary font-bold">{item.title}</div>
                                     <div className="text-center text-sm max-w-[240px]">{item.desc}</div>
                                 </div>

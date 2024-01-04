@@ -29,7 +29,7 @@ export default function Header() {
 
     return (
         <header className={`fixed w-full z-30 transition duration-300 ease-in-out ${!top ? ' bg-[--header-bg]  backdrop-blur-sm shadow-sm' : ''}`}>
-            <div className={`mx-auto px-5 relative max-w-[1440px] ${params?.locale === "en" ? "" : ""}`}>
+            <div className={`mx-auto px-5 relative ${params?.locale === "en" ? "" : ""}`}>
                 <div className="flex items-center justify-between h-28 md:h-36 md:gap-x-6 lg:gap-x-12 xl:gap-x-20">
 
                     {/* Site branding */}
@@ -38,9 +38,9 @@ export default function Header() {
                     </div>
 
                     {/* Desktop navigation */}
-                    <nav className={`hidden md:grow h-full ${params?.locale === "en" ? "xl:flex" : " md:flex"}`}>
+                    <nav className={`hidden md:grow h-full  ${params?.locale === "en" ? "xl:flex" : " md:flex"}`}>
                         {/* Desktop sign in links */}
-                        <ul className="flex grow justify-between flex-wrap items-center text-sm text-[#C7DAFF]">
+                        <ul className="flex grow flex-wrap gap-x-10 justify-center items-center text-sm text-[#C7DAFF]">
                             {navList.map(nav => {
                                 return (
                                     <li key={nav.id} className={` relative ${params?.locale === "en" ? "" : ""}`}>

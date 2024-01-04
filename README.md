@@ -67,6 +67,21 @@ server {
 
 ```js
 
+listen       80;
+    server_name  www.test.wetech.vip;
+    charset utf-8;
+    access_log off;
+    location / {
+        root   /data/phpweb/www.test.wetech-rc.com;
+        proxy_pass http://127.0.0.1:3000/;
+        #index  index.php index.html index.htm;
+        #try_files $uri $uri/ /index.html =404;
+    }
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   html;
+    }
+
 pm2 start npm --name "offsit" -- start
 ```
 

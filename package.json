@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "cp .env.base.staging .env.local && next dev",
     "dev:pro": "cp .env.base.production .env.local && next dev",
-    "build": "cp .env.base.production .env.production && next build",
+    "build": "sudo cp .env.base.production .env.production && next build",
+    "build:local": "cp .env.base.production .env.production && next build",
     "build:staging": "cp .env.base.staging .env.production && next build",
     "build:export": "next build && next export",
     "build:start": "next build && next start",

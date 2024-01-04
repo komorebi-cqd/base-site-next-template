@@ -1,4 +1,19 @@
 {
+  "seo_home_title": "WeTech官网",
+  "seo_home_desc": "WeTech官网",
+  "seo_anti-fraud_title": "信用卡反欺诈-WeTech",
+  "seo_anti-fraud_desc": "信用卡反欺诈-WeTech",
+  "seo_ri_title": "设备风险识别-WeTech",
+  "seo_ri_desc": "设备风险识别-WeTech",
+  "seo_rp_title": "风险画像-WeTech",
+  "seo_rp_desc": "风险画像-WeTech",
+  "seo_zyjj_title": "争议预警与解决-WeTech",
+  "seo_zyjj_desc": "争议预警与解决-WeTech",
+  "seo_about_title": "关于WeTech",
+  "seo_about_desc": "关于WeTech",
+  
+  
+
   "language": "语言",
   "nav_one": "首页",
   "nav_two": "信用卡反欺诈",
@@ -6,7 +21,6 @@
   "nav_four": "风险画像",
   "nav_five": "争议预警与解决",
   "nav_six": "关于我们",
-  "foot_nav_one": "反欺诈风控",
   "jump_wetech_text": "立即体验",
   "phone": "联系电话：13715293975",
   "email": "电子邮箱：business@wetech.vip",

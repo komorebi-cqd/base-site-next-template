@@ -4,6 +4,14 @@ import getIntl from "../../intl";
 
 
 
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+    const intl = await getIntl(params.locale);
+    return {
+        title: intl.formatMessage({ id: "seo_ri_title" }),
+        description: intl.formatMessage({ id: "seo_ri_title" })
+    }
+}
+
 const RiskIdentification = async ({ params: { locale } }: { params: { locale: string } }) => {
     const intl = await getIntl(locale);
     const ourAdvList = [
@@ -22,7 +30,7 @@ const RiskIdentification = async ({ params: { locale } }: { params: { locale: st
                         <div className={`flex flex-col mt-4 ${locale === "en" ? "max-w-[730px] text-[25px] mb-7" : "text-3xl mb-16"}`}>
                             <span>{intl.formatMessage({ id: "dri_top_desc" })}</span>
                         </div>
-                        <a href="#" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({ id: "jump_wetech_text" })}</a>
+                        <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({ id: "jump_wetech_text" })}</a>
                     </div>
                 </div>
             </div>

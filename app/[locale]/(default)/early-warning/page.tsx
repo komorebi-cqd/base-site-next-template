@@ -6,6 +6,13 @@ import getIntl from "../../intl";
 
 
 
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+    const intl = await getIntl(params.locale);
+    return {
+        title: intl.formatMessage({ id: "seo_zyjj_title" }),
+        description: intl.formatMessage({ id: "seo_zyjj_title" })
+    }
+}
 
 
 const EarlyWarning = async ({ params: { locale } }: { params: { locale: string } }) => {
@@ -51,10 +58,10 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
                 <div className="max-w-[1440px] mx-auto h-full bg-[url('/image/early-warning/top-bg.png')] bg-contain bg-right-bottom bg-no-repeat  px-6 xl:px-0">
                     <div className={`flex flex-col text-white h-full max-w-[1200px] mx-auto ${locale === 'en' ? ' pt-36 md:pt-48 ' : 'pt-40 sm:pt-48'}`}>
                         <h3 className={` text-5xl lg:leading-[72px] font-bold ${locale === 'en' ? 'max-w-[480px] lg:text-6xl' : 'lg:text-[58px]'}`}>{intl.formatMessage({ id: 'early_warning_t' })}</h3>
-                        <div className={`flex flex-col mt-4 mb-6 ${locale === 'en' ? 'max-w-[470px] text-lg' : 'text-[32px] max-w-[420px]'}`}>
+                        <div className={`flex flex-col leading-tight mt-4 mb-6 ${locale === 'en' ? 'max-w-[470px] text-lg' : ' text-3xl max-w-[420px]'}`}>
                             <span>{intl.formatMessage({ id: 'early_warning_desc' })}</span>
                         </div>
-                        <a href="#" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({ id: 'jump_wetech_text' })}</a>
+                        <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({ id: 'jump_wetech_text' })}</a>
                     </div>
                 </div>
             </div>

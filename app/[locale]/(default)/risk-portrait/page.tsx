@@ -5,7 +5,13 @@ import getIntl from "../../intl";
 
 
 
-
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+    const intl = await getIntl(params.locale);
+    return {
+        title: intl.formatMessage({ id: "seo_rp_title" }),
+        description: intl.formatMessage({ id: "seo_rp_title" })
+    }
+}
 
 
 
@@ -39,13 +45,13 @@ const RiskPortait = async ({ params: { locale } }: { params: { locale: string } 
                         <div className={`flex flex-col mt-4 mb-6 ${locale === 'en' ? ' max-w-[460px] text-[25px]' : 'text-3xl'}`}>
                             <span>{intl.formatMessage({id: 'rp_top_desc'})}</span>
                         </div>
-                        <a href="#" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({id: 'jump_wetech_text'})}</a>
+                        <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({id: 'jump_wetech_text'})}</a>
                     </div>
                 </div>
             </div>
             {/* 多维画像设计，提高风险识别精准度 */}
             <div className='w-full bg-white pt-14 pb-[108px] text-[#333333]'>
-                <h3 className={`text-[38px] font-semibold text-center mx-auto ${locale === 'en' ? ' max-w-[900px]' : ''}`}>{intl.formatMessage({id: 'rp_sj_t'})}</h3>
+                <h3 className={`text-[38px] leading-tight font-semibold text-center mx-auto ${locale === 'en' ? ' max-w-[900px]' : ''}`}>{intl.formatMessage({id: 'rp_sj_t'})}</h3>
                 <div className={`mx-auto text-center mt-8 mb-12 text-[rgba(0,0,0,0.69)] text-base ${locale === 'en' ? '' : 'flex items-center justify-center flex-col'}`}>
                     <span>{intl.formatMessage({id: 'rp_sj_desc_one'})}</span>
                     <span>{intl.formatMessage({id: 'rp_sj_desc_two'})}</span>

@@ -1,14 +1,17 @@
-import type { Metadata } from 'next';
 import { ReactNode } from 'react';
 import Header from '@/app/components/ui/header';
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import Footer from '@/app/components/ui/footer';
+import getIntl from "../intl";
 
 
-export const metadata: Metadata = {
-    title: 'WeTech',
-    description: 'WeTech官网'
-};
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+    const intl = await getIntl(params.locale);
+    return {
+        title: intl.formatMessage({ id: "seo_home_title" }),
+        description: intl.formatMessage({ id: "seo_home_title" })
+    }
+}
 
 
 export default async function DefaultRootLayout({
@@ -24,7 +27,7 @@ export default async function DefaultRootLayout({
         <>
             <Header />
             {children}
-            <Footer locale={params.locale}/>
+            <Footer locale={params.locale} />
         </>
     );
 }

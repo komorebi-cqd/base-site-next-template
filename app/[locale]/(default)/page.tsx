@@ -65,12 +65,12 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
             <div className="w-full  bg-[#242736] max-h-[var(--top-h)] h-[var(--top-h)]">
                 <div className="max-w-[1440px] mx-auto h-full bg-[url('/image/home/home-top-bg.png')] bg-contain  md:bg-[length:auto_56%] lg:bg-contain bg-right-bottom bg-no-repeat  px-6 xl:px-0">
                     <div className={`flex flex-col text-white h-full max-w-[1200px] mx-auto ${locale === 'en' ? 'pt-36 sm:pt-48 ' : 'pt-48'}`}>
-                        <h3 className={`text-5xl lg:text-[58px] font-bold ${locale === "en" ? "max-w-[520px]" : ""}`}>{intl.formatMessage({ id: 'home_top_title' })}</h3>
-                        <div className={`flex flex-col  mt-4 mb-6 ${locale === "en" ? " text-lg" : " text-3xl lg:text-[32px] "}`}>
+                        <h3 className={`text-5xl home-top-bg lg:text-[58px] font-bold ${locale === "en" ? "max-w-[560px]" : "max-w-[527px]"}`}>{intl.formatMessage({ id: 'home_top_title' })}</h3>
+                        <div className={`flex flex-col leading-tight mt-4 mb-6 ${locale === "en" ? " text-lg" : " text-3xl lg:text-[32px] "}`}>
                             <span>{intl.formatMessage({ id: 'home_top_title_des' })}</span>
                             <span>{intl.formatMessage({ id: 'home_top_title_des_two' })}</span>
                         </div>
-                        <a href="#" className={`w-[206px] h-[56px] bg-[#0F61FF] rounded block leading-[56px] text-center text-xl ${locale === "en" ? "" : "font-semibold"}`}>{intl.formatMessage({ id: 'jump_wetech_text' })}</a>
+                        <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className={`w-[206px] h-[56px] bg-[#0F61FF] rounded block leading-[56px] text-center text-xl ${locale === "en" ? "" : "font-semibold"}`}>{intl.formatMessage({ id: 'jump_wetech_text' })}</a>
                     </div>
                 </div>
             </div>

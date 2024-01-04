@@ -3,6 +3,14 @@ import Image from 'next/image';
 import getIntl from "../../intl";
 
 
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+    const intl = await getIntl(params.locale);
+    return {
+        title: intl.formatMessage({ id: "seo_about_title" }),
+        description: intl.formatMessage({ id: "seo_about_title" })
+    }
+}
+
 const About = async ({ params: { locale } }: { params: { locale: string } }) => {
     const intl = await getIntl(locale);
     return (
@@ -16,7 +24,7 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
                             <span>{intl.formatMessage({id: "about_top_des"})}</span>
                             <span>{intl.formatMessage({id: "about_top_des_two"})}</span>
                         </div>
-                        <a href="#" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({id: "jump_wetech_text"})}</a>
+                        <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({id: "jump_wetech_text"})}</a>
                     </div>
                 </div>
             </div>

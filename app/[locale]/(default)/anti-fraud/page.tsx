@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import getIntl from "../../intl";
-
+import JumpBtn from "@/app/components/Btn/JumpBtn";
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
     const intl = await getIntl(params.locale);
@@ -23,7 +23,9 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                         <div className={`flex flex-col leading-tight mt-4 mb-6 ${locale === "en" ? " text-lg max-w-[620px]" : " text-[32px]  max-w-[570px]"}`}>
                             <span>{intl.formatMessage({ id: 'ar_top_desc' })}</span>
                         </div>
-                        <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({ id: 'jump_wetech_text' })}</a>
+                        <JumpBtn locale={locale}>
+                            {intl.formatMessage({ id: 'jump_wetech_text' })}
+                        </JumpBtn>
                     </div>
                 </div>
             </div>
@@ -40,7 +42,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                             <Image className=' object-contain' style={{
                                 width: '100%',
                                 height: 'auto',
-                            }} src={locale === "en" ? "/image/anti-fraud/ct-fk-en.png" : "/image/anti-fraud/ct-fk.png"} alt='advantage1'  width={692} height={248} />
+                            }} src={locale === "en" ? "/image/anti-fraud/ct-fk-en.png" : "/image/anti-fraud/ct-fk.png"} alt='advantage1' width={692} height={248} />
                         </div>
                     </div>
                     <div className={`w-full min-h-[300px] bg-white flex p-6 flex-col-reverse lg:flex-row-reverse  ${locale === "en" ? "gap-x-4" : " gap-x-12"}`}>
@@ -54,7 +56,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                             <Image style={{
                                 width: '100%',
                                 height: 'auto',
-                            }} className=' object-contain' src={locale === "en" ? "/image/anti-fraud/wc-fk-en.png" : "/image/anti-fraud/wc-fk.png"} alt='advantage1'  width={692} height={248} />
+                            }} className=' object-contain' src={locale === "en" ? "/image/anti-fraud/wc-fk-en.png" : "/image/anti-fraud/wc-fk.png"} alt='advantage1' width={692} height={248} />
                         </div>
                     </div>
                 </div>

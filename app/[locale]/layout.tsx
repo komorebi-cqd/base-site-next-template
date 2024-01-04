@@ -27,6 +27,7 @@ export default async function DefaultRootLayout({
     const intl = await getIntl(locale);
     return (
         <html lang={locale}>
+            <link rel="icon" href="/favicon.ico" sizes="any" />
             <body>
                 <ServerIntlProvider messages={intl.messages} locale={intl.locale}>
                     <ToasterProvider />

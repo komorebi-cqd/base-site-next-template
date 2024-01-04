@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import getIntl from "../../intl";
+import JumpBtn from "@/app/components/Btn/JumpBtn";
 
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
@@ -19,12 +20,14 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
             <div className="w-full  bg-[#262626] max-h-[var(--top-h)] h-[var(--top-h)] bg-[url('/image/about/top-bg.png')] bg-contain bg-right-bottom bg-no-repeat">
                 <div className="max-w-[1440px] mx-auto h-full  bg-no-repeat  px-6 xl:px-0">
                     <div className={`flex flex-col text-white h-full max-w-[1200px] mx-auto ${locale === 'en' ? 'pt-24 sm:pt-40 lg:pt-48 ' : ' pt-40 sm:pt-48'}`}>
-                        <h3 className={`font-bold text-5xl leading-[64px] ${locale === 'en' ? 'lg:text-[55px] ' : 'lg:text-[58px] '}`}>{intl.formatMessage({id: "about_top_t"})}</h3>
+                        <h3 className={`font-bold text-5xl leading-[64px] ${locale === 'en' ? 'lg:text-[55px] ' : 'lg:text-[58px] '}`}>{intl.formatMessage({ id: "about_top_t" })}</h3>
                         <div className={`flex flex-col text-3xl mt-6 mb-12 ${locale === 'en' ? 'max-w-[781px]' : ''}`}>
-                            <span>{intl.formatMessage({id: "about_top_des"})}</span>
-                            <span>{intl.formatMessage({id: "about_top_des_two"})}</span>
+                            <span>{intl.formatMessage({ id: "about_top_des" })}</span>
+                            <span>{intl.formatMessage({ id: "about_top_des_two" })}</span>
                         </div>
-                        <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({id: "jump_wetech_text"})}</a>
+                        <JumpBtn locale={locale}>
+                            {intl.formatMessage({ id: 'jump_wetech_text' })}
+                        </JumpBtn>
                     </div>
                 </div>
             </div>
@@ -32,10 +35,10 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
                 <div className='w-1200 flex flex-col lg:flex-row gap-x-28'>
                     <div className='flex-1 lg:max-w-[563px] w-full'>
                         <h3 className=' text-[38px] font-semibold'>{intl.formatMessage({ id: 'about_us' })}</h3>
-                        <p className=' py-[30px] font-semibold text-base'>{intl.formatMessage({id: "about_des"})}</p>
+                        <p className=' py-[30px] font-semibold text-base'>{intl.formatMessage({ id: "about_des" })}</p>
                         <div className=' text-sm leading-7 pb-4'>
-                            <p>{intl.formatMessage({id: "about_content_one"})}</p>
-                            <p>{intl.formatMessage({id: "about_content_two"})}</p>
+                            <p>{intl.formatMessage({ id: "about_content_one" })}</p>
+                            <p>{intl.formatMessage({ id: "about_content_two" })}</p>
                         </div>
                     </div>
                     <div className='flex-1 relative w-full h-auto lg:max-w-[516px] mx-auto lg:mt-14'>
@@ -68,13 +71,13 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
                                 <div className=' md:max-w-[300px]'>{intl.formatMessage({ id: 'address_detials' })}</div>
                             </div>
                         </li>
-                         <li>
-                            <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className="py-2 px-3 bg-indigo-500 text-white text-sm font-semibold rounded-md shadow focus:outline-none">加入渠道联盟</a>
+                        <li>
+                            <a href={locale === 'en' ? process.env.NEXT_PUBLIC_JUMP_URL_EN + '&source=wetech-website-union' : process.env.NEXT_PUBLIC_JUMP_URL_ZH + '&source=wetech-website-union'} target="_blank" className="py-2 px-3 bg-indigo-500 text-white text-sm font-semibold rounded-md shadow focus:outline-none">加入渠道联盟</a>
                         </li>
                     </ul>
                 </div>
             </div>
-           
+
         </div>
     )
 }

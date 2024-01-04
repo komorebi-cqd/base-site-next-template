@@ -70,7 +70,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                             <span>{intl.formatMessage({ id: 'home_top_title_des' })}</span>
                             <span>{intl.formatMessage({ id: 'home_top_title_des_two' })}</span>
                         </div>
-                        <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className={`w-[206px] h-[56px] bg-[#0F61FF] rounded block leading-[56px] text-center text-xl ${locale === "en" ? "" : "font-semibold"}`}>{intl.formatMessage({ id: 'jump_wetech_text' })}</a>
+                        <a href={locale === 'en' ? process.env.NEXT_PUBLIC_JUMP_URL_EN : process.env.NEXT_PUBLIC_JUMP_URL_ZH} target="_blank" className={`w-[206px] h-[56px] bg-[#0F61FF] rounded block leading-[56px] text-center text-xl ${locale === "en" ? "" : "font-semibold"}`}>{intl.formatMessage({ id: 'jump_wetech_text' })}</a>
                     </div>
                 </div>
             </div>

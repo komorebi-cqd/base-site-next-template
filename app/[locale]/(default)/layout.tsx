@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import Header from '@/app/components/ui/header';
-import getCurrentUser from "@/app/actions/getCurrentUser";
 import Footer from '@/app/components/ui/footer';
 import getIntl from "../intl";
 
@@ -21,8 +20,6 @@ export default async function DefaultRootLayout({
     children: ReactNode;
     params: { locale: string };
 }) {
-
-    const currentUser = await getCurrentUser();
     return (
         <>
             <Header />

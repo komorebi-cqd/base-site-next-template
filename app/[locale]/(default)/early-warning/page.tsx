@@ -2,8 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import EarlyWarningSwiper from '@/app/components/ui/early-warning-swiper';
 import getIntl from "../../intl";
-
-
+import JumpBtn from "@/app/components/Btn/JumpBtn";
 
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
@@ -50,7 +49,7 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
             desc: intl.formatMessage({ id: 'ew_adv_six_desc' })
         },
     ]
-   
+
     return (
         <div>
             {/* 顶部大图 */}
@@ -61,7 +60,9 @@ const EarlyWarning = async ({ params: { locale } }: { params: { locale: string }
                         <div className={`flex flex-col leading-tight mt-4 mb-6 ${locale === 'en' ? 'max-w-[470px] text-lg' : ' text-3xl max-w-[420px]'}`}>
                             <span>{intl.formatMessage({ id: 'early_warning_desc' })}</span>
                         </div>
-                        <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({ id: 'jump_wetech_text' })}</a>
+                        <JumpBtn locale={locale}>
+                            {intl.formatMessage({ id: 'jump_wetech_text' })}
+                        </JumpBtn>
                     </div>
                 </div>
             </div>

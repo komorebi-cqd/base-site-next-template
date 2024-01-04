@@ -1,8 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import getIntl from "../../intl";
-
-
+import JumpBtn from "@/app/components/Btn/JumpBtn";
 
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
@@ -45,7 +44,9 @@ const RiskPortait = async ({ params: { locale } }: { params: { locale: string } 
                         <div className={`flex flex-col mt-4 mb-6 ${locale === 'en' ? ' max-w-[460px] text-[25px]' : 'text-3xl'}`}>
                             <span>{intl.formatMessage({id: 'rp_top_desc'})}</span>
                         </div>
-                        <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({id: 'jump_wetech_text'})}</a>
+                        <JumpBtn locale={locale}>
+                            {intl.formatMessage({ id: 'jump_wetech_text' })}
+                        </JumpBtn>
                     </div>
                 </div>
             </div>

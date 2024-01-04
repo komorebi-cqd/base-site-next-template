@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import getIntl from "../../intl";
+import JumpBtn from "@/app/components/Btn/JumpBtn";
 
 
 
@@ -30,7 +31,9 @@ const RiskIdentification = async ({ params: { locale } }: { params: { locale: st
                         <div className={`flex flex-col mt-4 ${locale === "en" ? "max-w-[730px] text-[25px] mb-7" : "text-3xl mb-16"}`}>
                             <span>{intl.formatMessage({ id: "dri_top_desc" })}</span>
                         </div>
-                        <a href={process.env.NEXT_PUBLIC_JUMP_URL} target="_blank" className="w-[206px] h-[56px] bg-white rounded leading-[56px] text-primary text-center text-xl font-semibold">{intl.formatMessage({ id: "jump_wetech_text" })}</a>
+                        <JumpBtn locale={locale}>
+                            {intl.formatMessage({ id: 'jump_wetech_text' })}
+                        </JumpBtn>
                     </div>
                 </div>
             </div>

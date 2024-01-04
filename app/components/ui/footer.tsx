@@ -41,6 +41,10 @@ const Footer = async ({ locale }: { locale: string }) => {
                         <li className='flex flex-col'>
                             <span>{intl.formatMessage({ id: 'foot_company_name' })}</span>
                             <a className=' transition-all hover:text-[--text-primary]' target='_blank' href="https://beian.miit.gov.cn/">粤ICP备2021094662号-3</a>
+                            {/* <div className='flex items-center'>
+                                <Image src="/image/jh.png" width={24} height={24} alt='jh' />
+                                <span className=' pl-1'>粤公网********号</span>
+                            </div> */}
                         </li>
                     </ul>
                 </div>

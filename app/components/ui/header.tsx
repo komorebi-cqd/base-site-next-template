@@ -10,6 +10,7 @@ import LocaleSwitcher from "@/app/components/LocaleSwitcher";
 
 export default function Header() {
     const params = useParams();
+    const [url, setUrl] = useState<string | null>('');
     const { navList, reg } = useNavList();
     const pathname = usePathname();
     const [top, setTop] = useState<boolean>(true)
@@ -25,7 +26,16 @@ export default function Header() {
         return () => {
             window.removeEventListener('scroll', scrollHandler);
         }
-    }, [top])
+    }, [top]);
+
+
+    useEffect(() => {
+        let url = pathname;
+        if (pathname?.startsWith("/en")) {
+            url = url?.replace(reg, "") || '/';
+        }
+        setUrl(url);
+    }, [pathname, reg]);
 
     return (
         <header className={`fixed w-full z-30 transition duration-300 ease-in-out ${!top ? ' bg-[--header-bg]  backdrop-blur-sm shadow-sm' : ''}`}>
@@ -40,11 +50,11 @@ export default function Header() {
                     {/* Desktop navigation */}
                     <nav className={`hidden md:grow h-full  ${params?.locale === "en" ? "xl:flex" : " md:flex"}`}>
                         {/* Desktop sign in links */}
-                        <ul className="flex grow flex-wrap gap-x-10 justify-center items-center text-sm text-[#C7DAFF]">
+                        <ul className={`flex grow flex-wrap  justify-center items-center text-sm text-[#C7DAFF] ${params?.locale === "en" ? "gap-x-4 2xl:gap-x-10" : "gap-x-10"}`}>
                             {navList.map(nav => {
                                 return (
                                     <li key={nav.id} className={` relative ${params?.locale === "en" ? "" : ""}`}>
-                                        <Link href={params?.locale === "en" ? "/en" + nav.link : nav.link} className={`text-[#C7DAFF] hover:text-white font-bold transition-colors after:absolute  after:content-[''] after:h-1 after:transition-all after:rounded-e after:w-[0px] hover:after:w-[7px] after:bg-white after:left-1/2 before:absolute before:h-1 before:transition-all before:rounded-s before:w-[0px] hover:before:w-[7px] before:bg-white before:right-1/2 ${params?.locale === "en" ? "after:-bottom-4 before:-bottom-4" : "after:-bottom-4 before:-bottom-4"} ${((pathname?.replace(reg, "") === "/" || pathname?.replace(reg, "") === "") && nav.link === "/") || (pathname?.replace(reg, "") !== "/" && nav.link !== "/" && pathname?.replace(reg, "")?.startsWith(nav.link)) ? "text-white after:w-[7px] before:w-[7px]" : ""}`}>
+                                        <Link href={params?.locale === "en" ? "/en" + nav.link : nav.link} className={`text-[#C7DAFF] hover:text-white font-bold transition-colors after:absolute  after:content-[''] after:h-1 after:transition-all after:rounded-e after:w-[0px] hover:after:w-[7px] after:bg-white after:left-1/2 before:absolute before:h-1 before:transition-all before:rounded-s before:w-[0px] hover:before:w-[7px] before:bg-white before:right-1/2 after:-bottom-4 before:-bottom-4 ${url === nav.link ? "text-white after:w-[7px] before:w-[7px]" : ""}`}>
                                             {nav.text}
                                         </Link>
                                     </li>

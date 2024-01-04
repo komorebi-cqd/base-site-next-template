@@ -72,7 +72,9 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
                             </div>
                         </li>
                         <li>
-                            <a href={locale === 'en' ? process.env.NEXT_PUBLIC_JUMP_URL_EN + '&source=wetech-website-union' : process.env.NEXT_PUBLIC_JUMP_URL_ZH + '&source=wetech-website-union'} target="_blank" className="py-2 px-3 bg-indigo-500 text-white text-sm font-semibold rounded-md shadow focus:outline-none">加入渠道联盟</a>
+                            <a href={locale === 'en' ? process.env.NEXT_PUBLIC_JUMP_URL_EN + '&source=wetech-website-union' : process.env.NEXT_PUBLIC_JUMP_URL_ZH + '&source=wetech-website-union'} target="_blank" className="py-2 px-3 bg-indigo-500 text-white text-sm font-semibold rounded-md shadow focus:outline-none">
+                                {intl.formatMessage({ id: 'join_channel_alliance' })}
+                            </a>
                         </li>
                     </ul>
                 </div>

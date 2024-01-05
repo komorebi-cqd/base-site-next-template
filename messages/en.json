@@ -177,7 +177,7 @@
   "ew_process_three_t_one": "Verifi CDRN Disputes:",
   "ew_process_three_desc_one": "Dispute paused by issuer for seller-directed resolution",
   "ew_process_three_t_two": "Visa RDR Disputes:",
-  "ew_process_three_desc_two": "Dispute flows through decision, engine for automatic resolution",
+  "ew_process_three_desc_two": "Dispute flows through decision engine for automatic resolution",
   "ew_process_four": "Customer dispute resolved",
   "ew_top_adv_one": "Avoid the high costs associated with disputes and chargebacks",
   "ew_top_adv_two": "Reduce the manual costs associated with handling disputes and refunds",

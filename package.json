@@ -7,7 +7,7 @@
     "dev:pro": "cp .env.base.production .env.local && next dev",
     "build": "sudo cp .env.base.production .env.production && next build",
     "build:local": "cp .env.base.production .env.production && next build",
-    "build:staging": "cp .env.base.staging .env.production && next build",
+    "build:staging": "sudo cp .env.base.staging .env.production && next build",
     "build:export": "next build && next export",
     "build:start": "next build && next start",
     "start": "next start",

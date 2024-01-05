@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide, } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { useParams } from 'next/navigation'
@@ -50,11 +50,16 @@ const EarlyWarningSwiper = () => {
                     onSwiper={(swiper) => setSwiperInstance(swiper)}
                     observer={true}
                     observeParents={true}
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    }}
                     pagination={{
                         el: ".swiper-pagination",
                         clickable: true
                     }}
-                    modules={[Pagination]}
+                    modules={[Pagination, Autoplay]}
                     className="mySwiper h-full"
                 >
                     <SwiperSlide className='w-full h-full'>

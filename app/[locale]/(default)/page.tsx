@@ -126,7 +126,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                     <div className=" text-center font-semibold  text-3xl lg:text-[38px] text-[#333] mb-8">{intl.formatMessage({ id: 'our_serve' })}</div>
 
                     <div className="w-full flex flex-col gap-y-9 items-center text-[#333] text-sm">
-                        <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28  flex-col md:flex-row">
+                        <a href={locale === 'en' ? '/en/anti-fraud' : '/anti-fraud'} className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28  flex-col md:flex-row">
                             <div>
                                 <div className="text-primary text-2xl font-bold mb-8">{serveContent.antiRisk.title}</div>
                                 <ul className={`leading-6 ${locale === 'en' ? ' max-w-[466px]' : ''}`}>
@@ -138,8 +138,8 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                             <div className=" relative w-full md:w-[315px] h-[215px]  flex-shrink-0">
                                 <Image src="/image/home/home-serve-1.png" className=" object-contain" fill alt="" />
                             </div>
-                        </div>
-                        <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28 flex-col-reverse md:flex-row-reverse">
+                        </a>
+                        <a href={locale === 'en' ? '/en/risk-identification' : '/risk-identification'} className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28 flex-col-reverse md:flex-row-reverse">
                             <div>
                                 <div className="text-primary text-2xl font-bold mb-8">{serveContent.deviceRisk.title}</div>
                                 <ul className={`leading-6 ${locale === 'en' ? ' max-w-[428px]' : ''}`}>
@@ -151,8 +151,8 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                             <div className=" relative w-full md:w-[404px] min-h-[180px] md:h-[234px]  flex-shrink-0">
                                 <Image src="/image/home/home-serve-2.png" className=" object-contain" fill alt="" />
                             </div>
-                        </div>
-                        <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28  flex-col md:flex-row">
+                        </a>
+                        <a href={locale === 'en' ? '/en/risk-portrait' : '/risk-portrait'} className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28  flex-col md:flex-row">
                             <div>
                                 <div className="text-primary text-2xl font-bold mb-8">{serveContent.riskProfile.title}</div>
                                 <ul className={`leading-6 ${locale === 'en' ? ' max-w-[540px]' : ''}`}>
@@ -164,8 +164,8 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                             <div className=" relative w-full md:w-[323px] h-[233px] flex-shrink-0">
                                 <Image src="/image/home/home-serve-3.png" className=" object-contain" fill alt="" />
                             </div>
-                        </div>
-                        <div className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28   flex-col-reverse md:flex-row-reverse">
+                        </a>
+                        <a href={locale === 'en' ? '/en/early-warning' : '/early-warning'} className="flex justify-between bg-white rounded-lg w-full min-h-[360px] gap-y-5 py-6 md:py-[72px] px-6 lg:px-28   flex-col-reverse md:flex-row-reverse">
                             <div className="max-w-[524px]">
                                 <div className="text-primary text-2xl font-bold">{intl.formatMessage({ id: 'home_serve_zyjj_t' })}</div>
                                 <div className=" my-6">{intl.formatMessage({ id: 'home_serve_zyjj_one' })}</div>
@@ -183,7 +183,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
                             <div className=" relative w-[300px] h-[256px] flex-shrink-0">
                                 <Image src="/image/home/home-serve-4.png" className=" object-contain" fill alt="" />
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

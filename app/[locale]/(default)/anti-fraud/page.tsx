@@ -133,7 +133,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                                 }} />
                         </div>
                         <h3 className={`text-primary font-semibold text-center ${locale === "en" ? " text-xl my-2" : "text-2xl mt-2 mb-4"}`}>{intl.formatMessage({ id: 'ar_adv_one_t' })}</h3>
-                        <div className={`text-center ${locale === 'en' ? 'max-w-[270px] leading-5' : 'max-w-[268px] leading-6'}`}>{intl.formatMessage({ id: 'ar_adv_one_des' })}</div>
+                        <div className={`text-center ${locale === 'en' ? 'max-w-[270px] leading-5' : 'max-w-[210px] leading-6'}`}>{intl.formatMessage({ id: 'ar_adv_one_des' })}</div>
                     </div>
                     <div className='w-full max-w-[383px] bg-white h-[327px] flex flex-col items-center pt-4 rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)]'>
                         <div className=' relative'>
@@ -144,7 +144,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                                 }} />
                         </div>
                         <h3 className={`text-primary font-semibold text-center ${locale === "en" ? "text-xl max-w-[240px] my-[6px] leading-5" : "text-2xl mt-2 mb-4"}`}>{intl.formatMessage({ id: 'ar_adv_two_t' })}</h3>
-                        <div className={`text-center ${locale === 'en' ? ' max-w-[260px] leading-5' : 'max-w-[268px] leading-6'}`}>{intl.formatMessage({ id: 'ar_adv_two_des' })}</div>
+                        <div className={`text-center ${locale === 'en' ? ' max-w-[260px] leading-5' : 'max-w-[210px] leading-6'}`}>{intl.formatMessage({ id: 'ar_adv_two_des' })}</div>
                     </div>
                     <div className='w-full max-w-[383px] bg-white min-h-[327px] flex flex-col items-center pt-4 rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)]'>
                         <div className=' relative'>
@@ -155,7 +155,7 @@ const AntiFraud = async ({ params: { locale } }: { params: { locale: string } })
                                 }} />
                         </div>
                         <h3 className={`mt-2 mb-4 text-primary font-semibold text-center ${locale === "en" ? "text-xl" : "text-2xl"}`}>{intl.formatMessage({ id: 'ar_adv_three_t' })}</h3>
-                        <div className={`text-center ${locale === 'en' ? ' max-w-[280px] leading-5' : 'max-w-[268px] leading-6'}`}>{intl.formatMessage({ id: 'ar_adv_three_des' })}</div>
+                        <div className={`text-center ${locale === 'en' ? ' max-w-[280px] leading-5' : 'max-w-[210px] leading-6'}`}>{intl.formatMessage({ id: 'ar_adv_three_des' })}</div>
                     </div>
                 </div>
             </div>

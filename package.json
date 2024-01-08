@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cp .env.base.staging .env.local && next dev",
-    "dev:pro": "cp .env.base.production .env.local && next dev",
+    "dev": "cp .env.base.staging .env.production && next dev",
+    "dev:pro": "cp .env.base.production .env.production && next dev",
     "build": "sudo cp .env.base.production .env.production && next build",
     "build:local": "cp .env.base.production .env.production && next build",
     "build:staging": "sudo cp .env.base.staging .env.production && next build",

@@ -68,7 +68,7 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
                             <Image src="/image/about/address.png" className=' pt-1' width={16} height={16} alt='WeTech-address' />
                             <div className='flex'>
                                 <span className=' flex-shrink-0'>{intl.formatMessage({ id: 'address_text' })}</span>
-                                <div className=' md:max-w-[300px]'>{intl.formatMessage({ id: 'address_detials' })}</div>
+                                <div className=' md:max-w-[300px]'>{intl.formatMessage({ id: 'about_us_address' })}</div>
                             </div>
                         </li>
                         {/* <li>

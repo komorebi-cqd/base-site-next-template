@@ -40,7 +40,7 @@ const RiskPortait = async ({ params: { locale } }: { params: { locale: string } 
             <div className="w-full  bg-[#00061a] max-h-[var(--top-h)] h-[var(--top-h)]">
                 <div className="max-w-[1440px] mx-auto h-full bg-[url('/image/risk-portrait/top-bg.png')] bg-contain bg-right-bottom bg-no-repeat  px-6 xl:px-0">
                     <div className={`flex flex-col text-white h-full max-w-[1200px] mx-auto ${locale === 'en' ? ' pt-36 md:pt-48 ' : 'pt-40 sm:pt-48'}`}>
-                        <h3 className={`font-bold text-5xl ${locale === 'en' ? ' lg:text-[55px] max-w-[675px]' : 'lg:text-[58px] '}`}>{intl.formatMessage({id: 'rp_top_title'})}</h3>
+                        <h3 className={`font-bold text-5xl ${locale === 'en' ? ' lg:text-[55px] max-w-[520px]' : 'lg:text-[58px] '}`}>{intl.formatMessage({id: 'rp_top_title'})}</h3>
                         <div className={`flex flex-col mt-4 mb-6 ${locale === 'en' ? ' max-w-[460px] text-[25px]' : 'text-3xl'}`}>
                             <span>{intl.formatMessage({id: 'rp_top_desc'})}</span>
                         </div>

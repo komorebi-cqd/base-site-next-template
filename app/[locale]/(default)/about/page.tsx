@@ -33,7 +33,7 @@ const About = async ({ params: { locale } }: { params: { locale: string } }) => 
             </div>
             <div className='w-full bg-white pt-20 lg:pt-[170px] pb-20 lg:pb-[122px] px-5'>
                 <div className='w-1200 flex flex-col lg:flex-row gap-x-28'>
-                    <div className='flex-1 lg:max-w-[563px] w-full'>
+                    <div className='flex-1 lg:max-w-[556px] w-full'>
                         <h3 className=' text-[38px] font-semibold'>{intl.formatMessage({ id: 'about_us' })}</h3>
                         <p className=' py-[30px] font-semibold text-base'>{intl.formatMessage({ id: "about_des" })}</p>
                         <div className=' text-sm leading-7 pb-4'>

@@ -44,7 +44,7 @@ export default function LanguageChanger({ fun }: { fun?: () => void }) {
         <Menu as="div" className="relative inline-block text-left">
             <div className='flex justify-center items-center text-white text-sm'>
                 <span>{formatMessage({ id: "language" })}：</span>
-                <Menu.Button>{currentLocale === "zh-CN" ? "简体中文" : "English-en"}</Menu.Button>
+                <Menu.Button>{currentLocale === "zh-CN" ? "简体中文" : "English"}</Menu.Button>
             </div>
             <Transition
                 enter="transition ease-out duration-100"
@@ -66,7 +66,7 @@ export default function LanguageChanger({ fun }: { fun?: () => void }) {
                                     className={`${active ? 'bg-primary' : ''
                                         } w-full h-6 leading-6 text-xs text-white`}
                                 >
-                                    简体中文-zh
+                                    简体中文
                                 </button>
                             )}
                         </Menu.Item>
@@ -77,7 +77,7 @@ export default function LanguageChanger({ fun }: { fun?: () => void }) {
                                     className={`${active ? 'bg-primary' : ''
                                         } w-full h-6 leading-6 text-xs text-white `}
                                 >
-                                    English-en
+                                    English
                                 </button>
                             )}
                         </Menu.Item>

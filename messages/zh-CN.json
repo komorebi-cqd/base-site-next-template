@@ -162,7 +162,7 @@
   "early_warning_t": "争议预警与解决",
   "early_warning_desc": "实时获取拒付信息、快速响应 有效降低商户拒付率",
   "ew_slide_one_t": "持卡人争议解决网络（CDRN）",
-  "ew_slide_one_desc": "通过卖家发起的退款，在72小时内解决参与CDRN发卡推送的争议交易",
+  "ew_slide_one_desc": "通过卖家发起的退款，在72小时内解决参与CDRN发卡行推送的争议交易",
   "ew_slide_one_item_one": "通过闭环网络接收以及直接交付",
   "ew_slide_one_item_two": "停止未来重复交易的争议",
   "ew_slide_one_item_three": "避免昂贵的费用，罚款",

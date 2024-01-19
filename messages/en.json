@@ -1,6 +1,6 @@
 {
-  "seo_home_title": "WeTech official website",
-  "seo_home_desc": "WeTech official website",
+  "seo_home_title": "WeTech-AI Risk control",
+  "seo_home_desc": "WeTech-AI Risk control",
   "seo_anti-fraud_title": "Anti-Fraud-WeTech",
   "seo_anti-fraud_desc": "Anti-Fraud-WeTech",
   "seo_ri_title": "Device Risk Identification-WeTech",
@@ -128,9 +128,9 @@
   "dri_bigdata_one": "Hundreds of millions of mobile devices",
   "dri_bigdata_two": "A professional team of over a hundred people",
   "dri_adv_one_t": "High model accuracy, stability and reliability",
-  "dri_adv_one_desc": "Combine dynamic and static features with AI intelligent models to enhance accuracy and ensure stability",
+  "dri_adv_one_desc": "Combine dynamic and static features with AI models to enhance accuracy and ensure stability",
   "dri_adv_two_t": "Full-platform coverage and excellent adaptability",
-  "dri_adv_two_desc": "Combine dynamic and static features with AI intelligent models, highly compatible, effectively counteracts device information tampering",
+  "dri_adv_two_desc": "Combine dynamic and static features with AI models, highly compatible, effectively counteracts device information tampering",
   "dri_adv_three_t": "Multi-dimensional, strong anti-fraud capabilities",
   "dri_adv_three_desc": "Multi-dimensional device information, big data analysis, AI algorithms, and intelligent risk control systems effectively combat forgery, bot control, and wool-pulling activities",
 

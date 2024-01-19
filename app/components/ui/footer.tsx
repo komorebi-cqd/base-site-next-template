@@ -66,7 +66,7 @@ const Footer = async ({ locale }: { locale: string }) => {
             </li>
             <li className="flex flex-col">
               <span>{intl.formatMessage({ id: "foot_company_name" })}</span>
-              <div className="flex gap-x-5 my-1">
+              <div className="flex flex-col md:flex-row md:gap-x-5 gap-y-2 my-3">
                 <a
                   className=" transition-all hover:text-[--text-primary] inline-block"
                   target="_blank"
@@ -82,12 +82,24 @@ const Footer = async ({ locale }: { locale: string }) => {
                   粤ICP备2021094662号-3
                 </a>
               </div>
-              {/* <div className="flex-auto">
-                <a className=" inline-flex items-center cursor-pointer" target="_blank">
+              <div className="flex-auto flex md:items-center gap-x-2 flex-col md:flex-row gap-y-2">
+                <a
+                  className=" inline-flex items-center transition-all cursor-pointer hover:text-[--text-primary]"
+                  href="https://beian.mps.gov.cn/#/query/webSearch?code=44030002002177"
+                  target="_blank"
+                >
                   <Image src="/image/jh.png" width={24} height={24} alt="jh" />
-                  <span className=" pl-1">粤公网安备 44010402000282号</span>
+                  <span className=" pl-1">粤公网安备 44030002002177号</span>
                 </a>
-              </div> */}
+                <a
+                  className=" inline-flex items-center transition-all cursor-pointer hover:text-[--text-primary]"
+                  href="https://beian.mps.gov.cn/#/query/webSearch?code=44030002002120"
+                  target="_blank"
+                >
+                  <Image src="/image/jh.png" width={24} height={24} alt="jh" />
+                  <span className=" pl-1">粤公网安备 44030002002120号</span>
+                </a>
+              </div>
             </li>
           </ul>
         </div>

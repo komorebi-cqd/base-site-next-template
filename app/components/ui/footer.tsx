@@ -22,6 +22,11 @@ const Footer = async ({ locale }: { locale: string }) => {
       text: intl.formatMessage({ id: "nav_five" }),
       link: "/early-warning",
     },
+    {
+      id: 6,
+      text: intl.formatMessage({ id: "nav_seven" }),
+      link: "/transaction-enquiry-alerts",
+    },
   ];
   return (
     <footer className="w-full pb-12 md:pb-[13.375rem] bg-[#071532] pt-[82px] px-10 md:px-0">

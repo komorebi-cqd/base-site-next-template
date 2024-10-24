@@ -54,8 +54,8 @@ const TransactionEnquiryAlerts = async ({ params: { locale } }: { params: { loca
              <div className="w-full  bg-gradient-to-bl from-[#061242] to-[#1537BE] max-h-[var(--top-h)] h-[var(--top-h)]">
                 <div className="max-w-[1440px] mx-auto h-full lg:bg-[url('/image/enquiry-alerts/top-bg.jpg')] bg-[length:360px_354px]  xl:bg-[length:450px_443px] bg-[right_bottom_0%]  lg:bg-[right_bottom_56px] bg-no-repeat  px-6 xl:px-0">
                     <div className={`flex flex-col text-white h-full max-w-[1200px] mx-auto   ${locale === 'en' ? ' pt-36 sm:pt-40 lg:pt-48' : 'pt-40 sm:pt-48'}`}>
-                        <h3 className={`font-bold text-5xl ${locale === "en" ? ' max-w-[500px] lg:text-[55px]' : 'lg:text-[58px] '}`}>{intl.formatMessage({ id: "tran_top_title" })}</h3>
-                        <div className={`flex flex-col ${locale === "en" ? "max-w-[712px] text-[25px] mb-12  mt-10" : "text-3xl mb-20 mt-20"}`}>
+                        <h3 className={`font-bold text-5xl uppercase ${locale === "en" ? ' max-w-[500px] lg:text-[55px]' : 'lg:text-[58px] '}`}>{intl.formatMessage({ id: "tran_top_title" })}</h3>
+                        <div className={`flex flex-col ${locale === "en" ? "max-w-[712px] text-[22px] mb-12  mt-10" : "text-3xl mb-20 mt-20"}`}>
                             <span>{intl.formatMessage({ id: "tran_top_desc_one" })}</span>
                             <span>{intl.formatMessage({ id: "tran_top_desc_two" })}</span>
                         </div>
@@ -71,7 +71,7 @@ const TransactionEnquiryAlerts = async ({ params: { locale } }: { params: { loca
                     <div className='relative w-full h-full z-20'>
                         <div className='w-full flex flex-col sm:flex-row justify-between items-center px-7 py-6'>
                             <div className={`sm:mb-0 mb-6 ${locale === "en" ? '' : 'max-w-md' }`}>
-                                <h3 className='text-[#131C87] font-semibold text-3xl mb-8'>{intl.formatMessage({id: 'tran_process'})}</h3>
+                                <h3 className='text-[#131C87] font-semibold text-3xl mb-4'>{intl.formatMessage({id: 'tran_process'})}</h3>
                                 <ul className='text-lg leading-9 '>
                                     {
                                         processList.map((it, index) => {
@@ -101,7 +101,7 @@ const TransactionEnquiryAlerts = async ({ params: { locale } }: { params: { loca
                         <span>{intl.formatMessage({ id: 'tran_our_services' })}</span>
                         <div className='w-8 h-[1px] bg-[#131B84]'></div>
                     </div>
-                    <h3 className='text-[38px] text-[#131B84] text-center font-semibold mb-10'>{intl.formatMessage({ id: 'our_advantage' })}</h3>
+                    <h3 className='text-[38px] text-[#131B84] text-center font-semibold mb-10 uppercase'>{intl.formatMessage({ id: 'our_advantage' })}</h3>
                 </div>
                 <ul className='max-w-[1000px] mx-auto flex items-center justify-center gap-x-52 gap-y-20 flex-wrap'>
                     {advList.map((adv, index) => (

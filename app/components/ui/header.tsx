@@ -48,7 +48,7 @@ export default function Header() {
                     </div>
 
                     {/* Desktop navigation */}
-                    <nav className={`hidden md:grow h-full  ${params?.locale === "en" ? "xl:flex" : " md:flex"}`}>
+                    <nav className={`hidden md:grow h-full  ${params?.locale === "en" ? "2xl:flex" : " lg:flex"}`}>
                         {/* Desktop sign in links */}
                         <ul className={`flex grow flex-wrap  justify-center items-center text-sm text-[#C7DAFF] ${params?.locale === "en" ? "gap-x-4 2xl:gap-x-10" : "gap-x-10"}`}>
                             {navList.map(nav => {
@@ -62,7 +62,7 @@ export default function Header() {
                             })}
                         </ul>
                     </nav>
-                    <div className={`justify-center items-center text-white text-sm hidden ${params?.locale === "en" ? "2xl:flex" : " md:flex"}`}>
+                    <div className={`justify-center items-center text-white text-sm hidden ${params?.locale === "en" ? "2xl:flex" : " xl:flex"}`}>
                         <LocaleSwitcher />
                     </div>
 

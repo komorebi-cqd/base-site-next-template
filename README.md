@@ -34,7 +34,7 @@ const variantsUl = {
 ```
 
 ```js
-
+// nginx配置
 server {
     listen       80;
     server_name   106.52.238.51;
@@ -66,7 +66,7 @@ server {
 
 
 ```js
-
+// nginx配置
 listen       80;
     server_name  www.test.wetech.vip;
     charset utf-8;

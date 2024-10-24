@@ -39,8 +39,8 @@ export default function Header() {
 
     return (
         <header className={`fixed w-full z-30 transition duration-300 ease-in-out ${!top ? ' bg-[--header-bg]  backdrop-blur-sm shadow-sm' : ''}`}>
-            <div className={`mx-auto px-5 relative ${params?.locale === "en" ? "" : ""}`}>
-                <div className="flex items-center justify-between h-28 md:h-36 md:gap-x-6 lg:gap-x-12 xl:gap-x-20">
+            <div className={`mx-auto px-5  relative`}>
+                <div className={`flex items-center justify-between h-28 md:h-36  ${params?.locale === "en" ? "md:gap-x-6 lg:gap-x-12 3xl:gap-x-20" : "md:gap-x-6 lg:gap-x-12 xl:gap-x-20"}`}>
 
                     {/* Site branding */}
                     <div className="shrink-0 z-50">
@@ -62,7 +62,7 @@ export default function Header() {
                             })}
                         </ul>
                     </nav>
-                    <div className={`justify-center items-center text-white text-sm hidden ${params?.locale === "en" ? "xl:flex" : " md:flex"}`}>
+                    <div className={`justify-center items-center text-white text-sm hidden ${params?.locale === "en" ? "2xl:flex" : " md:flex"}`}>
                         <LocaleSwitcher />
                     </div>
 

@@ -13,6 +13,7 @@ function useNavList() {
       link: "/risk-portrait",
     },
     { id: 5, text: formatMessage({ id: "nav_five" }), link: "/early-warning" },
+    { id: 7, text: formatMessage({ id: "nav_seven" }), link: "/transaction-enquiry-alerts" },
     { id: 6, text: formatMessage({ id: "nav_six" }), link: "/about" },
   ];
   return {navList, reg};

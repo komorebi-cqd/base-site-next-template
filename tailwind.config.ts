@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      backgroundPosition: {
+        "tran-bg-po": "left top,left bottom",
+      },
       colors: {
         primary: "#316FE7",
       },
@@ -22,6 +25,14 @@ const config: Config = {
       height: {
         halfcircleH: "calc(100vw - 60px)",
       },
+    },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      "3xl": "1618px",
     },
   },
   plugins: [],

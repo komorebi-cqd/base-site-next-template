@@ -5,6 +5,7 @@ import getIntl from './intl';
 import ServerIntlProvider from '@/app/providers/ServerIntlProvider';
 import ToasterProvider from '@/app/providers/ToasterProvider';
 import "@/app/globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ export default async function DefaultRootLayout({
                     <ToasterProvider />
                     {children}
                 </ServerIntlProvider>
+                <GoogleAnalytics gaId="G-0DVNB559RP" />
             </body>
         </html>
     );
